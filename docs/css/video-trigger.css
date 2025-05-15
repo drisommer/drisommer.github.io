@@ -1,0 +1,197 @@
+/* Project Video Trigger and Modal Styles */
+
+/* Video Play Button Wrapper */
+.play-project-video-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    pointer-events: all;
+}
+
+/* Video Play Button */
+.play-project-video {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    opacity: 0;
+    transform: scale(0.8);
+    z-index: 10;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Show play button on hover */
+.section-image:hover .play-project-video {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Play Icon */
+.play-project-video i {
+    color: #fff;
+    font-size: 18px;
+    margin-left: 4px; /* Slight offset for the play icon */
+}
+
+/* Video Modal Container */
+.clapat-video-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    opacity: 0;
+}
+
+/* Video Modal Background */
+.clapat-video-modal-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.95);
+    opacity: 0;
+}
+
+/* Video Container */
+.clapat-video-container {
+    position: relative;
+    width: 90%;
+    max-width: 1200px;
+    z-index: 1000;
+    margin: 0 auto;
+}
+
+/* Video Player */
+.clapat-video-modal-player {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 85vh;
+    object-fit: contain;
+}
+
+/* Close Button */
+.clapat-video-modal-close {
+    position: fixed;
+    top: 40px;
+    right: 40px;
+    width: auto;
+    height: auto;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 1001;
+    display: flex;
+    align-items: center;
+}
+
+.video-close-wrapper {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.video-close {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transform: rotate(45deg);
+}
+
+.video-close span {
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    display: block;
+    position: relative;
+}
+
+.video-close span:first-child {
+    transform: rotate(0deg);
+}
+
+.video-close span:last-child {
+    transform: rotate(90deg);
+    margin-top: -2px;
+}
+
+.clapat-video-modal-close .button-text {
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 20px;
+    letter-spacing: 1px;
+    margin-left: 10px;
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.clapat-video-modal-close .button-text span {
+    position: relative;
+    display: inline-block;
+    -webkit-transition: -webkit-transform 0.2s;
+    transition: transform 0.2s;
+    line-height: 14px;
+    font-weight: 600;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.clapat-video-modal-close .button-text span::before {
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    left: 0;
+    content: attr(data-hover);
+    transform: translate3d(0,0,0);
+}
+
+.clapat-video-modal-close:hover .button-text span {
+    transform: translateY(-100%);
+}
+
+.clapat-video-modal-close .parallax-element {
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    position: relative;
+}
+
+/* Disable scrolling when modal is open */
+body.no-scroll {
+    overflow: hidden;
+}
+
+/* Responsive styles */
+@media only screen and (max-width: 768px) {
+    .play-project-video {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .clapat-video-modal-close {
+        top: -10px;
+        right: -10px;
+    }
+}

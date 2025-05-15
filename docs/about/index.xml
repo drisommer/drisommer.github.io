@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Who is Dri? on </title>
+    <link>https://example.org/about/</link>
+    <description>Recent content in Who is Dri? on </description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="https://example.org/about/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Clipped Image</title>
+      <link>https://example.org/about/clipped-image/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://example.org/about/clipped-image/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Recognitions</title>
+      <link>https://example.org/about/awards-gallery/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://example.org/about/awards-gallery/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>More Awards</title>
+      <link>https://example.org/about/awards-list/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://example.org/about/awards-list/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://example.org/about/services/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://example.org/about/services/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Collaborators</title>
+      <link>https://example.org/about/collaborators-heading/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://example.org/about/collaborators-heading/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Client Logos</title>
+      <link>https://example.org/about/moving-gallery/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://example.org/about/moving-gallery/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Team Members</title>
+      <link>https://example.org/about/team-members/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://example.org/about/team-members/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>
