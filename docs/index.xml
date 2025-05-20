@@ -2,276 +2,269 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Home on </title>
-    <link>http://localhost:1313/</link>
+    <link>https://example.org/</link>
     <description>Recent content in Home on </description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 11 May 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 15 Mar 2023 11:00:00 -0700</lastBuildDate>
+    <atom:link href="https://example.org/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Adidas  30 X All In</title>
-      <link>http://localhost:1313/projects/adidas--30-x-all-in/</link>
+      <link>https://example.org/projects/adidas--30-x-all-in/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/projects/adidas--30-x-all-in/</guid>
+      <guid>https://example.org/projects/adidas--30-x-all-in/</guid>
       <description></description>
     </item>
     <item>
       <title>Boysmells   What&#39;s Your Ritual</title>
-      <link>http://localhost:1313/projects/boysmells---what-s-your-ritual/</link>
+      <link>https://example.org/projects/boysmells---what-s-your-ritual/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/projects/boysmells---what-s-your-ritual/</guid>
+      <guid>https://example.org/projects/boysmells---what-s-your-ritual/</guid>
       <description></description>
     </item>
     <item>
       <title>Boysmells X Woodphoria</title>
-      <link>http://localhost:1313/projects/boysmells-x-woodphoria/</link>
+      <link>https://example.org/projects/boysmells-x-woodphoria/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/projects/boysmells-x-woodphoria/</guid>
+      <guid>https://example.org/projects/boysmells-x-woodphoria/</guid>
       <description></description>
     </item>
     <item>
       <title>Pfizer &#43; Disney X Diana Taurasi</title>
-      <link>http://localhost:1313/projects/pfizer---disney-x-diana-taurasi/</link>
+      <link>https://example.org/projects/pfizer---disney-x-diana-taurasi/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/projects/pfizer---disney-x-diana-taurasi/</guid>
+      <guid>https://example.org/projects/pfizer---disney-x-diana-taurasi/</guid>
       <description></description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/home/video-hero/</link>
+      <link>https://example.org/home/video-hero/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/home/video-hero/</guid>
+      <guid>https://example.org/home/video-hero/</guid>
       <description></description>
     </item>
     <item>
       <title>Nba X Sga 16.9</title>
-      <link>http://localhost:1313/projects/nba-x-sga-16-9/</link>
+      <link>https://example.org/projects/nba-x-sga-16-9/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/projects/nba-x-sga-16-9/</guid>
+      <guid>https://example.org/projects/nba-x-sga-16-9/</guid>
       <description></description>
     </item>
     <item>
       <title>The Sims   Series Trailer</title>
-      <link>http://localhost:1313/projects/the-sims---series-trailer/</link>
+      <link>https://example.org/projects/the-sims---series-trailer/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/projects/the-sims---series-trailer/</guid>
+      <guid>https://example.org/projects/the-sims---series-trailer/</guid>
       <description></description>
     </item>
     <item>
       <title>The Sims X Episode 1</title>
-      <link>http://localhost:1313/projects/the-sims-x-episode-1/</link>
+      <link>https://example.org/projects/the-sims-x-episode-1/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/projects/the-sims-x-episode-1/</guid>
+      <guid>https://example.org/projects/the-sims-x-episode-1/</guid>
       <description></description>
     </item>
     <item>
       <title>The Sims X Episode 2</title>
-      <link>http://localhost:1313/projects/the-sims-x-episode-2/</link>
+      <link>https://example.org/projects/the-sims-x-episode-2/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/projects/the-sims-x-episode-2/</guid>
+      <guid>https://example.org/projects/the-sims-x-episode-2/</guid>
       <description></description>
     </item>
     <item>
       <title>Jukebox Dr. Squatch</title>
-      <link>http://localhost:1313/projects/jukebox_dr--squatch/</link>
+      <link>https://example.org/projects/jukebox_dr--squatch/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/projects/jukebox_dr--squatch/</guid>
+      <guid>https://example.org/projects/jukebox_dr--squatch/</guid>
       <description></description>
     </item>
     <item>
       <title>Cascadehollow Dickel</title>
-      <link>http://localhost:1313/projects/cascadehollow_dickel/</link>
+      <link>https://example.org/projects/cascadehollow_dickel/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/projects/cascadehollow_dickel/</guid>
+      <guid>https://example.org/projects/cascadehollow_dickel/</guid>
       <description></description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/home/featured-projects/</link>
+      <link>https://example.org/home/featured-projects/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/home/featured-projects/</guid>
+      <guid>https://example.org/home/featured-projects/</guid>
       <description></description>
     </item>
     <item>
       <title>Clipped Image</title>
-      <link>http://localhost:1313/about/clipped-image/</link>
+      <link>https://example.org/about/clipped-image/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/about/clipped-image/</guid>
+      <guid>https://example.org/about/clipped-image/</guid>
       <description></description>
     </item>
     <item>
       <title>Dickelwhiskey Bottledinbond</title>
-      <link>http://localhost:1313/projects/dickelwhiskey_bottledinbond/</link>
+      <link>https://example.org/projects/dickelwhiskey_bottledinbond/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/projects/dickelwhiskey_bottledinbond/</guid>
+      <guid>https://example.org/projects/dickelwhiskey_bottledinbond/</guid>
       <description></description>
     </item>
     <item>
       <title>Get in Touch</title>
-      <link>http://localhost:1313/contact/contact-info/</link>
+      <link>https://example.org/contact/contact-info/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/contact/contact-info/</guid>
+      <guid>https://example.org/contact/contact-info/</guid>
       <description></description>
     </item>
     <item>
       <title>Dominos Yumyum Hulu</title>
-      <link>http://localhost:1313/projects/dominos_yumyum_hulu/</link>
+      <link>https://example.org/projects/dominos_yumyum_hulu/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/projects/dominos_yumyum_hulu/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Marquee Text Section</title>
-      <link>http://localhost:1313/home/marquee/</link>
-      <pubDate>Sun, 11 May 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/home/marquee/</guid>
+      <guid>https://example.org/projects/dominos_yumyum_hulu/</guid>
       <description></description>
     </item>
     <item>
       <title>Nutrilite Raysfordays</title>
-      <link>http://localhost:1313/projects/nutrilite_raysfordays/</link>
+      <link>https://example.org/projects/nutrilite_raysfordays/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/projects/nutrilite_raysfordays/</guid>
+      <guid>https://example.org/projects/nutrilite_raysfordays/</guid>
       <description></description>
     </item>
     <item>
       <title>Converse</title>
-      <link>http://localhost:1313/projects/converse/</link>
+      <link>https://example.org/projects/converse/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/projects/converse/</guid>
+      <guid>https://example.org/projects/converse/</guid>
       <description></description>
     </item>
     <item>
       <title>Diablo Celebrity Dungeon Crawl Khleo&amp;Marcus</title>
-      <link>http://localhost:1313/projects/diablo-celebrity-dungeon-crawl_khleo-marcus/</link>
+      <link>https://example.org/projects/diablo-celebrity-dungeon-crawl_khleo-marcus/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/projects/diablo-celebrity-dungeon-crawl_khleo-marcus/</guid>
+      <guid>https://example.org/projects/diablo-celebrity-dungeon-crawl_khleo-marcus/</guid>
       <description></description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/home/skills/</link>
+      <link>https://example.org/home/skills/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/home/skills/</guid>
+      <guid>https://example.org/home/skills/</guid>
       <description></description>
     </item>
     <item>
       <title>Ready to Start Your Project?</title>
-      <link>http://localhost:1313/contact/contact-cta/</link>
+      <link>https://example.org/contact/contact-cta/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/contact/contact-cta/</guid>
+      <guid>https://example.org/contact/contact-cta/</guid>
       <description></description>
     </item>
     <item>
       <title>Recognitions</title>
-      <link>http://localhost:1313/about/awards-gallery/</link>
+      <link>https://example.org/about/awards-gallery/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/about/awards-gallery/</guid>
+      <guid>https://example.org/about/awards-gallery/</guid>
       <description></description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/home/contact/</link>
+      <link>https://example.org/home/contact/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/home/contact/</guid>
+      <guid>https://example.org/home/contact/</guid>
       <description></description>
     </item>
     <item>
       <title>More Awards</title>
-      <link>http://localhost:1313/about/awards-list/</link>
+      <link>https://example.org/about/awards-list/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/about/awards-list/</guid>
+      <guid>https://example.org/about/awards-list/</guid>
       <description></description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/about/services/</link>
+      <link>https://example.org/about/services/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/about/services/</guid>
+      <guid>https://example.org/about/services/</guid>
       <description></description>
     </item>
     <item>
       <title>About Dri</title>
-      <link>http://localhost:1313/home/our-studio/</link>
+      <link>https://example.org/home/our-studio/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/home/our-studio/</guid>
+      <guid>https://example.org/home/our-studio/</guid>
       <description></description>
     </item>
     <item>
       <title>Collaborators</title>
-      <link>http://localhost:1313/about/collaborators-heading/</link>
+      <link>https://example.org/about/collaborators-heading/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/about/collaborators-heading/</guid>
+      <guid>https://example.org/about/collaborators-heading/</guid>
       <description></description>
     </item>
     <item>
       <title>Client Logos</title>
-      <link>http://localhost:1313/about/moving-gallery/</link>
+      <link>https://example.org/about/moving-gallery/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/about/moving-gallery/</guid>
+      <guid>https://example.org/about/moving-gallery/</guid>
       <description></description>
     </item>
     <item>
       <title>Team Members</title>
-      <link>http://localhost:1313/about/team-members/</link>
+      <link>https://example.org/about/team-members/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/about/team-members/</guid>
+      <guid>https://example.org/about/team-members/</guid>
       <description></description>
     </item>
     <item>
       <title>Rico Nasty   Teethsucker Visualizer</title>
-      <link>http://localhost:1313/projects/rico-nasty---teethsucker-visualizer/</link>
+      <link>https://example.org/projects/rico-nasty---teethsucker-visualizer/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/projects/rico-nasty---teethsucker-visualizer/</guid>
+      <guid>https://example.org/projects/rico-nasty---teethsucker-visualizer/</guid>
       <description></description>
     </item>
     <item>
       <title>Aint Afraid X That&#39;s Final</title>
-      <link>http://localhost:1313/projects/aint-afraid-x-that-s-final/</link>
+      <link>https://example.org/projects/aint-afraid-x-that-s-final/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/projects/aint-afraid-x-that-s-final/</guid>
+      <guid>https://example.org/projects/aint-afraid-x-that-s-final/</guid>
       <description></description>
     </item>
     <item>
       <title>Pina Snowthaproduct &amp; Lauren Jauregui</title>
-      <link>http://localhost:1313/projects/pina_snowthaproduct---lauren-jauregui/</link>
+      <link>https://example.org/projects/pina_snowthaproduct---lauren-jauregui/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/projects/pina_snowthaproduct---lauren-jauregui/</guid>
+      <guid>https://example.org/projects/pina_snowthaproduct---lauren-jauregui/</guid>
       <description></description>
     </item>
     <item>
       <title>Beginners Cant Get Enough</title>
-      <link>http://localhost:1313/projects/beginners-cant-get-enough/</link>
+      <link>https://example.org/projects/beginners-cant-get-enough/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/projects/beginners-cant-get-enough/</guid>
+      <guid>https://example.org/projects/beginners-cant-get-enough/</guid>
       <description></description>
     </item>
     <item>
       <title>Wise Gal X Lauren Ruth Ward</title>
-      <link>http://localhost:1313/projects/wise-gal-x-lauren-ruth-ward/</link>
+      <link>https://example.org/projects/wise-gal-x-lauren-ruth-ward/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/projects/wise-gal-x-lauren-ruth-ward/</guid>
+      <guid>https://example.org/projects/wise-gal-x-lauren-ruth-ward/</guid>
       <description></description>
     </item>
     <item>
       <title>Post 3</title>
-      <link>http://localhost:1313/posts/post-3/</link>
+      <link>https://example.org/posts/post-3/</link>
       <pubDate>Wed, 15 Mar 2023 11:00:00 -0700</pubDate>
-      <guid>http://localhost:1313/posts/post-3/</guid>
+      <guid>https://example.org/posts/post-3/</guid>
       <description>&lt;p&gt;Occaecat aliqua consequat laborum ut ex aute aliqua culpa quis irure esse magna dolore quis. Proident fugiat labore eu laboris officia Lorem enim. Ipsum occaecat cillum ut tempor id sint aliqua incididunt nisi incididunt reprehenderit. Voluptate ad minim sint est aute aliquip esse occaecat tempor officia qui sunt. Aute ex ipsum id ut in est velit est laborum incididunt. Aliqua qui id do esse sunt eiusmod id deserunt eu nostrud aute sit ipsum. Deserunt esse cillum Lorem non magna adipisicing mollit amet consequat.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Post 2</title>
-      <link>http://localhost:1313/posts/post-2/</link>
+      <link>https://example.org/posts/post-2/</link>
       <pubDate>Wed, 15 Feb 2023 10:00:00 -0700</pubDate>
-      <guid>http://localhost:1313/posts/post-2/</guid>
+      <guid>https://example.org/posts/post-2/</guid>
       <description>&lt;p&gt;Anim eiusmod irure incididunt sint cupidatat. Incididunt irure irure irure nisi ipsum do ut quis fugiat consectetur proident cupidatat incididunt cillum. Dolore voluptate occaecat qui mollit laborum ullamco et. Ipsum laboris officia anim laboris culpa eiusmod ex magna ex cupidatat anim ipsum aute. Mollit aliquip occaecat qui sunt velit ut cupidatat reprehenderit enim sunt laborum. Velit veniam in officia nulla adipisicing ut duis officia.&lt;/p&gt;&#xA;&lt;p&gt;Exercitation voluptate irure in irure tempor mollit Lorem nostrud ad officia. Velit id fugiat occaecat do tempor. Sit officia Lorem aliquip eu deserunt consectetur. Aute proident deserunt in nulla aliquip dolore ipsum Lorem ut cupidatat consectetur sit sint laborum. Esse cupidatat sit sint sunt tempor exercitation deserunt. Labore dolor duis laborum est do nisi ut veniam dolor et nostrud nostrud.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Post 1</title>
-      <link>http://localhost:1313/posts/post-1/</link>
+      <link>https://example.org/posts/post-1/</link>
       <pubDate>Sun, 15 Jan 2023 09:00:00 -0700</pubDate>
-      <guid>http://localhost:1313/posts/post-1/</guid>
+      <guid>https://example.org/posts/post-1/</guid>
       <description>&lt;p&gt;Tempor proident minim aliquip reprehenderit dolor et ad anim Lorem duis sint eiusmod. Labore ut ea duis dolor. Incididunt consectetur proident qui occaecat incididunt do nisi Lorem. Tempor do laborum elit laboris excepteur eiusmod do. Eiusmod nisi excepteur ut amet pariatur adipisicing Lorem.&lt;/p&gt;&#xA;&lt;p&gt;Occaecat nulla excepteur dolore excepteur duis eiusmod ullamco officia anim in voluptate ea occaecat officia. Cillum sint esse velit ea officia minim fugiat. Elit ea esse id aliquip pariatur cupidatat id duis minim incididunt ea ea. Anim ut duis sunt nisi. Culpa cillum sit voluptate voluptate eiusmod dolor. Enim nisi Lorem ipsum irure est excepteur voluptate eu in enim nisi. Nostrud ipsum Lorem anim sint labore consequat do.&lt;/p&gt;</description>
     </item>
   </channel>

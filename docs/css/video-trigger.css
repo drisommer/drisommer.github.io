@@ -37,7 +37,7 @@
 
 /* Play Icon */
 .play-project-video i {
-    color: #fff;
+    color: var(--accent-color);
     font-size: 18px;
     margin-left: 4px; /* Slight offset for the play icon */
 }
@@ -121,7 +121,7 @@
 .video-close span {
     width: 100%;
     height: 2px;
-    background-color: #fff;
+    background-color: var(--accent-color);
     display: block;
     position: relative;
 }
@@ -136,7 +136,7 @@
 }
 
 .clapat-video-modal-close .button-text {
-    color: #fff;
+    color: var(--accent-color);
     font-size: 12px;
     font-weight: 600;
     line-height: 20px;

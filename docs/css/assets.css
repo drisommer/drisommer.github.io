@@ -27,7 +27,7 @@
 		background-image:linear-gradient(to bottom,#4089a6,rgba(64,137,166,0))
 	}
 	main .cd-main-content.cd-about{
-		background-color:#fff
+		background-color:var(--accent-color-alt)
 	}
 	main .cd-main-content.cd-about>div{
 		padding-top:50px
@@ -122,7 +122,7 @@
 		overflow:hidden
 	}
 	.flexnav li a{
-		background:#fff;
+		background:var(--accent-color);
 		border-bottom:1px solid rgba(0,0,0,.05);
 		color:#222;
 		display:block;
@@ -137,7 +137,7 @@
 		overflow:visible
 	}
 	.flexnav li ul li a{
-		background:#fff;
+		background:var(--accent-color);
 		display:block;
 		padding:20px
 	}
@@ -341,7 +341,7 @@
 		font-size:12px;
 		font-weight:500;
 		font-family:Poppins,sans-serif;
-		color:#000;
+		color:var(--accent-color-alt);
 		padding:5px;
 		border-radius:5px;
 		white-space:nowrap;
@@ -349,7 +349,7 @@
 		text-align:left
 	}
 	.light-content [data-tooltip]::before{
-		color:#fff
+		color:var(--accent-color-alt)
 	}
 	[data-tooltip]::after{
 		width:0;
@@ -504,11 +504,11 @@
 		position:absolute;
 		bottom:0;
 		padding:5px;
-		background-color:#000;
+		background-color:var(--accent-color-alt);
 		left:0;
 		right:0;
 		margin:0;
-		color:#fff;
+		color:var(--accent-color);
 		font-size:12px;
 		font-weight:300;
 		font-family:sans-serif
@@ -546,7 +546,7 @@
 		width:8px;
 		height:8px;
 		margin:0 4px;
-		background-color:#fff;
+		background-color:var(--accent-color);
 		border-radius:6px
 	}
 	
@@ -619,7 +619,7 @@
 		width: 13px;
 		height: 13px;
 		border-radius: 50%;
-		background: #fff;
+		background: var(--accent-color);
 		animation-timing-function: cubic-bezier(0, 1, 1, 0);
 	}
 	
@@ -715,7 +715,7 @@
 		right:20px;
 		top:60px;
 		background-color:rgba(0,0,0,1);
-		color:#fff;
+		color:var(--accent-color);
 		opacity:0;
 		border-radius:20px;
 		z-index: 100;
@@ -732,7 +732,7 @@
 		right:-20px;
 		top:-20px;
 		background-color:rgba(0,0,0,1);
-		color:#fff;
+		color:var(--accent-color);
 		opacity:0;
 		border-radius:20px;
 		z-index: 100;
@@ -764,7 +764,7 @@
 		height: 50px;
 		left:60px;
 		background-color:rgba(0,0,0,1);
-		color:#fff;
+		color:var(--accent-color);
 		opacity:0;
 		border-radius:4px;
 		z-index: 100;
@@ -795,7 +795,7 @@
 		height: 50px;
 		right:60px;
 		background-color:rgba(0,0,0,1);
-		color:#fff;
+		color:var(--accent-color);
 		opacity:0;
 		border-radius:4px;
 		z-index: 100;

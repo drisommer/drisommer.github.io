@@ -2,150 +2,150 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Our Projects on </title>
-    <link>http://localhost:1313/projects/</link>
+    <link>https://example.org/projects/</link>
     <description>Recent content in Our Projects on </description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 01 Jan 0001 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/projects/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://example.org/projects/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Adidas  30 X All In</title>
-      <link>http://localhost:1313/projects/adidas--30-x-all-in/</link>
+      <link>https://example.org/projects/adidas--30-x-all-in/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/projects/adidas--30-x-all-in/</guid>
+      <guid>https://example.org/projects/adidas--30-x-all-in/</guid>
       <description></description>
     </item>
     <item>
       <title>Boysmells   What&#39;s Your Ritual</title>
-      <link>http://localhost:1313/projects/boysmells---what-s-your-ritual/</link>
+      <link>https://example.org/projects/boysmells---what-s-your-ritual/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/projects/boysmells---what-s-your-ritual/</guid>
+      <guid>https://example.org/projects/boysmells---what-s-your-ritual/</guid>
       <description></description>
     </item>
     <item>
       <title>Boysmells X Woodphoria</title>
-      <link>http://localhost:1313/projects/boysmells-x-woodphoria/</link>
+      <link>https://example.org/projects/boysmells-x-woodphoria/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/projects/boysmells-x-woodphoria/</guid>
+      <guid>https://example.org/projects/boysmells-x-woodphoria/</guid>
       <description></description>
     </item>
     <item>
       <title>Pfizer &#43; Disney X Diana Taurasi</title>
-      <link>http://localhost:1313/projects/pfizer---disney-x-diana-taurasi/</link>
+      <link>https://example.org/projects/pfizer---disney-x-diana-taurasi/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/projects/pfizer---disney-x-diana-taurasi/</guid>
+      <guid>https://example.org/projects/pfizer---disney-x-diana-taurasi/</guid>
       <description></description>
     </item>
     <item>
       <title>Nba X Sga 16.9</title>
-      <link>http://localhost:1313/projects/nba-x-sga-16-9/</link>
+      <link>https://example.org/projects/nba-x-sga-16-9/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/projects/nba-x-sga-16-9/</guid>
+      <guid>https://example.org/projects/nba-x-sga-16-9/</guid>
       <description></description>
     </item>
     <item>
       <title>The Sims   Series Trailer</title>
-      <link>http://localhost:1313/projects/the-sims---series-trailer/</link>
+      <link>https://example.org/projects/the-sims---series-trailer/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/projects/the-sims---series-trailer/</guid>
+      <guid>https://example.org/projects/the-sims---series-trailer/</guid>
       <description></description>
     </item>
     <item>
       <title>The Sims X Episode 1</title>
-      <link>http://localhost:1313/projects/the-sims-x-episode-1/</link>
+      <link>https://example.org/projects/the-sims-x-episode-1/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/projects/the-sims-x-episode-1/</guid>
+      <guid>https://example.org/projects/the-sims-x-episode-1/</guid>
       <description></description>
     </item>
     <item>
       <title>The Sims X Episode 2</title>
-      <link>http://localhost:1313/projects/the-sims-x-episode-2/</link>
+      <link>https://example.org/projects/the-sims-x-episode-2/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/projects/the-sims-x-episode-2/</guid>
+      <guid>https://example.org/projects/the-sims-x-episode-2/</guid>
       <description></description>
     </item>
     <item>
       <title>Jukebox Dr. Squatch</title>
-      <link>http://localhost:1313/projects/jukebox_dr--squatch/</link>
+      <link>https://example.org/projects/jukebox_dr--squatch/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/projects/jukebox_dr--squatch/</guid>
+      <guid>https://example.org/projects/jukebox_dr--squatch/</guid>
       <description></description>
     </item>
     <item>
       <title>Cascadehollow Dickel</title>
-      <link>http://localhost:1313/projects/cascadehollow_dickel/</link>
+      <link>https://example.org/projects/cascadehollow_dickel/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/projects/cascadehollow_dickel/</guid>
+      <guid>https://example.org/projects/cascadehollow_dickel/</guid>
       <description></description>
     </item>
     <item>
       <title>Dickelwhiskey Bottledinbond</title>
-      <link>http://localhost:1313/projects/dickelwhiskey_bottledinbond/</link>
+      <link>https://example.org/projects/dickelwhiskey_bottledinbond/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/projects/dickelwhiskey_bottledinbond/</guid>
+      <guid>https://example.org/projects/dickelwhiskey_bottledinbond/</guid>
       <description></description>
     </item>
     <item>
       <title>Dominos Yumyum Hulu</title>
-      <link>http://localhost:1313/projects/dominos_yumyum_hulu/</link>
+      <link>https://example.org/projects/dominos_yumyum_hulu/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/projects/dominos_yumyum_hulu/</guid>
+      <guid>https://example.org/projects/dominos_yumyum_hulu/</guid>
       <description></description>
     </item>
     <item>
       <title>Nutrilite Raysfordays</title>
-      <link>http://localhost:1313/projects/nutrilite_raysfordays/</link>
+      <link>https://example.org/projects/nutrilite_raysfordays/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/projects/nutrilite_raysfordays/</guid>
+      <guid>https://example.org/projects/nutrilite_raysfordays/</guid>
       <description></description>
     </item>
     <item>
       <title>Converse</title>
-      <link>http://localhost:1313/projects/converse/</link>
+      <link>https://example.org/projects/converse/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/projects/converse/</guid>
+      <guid>https://example.org/projects/converse/</guid>
       <description></description>
     </item>
     <item>
       <title>Diablo Celebrity Dungeon Crawl Khleo&amp;Marcus</title>
-      <link>http://localhost:1313/projects/diablo-celebrity-dungeon-crawl_khleo-marcus/</link>
+      <link>https://example.org/projects/diablo-celebrity-dungeon-crawl_khleo-marcus/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/projects/diablo-celebrity-dungeon-crawl_khleo-marcus/</guid>
+      <guid>https://example.org/projects/diablo-celebrity-dungeon-crawl_khleo-marcus/</guid>
       <description></description>
     </item>
     <item>
       <title>Rico Nasty   Teethsucker Visualizer</title>
-      <link>http://localhost:1313/projects/rico-nasty---teethsucker-visualizer/</link>
+      <link>https://example.org/projects/rico-nasty---teethsucker-visualizer/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/projects/rico-nasty---teethsucker-visualizer/</guid>
+      <guid>https://example.org/projects/rico-nasty---teethsucker-visualizer/</guid>
       <description></description>
     </item>
     <item>
       <title>Aint Afraid X That&#39;s Final</title>
-      <link>http://localhost:1313/projects/aint-afraid-x-that-s-final/</link>
+      <link>https://example.org/projects/aint-afraid-x-that-s-final/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/projects/aint-afraid-x-that-s-final/</guid>
+      <guid>https://example.org/projects/aint-afraid-x-that-s-final/</guid>
       <description></description>
     </item>
     <item>
       <title>Pina Snowthaproduct &amp; Lauren Jauregui</title>
-      <link>http://localhost:1313/projects/pina_snowthaproduct---lauren-jauregui/</link>
+      <link>https://example.org/projects/pina_snowthaproduct---lauren-jauregui/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/projects/pina_snowthaproduct---lauren-jauregui/</guid>
+      <guid>https://example.org/projects/pina_snowthaproduct---lauren-jauregui/</guid>
       <description></description>
     </item>
     <item>
       <title>Beginners Cant Get Enough</title>
-      <link>http://localhost:1313/projects/beginners-cant-get-enough/</link>
+      <link>https://example.org/projects/beginners-cant-get-enough/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/projects/beginners-cant-get-enough/</guid>
+      <guid>https://example.org/projects/beginners-cant-get-enough/</guid>
       <description></description>
     </item>
     <item>
       <title>Wise Gal X Lauren Ruth Ward</title>
-      <link>http://localhost:1313/projects/wise-gal-x-lauren-ruth-ward/</link>
+      <link>https://example.org/projects/wise-gal-x-lauren-ruth-ward/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/projects/wise-gal-x-lauren-ruth-ward/</guid>
+      <guid>https://example.org/projects/wise-gal-x-lauren-ruth-ward/</guid>
       <description></description>
     </item>
   </channel>

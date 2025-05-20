@@ -1,4 +1,12 @@
-jQuery(function ($) {
+// Ensure jQuery is available
+(function($) {
+  // Use the global jQuery object
+  if (typeof $ === 'undefined' || typeof jQuery === 'undefined') {
+    console.error('jQuery is not loaded! Make sure jQuery is loaded before common.js');
+    return;
+  }
+  // $ is guaranteed to be jQuery inside this function
+$(function () {
 	
 /*--------------------------------------------------
 Function Scroll Effects
@@ -3394,7 +3402,7 @@ Function Core
 				}
 			
 				function loadNewContent(url, bool) {
-					url = ('' == url) ? 'index.html' : url;
+					url = ('' == url) ? '/' : url;
 				
 				var section = $('<div class="cd-main-content "></div>');
 						
@@ -3782,5 +3790,6 @@ Function Project Video Modal
 				parallaxCursor(e, this, 2);
 				callParallax(e, this);
 			});
-}// End ProjectVideoModal
-})(jQuery);
+	} // End ProjectVideoModal
+});
+})(typeof jQuery !== 'undefined' ? jQuery : (typeof $ !== 'undefined' ? $ : window.jQuery));  // Make sure jQuery is available

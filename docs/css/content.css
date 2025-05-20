@@ -146,7 +146,7 @@
 		padding: 0;
 		margin-bottom:0;
 		margin-left:-0.6vw;
-		color:#000;		
+		color:var(--accent-color-alt);		
 	}
 	
 	.text-align-center .hero-title {
@@ -179,11 +179,11 @@
 	}
 	
 	.light-content .hero-title {
-		color:#fff;		
+		color: var(--accent-color);		
 	}
 	
 	.change-header .hero-title {
-		color:#000;		
+		color:var(--accent-color-alt);
 	}
 	
 	.hero-subtitle {
@@ -197,8 +197,8 @@
 		display:block;
 		overflow:hidden;
 		margin-left: 0px;
-		color:#000;
-		opacity:0.4;
+		color:var(--accent-color-alt);
+		opacity:1;
 	}
 	
 	.subtitle-padding-left .hero-subtitle {
@@ -222,11 +222,11 @@
 	}
 	
 	.light-content .hero-subtitle {
-		color: #fff;
+		color: var(--accent-color-alt);
 	}
 	
 	.change-header .hero-subtitle {
-		color: #000!important;
+		color: var(--accent-color)!important;
 	}
 	
 	.hero-arrow {
@@ -280,7 +280,7 @@
 	}
 	
 	.hero-arrow i.arrow-icon {
-		border: solid #000;
+		border: solid var(--accent-color-alt);
 		border-width: 0px 3px 3px 0px;
 		box-sizing: border-box;
 		display: block;
@@ -334,7 +334,7 @@
 	}
 	
 	.light-content #hero-footer {
-		color:#fff;
+		color: var(--accent-color);
 	}
 	
 	#hero-footer:after {
@@ -379,11 +379,11 @@
 	}
 	
 	#hero-description p {
-		color:#000;
+		color:var(--accent-color-alt);
 	}
 	
 	.light-content #hero-description p {
-		color: #fff;
+		color: var(--accent-color);
 	}
 	
 	#share {
@@ -532,7 +532,7 @@
 	#page-nav {
 		height: auto;
 		width: 100%;
-		color: #000;
+		color: var(--accent-color-alt);
 		position: relative;
 		margin-bottom: 0;
 		opacity:0;
@@ -540,7 +540,7 @@
 	}
 	
 	.light-content #page-nav {
-		color: #fff;
+		color: var(--accent-color);
 	}
 	
 	.page-nav-wrap {
@@ -591,7 +591,7 @@
 		margin:0;
 		width:auto;
 		z-index:10;
-		color:#000;
+		color:var(--accent-color-alt);
 		position:relative;
 		display:table;
 		-webkit-transition: all 0.2s ease-in-out;
@@ -603,7 +603,7 @@
 	}
 	
 	.light-content .page-title {
-		color:#fff;
+		color:var(--accent-color);
 	}
 	
 	.next-hero-title {
@@ -617,7 +617,7 @@
 		padding: 0;		
 		margin-top:0px;
 		margin-left:-0.6vw;
-		color:#000;				
+		color:var(--accent-color-alt);				
 	}
 	
 	.height-title .next-hero-title {
@@ -656,15 +656,15 @@
 	}
 	
 	.light-content .next-hero-title {
-		color:#fff;		
+		color:var(--accent-color);		
 	}
 	
 	.change-header .next-hero-title {
-		color:#000;		
+		color:var(--accent-color-alt);		
 	}
 	
 	.next-hero-subtitle {
-		font-size: 18px;
+		font-size: 24px;
 		font-weight:400;
 		line-height:30px;
 		margin-top:0px;
@@ -675,8 +675,8 @@
 		display:block;
 		overflow:hidden;
 		margin-left: 0px;
-		color:#000;
-		opacity:0.4;
+		color:var(--accent-color-alt);
+		opacity:1
 	}
 	
 	#page-nav .next-hero-subtitle {
@@ -694,11 +694,11 @@
 	}
 	
 	.light-content .next-hero-subtitle {
-		color: #fff;
+		color: var(--accent-color-alt);
 	}
 	
 	.change-header .next-hero-subtitle {
-		color: #000;
+		color: var(--accent-color-alt);
 	}
 	
 /*--------------------------------------------------
@@ -708,7 +708,7 @@
 	#project-nav {
 		height: 200vh;
 		width: 100%;
-		color: #fff;
+		color: var(--accent-color);
 		position: absolute;
 		margin-bottom: 0;
 		bottom: -200vh;
@@ -716,13 +716,13 @@
 	}
 	
 	#project-nav.change-header {
-		color: #000;
-		background-color:#fff;
+		color: var(--accent-color-alt);
+		background-color:var(--accent-color);
 	}
 	
 	.dark-content #project-nav.change-header {
-		color: #fff;
-		background-color:#000;
+		color: var(--accent-color);
+		background-color:var(--accent-color-alt);
 	}
 	
 	.next-project-wrap {
@@ -831,7 +831,7 @@
 		-webkit-transition: all 0.15s ease-out 0s;
 		transition: all 0.15s ease-out 0s;
 		width: 100%;
-		border: 2px solid #fff;
+		border: 2px solid var(--accent-color);
 		border-radius: 30px;
 		box-sizing: border-box;
 		clip-path: inset(50% 0% );
@@ -839,11 +839,11 @@
 	}
 	
 	.change-header .all-works::after {
-		border: 2px solid #000;
+		border: 2px solid var(--accent-color-alt);
 	}
 	
 	.dark-content .change-header .all-works::after {
-		border: 2px solid #fff;
+		border: 2px solid var(--accent-color);
 	}
 	
 	.all-works:hover::after {
@@ -936,23 +936,23 @@
 		font-size: 14px;
 		font-weight:500;
 		line-height:20px;
-		color:#000;
+		color:var(--accent-color-alt);
 	}
 	
 	.change-header .next-hero-counter span {
-		color: #000;
+		color: var(--accent-color-alt);
 	}
 	
 	.light-content .next-hero-counter span {
-		color: #fff;
+		color: var(--accent-color);
 	}
 	
 	.light-content .change-header .next-hero-counter span {
-		color: #000;
+		color: var(--accent-color-alt);
 	}
 	
 	.dark-content .change-header .next-hero-counter span {
-		color: #fff;
+		color: var(--accent-color);
 	}
 	
 	.next-hero-progress {
@@ -969,46 +969,46 @@
 		left:0;
 		height: 6px;
 		width: 0;
-		background-color: #000;
+		background-color: var(--accent-color-alt);
 	}
 	
 	.change-header .next-hero-progress span {
-		background-color: #000;
+		background-color: var(--accent-color-alt);
 	}
 	
 	.light-content .next-hero-progress span {
-		background-color: #fff;
+		background-color: var(--accent-color);
 	}
 	
 	.light-content .change-header .next-hero-progress span {
-		background-color: #000;
+		background-color: var(--accent-color-alt);
 	}
 	
 	.dark-content .change-header .next-hero-progress span {
-		background-color: #fff;
+		background-color: var(--accent-color);
 	}
 	
 	
 	
 	
 	#project-nav .next-hero-title, #project-nav .next-hero-subtitle {
-		color:#000;
+		color:var(--accent-color-alt);
 	}
 	
 	#project-nav.change-header .next-hero-title, #project-nav.change-header .next-hero-subtitle {
-		color:#000;
+		color:var(--accent-color-alt);
 	}
 	
 	.light-content #project-nav .next-hero-title, .light-content #project-nav .next-hero-subtitle {
-		color:#fff;
+		color:var(--accent-color);
 	}
 	
 	.light-content #project-nav.change-header .next-hero-title, .light-content #project-nav.change-header .next-hero-subtitle {
-		color:#000;
+		color:var(--accent-color-alt);
 	}
 	
 	.dark-content #project-nav.change-header .next-hero-title, .dark-content #project-nav.change-header .next-hero-subtitle {
-		color:#fff;
+		color:var(--accent-color);
 	}
 	
 	
@@ -1016,19 +1016,19 @@
 	
 	
 	#project-nav.change-header .all-works, #project-nav.change-header .all-works .link-text {
-		color:#000;
+		color:var(--accent-color-alt);
 	}
 	
 	.light-content #project-nav .all-works, .light-content #project-nav .all-works .link-text {
-		color:#fff;
+		color:var(--accent-color);
 	}
 	
 	.light-content #project-nav.change-header .all-works, .light-content #project-nav.change-header .all-works .link-text {
-		color:#000;
+		color:var(--accent-color-alt);
 	}
 	
 	.dark-content #project-nav.change-header .all-works, .dark-content #project-nav.change-header .all-works .link-text {
-		color:#fff;
+		color:var(--accent-color);
 	}
 	
 	
@@ -1086,7 +1086,7 @@
 	}
 	
 	.temporary-hero .inner .caption-wrapper .title span {
-		color: #000;
+		color: var(--accent-color-alt);
 		opacity: 1;
 		-webkit-transform: translateY(0px);
 		transform: translateY(0px);
@@ -1096,13 +1096,13 @@
 		position: relative;
 		display: block;
 		opacity: 1;
-		color: #000;
+		color: var(--accent-color-alt);
 		transform: translateY(0px);
 		-webkit-transform: translateY(0px);
 	}
 	
 	.temporary-hero.light-content .inner .caption-wrapper .title span, .temporary-hero.light-content .inner .caption-wrapper .subtitle span {
-		color: #fff;
+		color: var(--accent-color);
 	}
 	
 	.temporary-hero .next-hero-progress {
@@ -1110,7 +1110,7 @@
 	}
 	
 	.temporary-hero .next-hero-progress span {
-		background-color: #000;
+		background-color: var(--accent-color-alt);
 	}
 	
 	.temporary-hero.light-content .next-hero-progress {
@@ -1118,15 +1118,15 @@
 	}
 	
 	.temporary-hero.light-content .next-hero-progress span {
-		background-color: #fff;
+		background-color: var(--accent-color);
 	}
 	
 	.temporary-hero .next-hero-counter span {
-		color: #000;
+		color: var(--accent-color-alt);
 	}
 	
 	.temporary-hero.light-content .next-hero-counter span {
-		color: #fff;
+		color: var(--accent-color);
 	}
 	
 	.temporary-hero .inner .caption-wrapper .title div:first-child span:first-child::before {

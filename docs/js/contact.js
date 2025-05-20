@@ -2,7 +2,9 @@
 Function Contact Formular
 ---------------------------------------------------*/	
 		
-	function ContactForm() {	
+	function ContactForm() {
+		// Make sure we're using jQuery's $ inside this function
+		var $ = jQuery;
 	
 		if( $('#contact-formular').length > 0 ){
 			

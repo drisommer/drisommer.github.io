@@ -36,7 +36,7 @@ Primary use:	Showcase Portfolio
 		height:100%;
 		width:100%;
 		color:#444;
-		background-color:#fff;
+		background-color:var(--accent-color);
 		user-select: none; /* supported by Chrome and Opera */
 		-webkit-user-select: none; /* Safari */
 		-khtml-user-select: none; /* Konqueror HTML */
@@ -112,17 +112,17 @@ Primary use:	Showcase Portfolio
 	b,
 	strong {
 		font-weight: 600;
-		color:#000;
+		color:var(--accent-color-alt);
 	}
 	
 	.light-content b, .light-content strong, .dark-section b, .dark-section strong {
 		font-weight: 600;
-		color:#fff;
+		color:var(--accent-color);
 	}
 	
 	.light-content .light-section b, .light-content .light-section strong {
 		font-weight: 600;
-		color:#000;
+		color:var(--accent-color-alt);
 	}
 	
 	cite,
@@ -133,22 +133,22 @@ Primary use:	Showcase Portfolio
 	}
 	
 	mark, ins {
-		background: none repeat scroll 0 0 #000;
+		background: none repeat scroll 0 0 var(--accent-color-alt);
 		text-decoration: none;
-		color: #fff;
+		color: var(--accent-color);
 		padding: 2px 8px;
 		display: inline-block;
 		border-radius: 2px;
 	}
 	
 	.light-content mark, .light-content ins, .dark-section mark, .dark-section ins {
-		background: none repeat scroll 0 0 #fff;
-		color:#000;
+		background: none repeat scroll 0 0 var(--accent-color);
+		color:var(--accent-color-alt);
 	}
 	
 	.light-content .light-section mark, .light-content .light-section ins {
 		background: none repeat scroll 0 0 #111;
-		color:#fff;
+		color:var(--accent-color);
 	}
 	
 	code,
@@ -182,12 +182,12 @@ Primary use:	Showcase Portfolio
 	
 	.light-content pre, .dark-section pre {
 		background-color:rgba(255,255,255,0.05);
-		color:#fff;
+		color:var(--accent-color);
 	}
 	
 	.light-content .light-section pre {
 		background-color:rgba(0,0,0,0.05);
-		color:#000;
+		color:var(--accent-color-alt);
 	}
 	
 	blockquote,
@@ -208,7 +208,7 @@ Primary use:	Showcase Portfolio
 	}
 	
 	blockquote {
-		color: #000;
+		color: var(--accent-color-alt);
 		line-height: 1.6;
 		font-size: 1.5rem;
 		margin-bottom: 2.1875rem;
@@ -219,11 +219,11 @@ Primary use:	Showcase Portfolio
 	}
 	
 	.light-content blockquote, .dark-section blockquote {
-		color: #fff;
+		color: var(--accent-color);
 	}
 	
 	.light-content .light-section blockquote {
-		color: #000;
+		color: var(--accent-color-alt);
 	}
 	
 	blockquote::before {
@@ -245,7 +245,7 @@ Primary use:	Showcase Portfolio
 	}
 	
 	.light-content blockquote cite, .light-content blockquote small {
-		color:#fff;
+		color:var(--accent-color);
 	}
 	
 	blockquote em,
@@ -366,7 +366,7 @@ Primary use:	Showcase Portfolio
 	figcaption {
 		background-color: rgba(0,0,0,0.3);
 		bottom: 0px;
-		color: #fff;
+		color: var(--accent-color);
 		font-weight:400;
 		font-size: 10px;
 		padding: 5px 10px;
@@ -438,7 +438,7 @@ Primary use:	Showcase Portfolio
 	
 	thead, .light-content .light-section thead {
 		background-color:rgba(0,0,0,1);
-		color:#fff;
+		color:var(--accent-color);
 	}
 	
 	.light-content thead, .dark-section thead {
@@ -446,11 +446,11 @@ Primary use:	Showcase Portfolio
 	}
 	
 	thead tr, .light-content .light-section thead tr {
-		color:#fff;
+		color:var(--accent-color);
 	}
 	
 	.light-content thead tr, .dark-section thead tr {
-		color:#000;
+		color:var(--accent-color-alt);
 	}
 	
 	tr, .light-content .light-section tr {
@@ -537,14 +537,14 @@ Primary use:	Showcase Portfolio
 	}
 	
 	::selection {
-		background: #000;
-		color: #fff;
+		background: var(--accent-color-alt);
+		color: var(--accent-color);
 		text-shadow: none;
 	}
 	
 	::-moz-selection {
-		background: #000;
-		color: #fff;
+		background: var(--accent-color-alt);
+		color: var(--accent-color);
 		text-shadow: none;
 	}
 	
@@ -558,7 +558,7 @@ Primary use:	Showcase Portfolio
 	h1, h2, h3, h4, h5, h6 {		
 		font-family:inherit;
 		font-weight:500;
-		color:#000;
+		color:var(--accent-color-alt);
 		margin-bottom:20px;
 	}
 	
@@ -657,11 +657,15 @@ Primary use:	Showcase Portfolio
 	}
 	
 	.light-content h1, .light-content h2, .light-content h3, .light-content h4, .light-content h5, .light-content h6, .dark-section h1, .dark-section h2, .dark-section h3, .dark-section h4, .dark-section h5, .dark-section h6 {
-		color: #fff;
+		color: var(--accent-color-alt);
+	}
+
+	.light-content h1:hover, .light-content h2:hover, .light-content h3:hover, .light-content h4:hover, .light-content h5:hover, .light-content h6:hover, .dark-section h1:hover, .dark-section h2:hover, .dark-section h3:hover, .dark-section h4:hover, .dark-section h5:hover, .dark-section h6:hover {
+		color: var(--accent-color);
 	}
 	
 	.light-content .light-section h1, .light-content .light-section h2, .light-content .light-section h3, .light-content .light-section h4, .light-content .light-section h5, .light-content .light-section h6 {
-		color: #000;
+		color: var(--accent-color-alt);
 	}
 	
 	p {
@@ -673,11 +677,11 @@ Primary use:	Showcase Portfolio
 	}
 	
 	.light-content p, .dark-section p {
-		color:#999;
+		color:var(--accent-color);
 	}
 	
 	.light-content .light-section p {
-		color:#999;
+		color: var(--dark-text);
 	}
 	
 	.bigger {
@@ -705,21 +709,21 @@ Primary use:	Showcase Portfolio
 	
 	a:hover, a:active {
 	  outline: 0;
-	  color: #000;
+	  color: var(--accent-color-alt);
 	}
 	
 	a, .light-content .light-section a {
 		text-decoration: none;
-		color: #000;
+		color: var(--accent-color-alt);
 		outline: 0;
 	}
 	
 	.light-content a, .dark-section a, .white-header a {
-		color: #fff;
+		color: var(--accent-color);
 	}
 	
 	.light-content .white-header a { 
-		color:#000;		
+		color:var(--accent-color-alt);		
 	}
 	
 	a:hover {
@@ -871,6 +875,10 @@ Primary use:	Showcase Portfolio
 	.row_padding_bottom {
 		padding-bottom:9vw;
 	}
+
+	.row_padding_bottom_half {
+		padding-bottom:4vw;
+	}
 	
 	.row_padding_left {
 		padding-left:80px;
@@ -903,7 +911,7 @@ Primary use:	Showcase Portfolio
 	}
 	
 	i.arrow-icon {
-		border: solid #000;
+		border: solid var(--accent-color-alt);
 		border-width: 0px 3px 3px 0px;
 		box-sizing:border-box;
 		display: block;
@@ -915,12 +923,12 @@ Primary use:	Showcase Portfolio
 	}
 	
 	.light-content i.arrow-icon, .dark-content .item i.arrow-icon {
-		border: solid #fff;
+		border: solid var(--accent-color);
 		border-width: 0px 3px 3px 0px;
 	}
 	
 	.light-content .change-header i.arrow-icon, .dark-content .change-header i.arrow-icon {
-		border: solid #000;
+		border: solid var(--accent-color-alt);
 		border-width: 0px 3px 3px 0px;
 	}
 	
@@ -931,17 +939,17 @@ Primary use:	Showcase Portfolio
 		height: 3px;
 		top: 7px;
 		left: -6px;
-		background-color: #000;
+		background-color: var(--accent-color-alt);
 		transform: rotate(45deg);
 		-webkit-transform: rotate(45deg);
 	}
 	
 	.light-content i.arrow-icon:after, .light-content .change-header i.arrow-icon::after, .dark-content .item i.arrow-icon::after {
-		background-color:#fff;
+		background-color:var(--accent-color);
 	}
 	
 	.light-content .change-header i.arrow-icon::after, .dark-content .change-header i.arrow-icon::after {
-		background-color:#000;
+		background-color:var(--accent-color-alt);
 	}
 	
 	i.arrow-icon-down {
@@ -976,12 +984,12 @@ Primary use:	Showcase Portfolio
 	}
 	
 	.light-content i.arrow-icon-down {
-		border: solid #fff;
+		border: solid var(--accent-color);
 		border-width: 0px 2px 2px 0px;
 	}
 	
 	.light-content i.arrow-icon-down::after {
-		background-color: #fff;
+		background-color: var(--accent-color);
 	}
 	
 	i.arrow-icon-up {
@@ -1015,12 +1023,12 @@ Primary use:	Showcase Portfolio
 	}
 	
 	.light-content i.arrow-icon-up {
-		border: solid #fff;
+		border: solid var(--accent-color);
 		border-width:  2px 2px 0px 0px;
 	}
 	
 	.light-content i.arrow-icon-up::after {
-		background-color: #fff;
+		background-color: var(--accent-color);
 	}
 
 /*--------------------------------------------------
@@ -1122,7 +1130,7 @@ Primary use:	Showcase Portfolio
 	}
 	
 	.scale-drag-horizontal #ball:before {
-		color: #fff;
+		color: var(--accent-color);
 	}
 	
 	.scale-up #ball:after, .scale-drag-horizontal #ball:after {
@@ -1133,7 +1141,7 @@ Primary use:	Showcase Portfolio
 	}
 	
 	.scale-drag-horizontal #ball:after {
-		color: #fff;
+		color: var(--accent-color);
 	}
 	
 	.scale-up.scale-none #ball:before, .scale-up.scale-none #ball:after {
@@ -1160,7 +1168,7 @@ Primary use:	Showcase Portfolio
 		position: absolute;
 		left: -37px;
 		top: 30px;
-		color: #000;
+		color: var(--accent-color-alt);
 		opacity: 0;
 		transform: translateX(-20px);
 		-webkit-transform: translateX(-20px);
@@ -1168,7 +1176,7 @@ Primary use:	Showcase Portfolio
 	}
 	
 	.light-content #ball-drag-x:before {
-		color:#fff;
+		color:var(--accent-color);
 	}
 	
 	#ball-drag-x::after {
@@ -1183,7 +1191,7 @@ Primary use:	Showcase Portfolio
 		right: -40px;
 		left: auto;
 		top: 30px;
-		color: #000;
+		color: var(--accent-color-alt);
 		opacity: 0;
 		transform: translateX(20px);
 		-webkit-transform: translateX(20px);
@@ -1191,15 +1199,15 @@ Primary use:	Showcase Portfolio
 	}
 	
 	.light-content #ball-drag-x:before, .light-content #ball-drag-x:after {
-		color:#fff;
+		color:var(--accent-color);
 	}
 	
 	.drag-cursor-white #ball-drag-x:before, .drag-cursor-white #ball-drag-x:after {
-		color:#fff;
+		color:var(--accent-color);
 	}
 	
 	.drag-cursor-black #ball-drag-x:before, .drag-cursor-black #ball-drag-x:after {
-		color:#000;
+		color:var(--accent-color-alt);
 	}
 	
 	.scale-drag-x #ball-drag-x:before {
@@ -1240,7 +1248,7 @@ Primary use:	Showcase Portfolio
 		position:absolute;
 		left: 32px;
 		top: -40px;
-		color:#000;
+		color:var(--accent-color-alt);
 		opacity:0;
 		transform: translateY(-20px);
 		-webkit-transform: translateY(-20px);
@@ -1248,7 +1256,7 @@ Primary use:	Showcase Portfolio
 	}
 	
 	.light-content #ball-drag-y:before {
-		color:#fff;
+		color:var(--accent-color);
 	}
 	
 	#ball-drag-y::after {
@@ -1262,7 +1270,7 @@ Primary use:	Showcase Portfolio
 		position: absolute;
 		left: 32px;
 		top: 100px;
-		color: #000;
+		color: var(--accent-color-alt);
 		opacity:0;
 		transform: translateY(20px);
 		-webkit-transform: translateY(20px);
@@ -1270,7 +1278,7 @@ Primary use:	Showcase Portfolio
 	}
 	
 	.light-content #ball-drag-y:before, .light-content #ball-drag-y:after {
-		color:#fff;
+		color:var(--accent-color);
 	}
 	
 	.scale-drag-y #ball-drag-y:before {
@@ -1292,7 +1300,7 @@ Primary use:	Showcase Portfolio
 	}
 	
 	#ball i {
-		color:#fff;
+		color:var(--accent-color);
 		width:76px;
 		height:80px;
 		line-height:78px;
@@ -1310,7 +1318,7 @@ Primary use:	Showcase Portfolio
 	}
 	
 	#ball p {
-		color:#fff;
+		color:var(--accent-color);
 		width:auto;
 		height:16px;
 		line-height:16px;
@@ -1331,7 +1339,7 @@ Primary use:	Showcase Portfolio
 	}
 	
 	.light-content #ball p {
-		color:#fff;
+		color:var(--accent-color);
 	}
 	
 	#ball p.center-first::before {
@@ -1357,19 +1365,19 @@ Primary use:	Showcase Portfolio
 	}
 	
 	.light-content #ball i, #ball.over-movie i, .light-content #ball.with-icon i {
-		color:#fff;
+		color:var(--accent-color);
 	}
 	
 	.drag-cursor-white #ball i, .drag-cursor-white #ball.with-icon i {
-		color:#fff;
+		color:var(--accent-color);
 	}
 	
 	.drag-cursor-black #ball i, .drag-cursor-black #ball.with-icon i {
-		color:#000;
+		color:var(--accent-color-alt);
 	}
 	
 	.light-content #ball.with-icon.dark-icon i {
-		color:#000;
+		color:var(--accent-color-alt);
 	}
 	
 	.scale-up #ball i {
@@ -1455,7 +1463,7 @@ Primary use:	Showcase Portfolio
 	}
 	
 	#ball i.arrow-icon {
-		border: solid #fff;
+		border: solid var(--accent-color);
 		border-width: 3px 3px 0px 0px;
 		box-sizing:border-box;
 		display: block;
@@ -1467,7 +1475,7 @@ Primary use:	Showcase Portfolio
 	}
 	
 	.light-content #ball i.arrow-icon {
-		border: solid #fff;
+		border: solid var(--accent-color);
 		border-width: 3px 3px 0px 0px;
 	}
 	
@@ -1478,13 +1486,13 @@ Primary use:	Showcase Portfolio
 		height:3px;
 		top:8px;
 	  	left:-8px;
-		background-color:#fff;
+		background-color:var(--accent-color);
 		transform: rotate(-45deg);
   		-webkit-transform: rotate(-45deg);
 	}
 	
 	.light-content #ball i.arrow-icon:after {
-		background-color:#fff;
+		background-color:var(--accent-color);
 	}
 	
 	
@@ -1502,7 +1510,7 @@ Primary use:	Showcase Portfolio
 		position: fixed;
 		top: 0; 
 		bottom: 0;
-		background: #000;
+		background: var(--accent-color-alt);
 		z-index : 1800;
 		text-align:center;
 	}
@@ -1534,7 +1542,7 @@ Primary use:	Showcase Portfolio
 		line-height: 60px;
 		width:50px;
 		font-weight: 500;
-		color:#fff;		
+		color:var(--accent-color);		
 		display: table;
 		margin: 0 auto;
 		margin-top:1px;
@@ -1577,7 +1585,7 @@ Primary use:	Showcase Portfolio
 	.loadbar {
 		width: 0;
 		height: 100%;
-		background: #fff;
+		background: var(--accent-color);
 		position: absolute;
 		top: 0px;
 		left: 0;
@@ -1589,7 +1597,7 @@ Primary use:	Showcase Portfolio
 	.loadbar-inner {
 		width: 100%;
 		height: 100%;
-		background: #000;
+		background: var(--accent-color-alt);
 		position: absolute;
 		top: 0px;
 		left: auto;
@@ -1613,7 +1621,7 @@ Primary use:	Showcase Portfolio
 	.preloader-intro {
 		position:relative;
 		display:block;
-		color:#fff;
+		color:var(--accent-color);
 		overflow:hidden;
 		padding-left:0vw;		
 		float:right;
@@ -1843,7 +1851,7 @@ Primary use:	Showcase Portfolio
 		}
 		
 		.light-content .classic-menu .flexnav li a { 
-			color:#fff;		
+			color:var(--accent-color);		
 		}
 		
 		.light-content  .classic-menu.white-header .flexnav li a { 
@@ -1851,7 +1859,7 @@ Primary use:	Showcase Portfolio
 		}
 		
 		.classic-menu.white-header .flexnav li a { 
-			color:#fff;		
+			color:var(--accent-color);		
 		}
 		
 		.flexnav:hover li a {
@@ -1875,11 +1883,11 @@ Primary use:	Showcase Portfolio
 		}
 		
 		.light-content .classic-menu .flexnav li:hover a {
-			color:#fff;
+			color:var(--accent-color);
 		}
 		
 		.classic-menu.white-header .flexnav li:hover a {
-			color:#fff;
+			color:var(--accent-color);
 		}
 		
 		.light-content .classic-menu.white-header .flexnav li:hover a {
@@ -1918,7 +1926,7 @@ Primary use:	Showcase Portfolio
 			font-size:14px;
 			font-weight:400;
 			text-transform:none;
-			color:#fff!important;
+			color:var(--accent-color-alt)!important;
 			opacity:0.6;
 			-webkit-transition: all 0.05s ease-in-out;
 			-moz-transition: all 0.05s ease-in-out;
@@ -1953,7 +1961,7 @@ Primary use:	Showcase Portfolio
 			left:15px;
 			top:60px;
 			padding-top:20px;
-			background: #000;		
+			background: var(--accent-color-alt);		
 			border-radius:3px;
 			-webkit-transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out, transform 0.2s ease-in-out!important;
 			transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out, transform 0.2s ease-in-out!important;
@@ -1979,7 +1987,7 @@ Primary use:	Showcase Portfolio
 			height: 0;
 			border-style: solid;
 			border-width: 0 10px 9px;
-			border-color: transparent transparent #000;
+			border-color: transparent transparent var(--accent-color-alt);
 		}
 		
 		.classic-menu .flexnav li:last-child ul:after {
@@ -1997,7 +2005,7 @@ Primary use:	Showcase Portfolio
 			height: 0;
 			border-style: solid;
 			border-width: 0 10px 9px;
-			border-color: transparent transparent #000;
+			border-color: transparent transparent var(--accent-color-alt);
 			-webkit-transform: rotate(-90deg);
 			transform: rotate(-90deg);
 		}
@@ -2021,11 +2029,11 @@ Primary use:	Showcase Portfolio
 		}
 		
 		.classic-menu .flexnav ul li ul li a {
-			background: #000;
+			background: var(--accent-color-alt);
 		}
 		
 		.classic-menu .flexnav ul li ul li ul li a {
-			background: #000;
+			background: var(--accent-color-alt);
 		}
 		
 		.classic-menu .flexnav li ul.flexnav-show {
@@ -2139,7 +2147,7 @@ Primary use:	Showcase Portfolio
 		}
 		
 		.fullscreen-menu.invert-header .flexnav li a {
-			color: #fff;
+			color: var(--accent-color);
 		}
 		
 		.fullscreen-menu .flexnav:hover li a, .fullscreen-menu .flexnav.hover li a {
@@ -2261,7 +2269,7 @@ Primary use:	Showcase Portfolio
 		position: relative;
 		justify-content: center;
 		align-items: center;
-		cursor: pointer;
+		cursor: none;
 		pointer-events: initial;
 	}
 	
@@ -2289,7 +2297,7 @@ Primary use:	Showcase Portfolio
 	  height: 5px;
 	  width: 5px;
 	  border-radius:5px;
-	  background-color: #000;
+	  background-color: var(--accent-color-alt);
 	  opacity: 1;
 	  top:8px;
 	  left:0;
@@ -2376,7 +2384,7 @@ Primary use:	Showcase Portfolio
 		width: 100%;
 		opacity: 1;
 		right: 0;
-		background-color:#000;
+		background-color:var(--accent-color-alt);
 		-webkit-transform: rotate(0deg);
 		-moz-transform: rotate(0deg);
 		-o-transform: rotate(0deg);
@@ -2414,35 +2422,35 @@ Primary use:	Showcase Portfolio
 	}
 	
 	.light-content #menu-burger span {
-		background-color:#fff;
+		background-color: var(--accent-color);
 	}
 	
 	.white-header #menu-burger span {
-		background-color:#fff;
+		background-color: var(--accent-color);;
 	}
 	
 	.light-content .white-header #menu-burger span {
-		background-color:#000;
+		background-color: var(--accent-color-alt);
 	}
 	
 	.light-content .white-header.over-white-section #menu-burger span, .show-loader1 .light-content .white-header #menu-burger span {
-		background-color:#fff;
+		background-color:var(--accent-color);;
 	}
 	
 	.dark-content-header #menu-burger span {
-		background-color:#000!important;
+		background-color: var(--accent-color-alt)!important;
 	}
 	
 	.light-content-header #menu-burger span {
-		background-color:#fff!important;
+		background-color:var(--accent-color) !important;
 	}
 	
 	.dark-content-header .button-text {
-		color:#000!important;
+		color: var(--accent-color-alt)!important;
 	}
 	
 	.light-content-header .button-text {
-		color:#fff!important;
+		color:var(--accent-color) !important;
 	}
 	
 	
@@ -2534,7 +2542,7 @@ Primary use:	Showcase Portfolio
 		font-size: 14px;
 		line-height: 30px;
 		font-weight: 500;
-		color: #000;
+		color: var(--accent-color-alt);
 		pointer-events: initial;
 		display: table;
 		width: auto;
@@ -2546,13 +2554,13 @@ Primary use:	Showcase Portfolio
 	}
 	
 	.light-content .copyright {
-		color:#fff;
+		color:var(--accent-color-alt);
 	}
 	
 	.socials-wrap {
 		position:relative;
 		float: right;
-		color: #000;
+		color: var(--accent-color-alt);
 		width: 240px;
 		height: 160px;
 		box-sizing: border-box;
@@ -2561,7 +2569,7 @@ Primary use:	Showcase Portfolio
 	}
 	
 	.light-content .socials-wrap {
-		color: #fff;
+		color: var(--accent-color);
 	}
 	
 	footer .socials-wrap {
@@ -2700,7 +2708,7 @@ Primary use:	Showcase Portfolio
 	}
 	
 	.socials li a {
-		color: #000;		
+		color: var(--accent-color-alt);		
 		font-size:14px;
 		font-weight: 500;
 		display: block;
@@ -2717,12 +2725,12 @@ Primary use:	Showcase Portfolio
 	}
 	
 	.socials li a:hover {
-		color: #000;
+		color: var(--accent-color-alt);
 		opacity:1;
 	}
 	
 	.light-content .socials li a {
-		color: #fff;	
+		color: var(--accent-color);	
 	}
 	
 	.light-content .socials:hover li  a {
@@ -2730,13 +2738,13 @@ Primary use:	Showcase Portfolio
 	}
 	
 	.light-content .socials li a:hover {
-		color: #fff;
+		color: var(--accent-color);
 		opacity:1;
 	}
 	
 	.button-wrap {
 		position: relative;
-		cursor: pointer;
+		cursor: none;
 		top: 0px;
 		pointer-events: initial;
 		width: auto;
@@ -2810,7 +2818,7 @@ Primary use:	Showcase Portfolio
 	.button-icon {
 		height: 40px;
 		width: 40px;
-		color: #000;
+		color: var(--accent-color-alt);
 		text-align: center;
 		line-height: 40px;
 		font-size: 18px;
@@ -2822,19 +2830,19 @@ Primary use:	Showcase Portfolio
 	}
 	
 	.light-content .button-icon, .dark-section .button-icon {
-		color:#fff;
+		color: var(--accent-color);
 	}
 	
 	.light-content .light-section .button-icon {
-		color:#000;
+		color: var(--accent-color-alt);
 	}
 	
 	.white-header .button-icon {
-		color:#fff;		
+		color: var(--accent-color);	
 	}
 	
 	.light-content .white-header .button-icon {
-		color:#000;		
+		color: var(--accent-color-alt);		
 	}
 	
 	.button-icon i {
@@ -2860,7 +2868,7 @@ Primary use:	Showcase Portfolio
 		overflow: hidden;
 		width:auto;
 		padding:0 10px;
-		color:#000;
+		color:var(--accent-color-alt);
 		-webkit-transition: color 0.05s ease-in-out;
 		transition: color 0.05s ease-in-out;
 	}
@@ -2890,23 +2898,23 @@ Primary use:	Showcase Portfolio
 	}
 	
 	.light-content .button-text, .dark-section .button-text {
-		color:#fff;
+		color: var(--accent-color);
 	}
 	
 	.light-content .light-section .button-text {
-		color:#000;
+		color: var(--accent-color-alt);
 	}
 	
 	.white-header .button-text {
-		color:#fff;		
+		color: var(--accent-color);
 	}
 	
 	.light-content .white-header .button-text {
-		color:#000;		
+		color: var(--accent-color-alt);
 	}
 	
 	.light-content .white-header.over-white-section .button-text, .show-loader1 .light-content .white-header .button-text {
-		color:#fff;		
+		color: var(--accent-color);
 	}
 	
 	.button-wrap.left a {
@@ -2987,7 +2995,7 @@ Primary use:	Showcase Portfolio
 	}
 	
 	.button-link .button-icon i {
-		background-color:#000;
+		background-color:var(--accent-color-alt);
 		border:1px solid rgba(0,0,0,1);
 		color:transparent;
 		font-size: 14px;
@@ -3001,8 +3009,8 @@ Primary use:	Showcase Portfolio
 	}
 	
 	.button-link:hover .button-icon i {
-		background-color:#000;
-		color:#fff;
+		background-color:var(--accent-color-alt);
+		color:var(--accent-color);
 		border:1px solid rgba(0,0,0,1);
 		transform: scale(1.2);
 		text-indent:0px;
@@ -3010,13 +3018,13 @@ Primary use:	Showcase Portfolio
 	}
 	
 	.light-content .button-link .button-icon i, .dark-section .button-link .button-icon i {
-		background-color:#fff;
+		background-color:var(--accent-color);
 		border:1px solid rgba(255,255,255,1);
 	}
 	
 	.light-content .button-link:hover .button-icon i, .dark-section .button-link:hover .button-icon i {
-		background-color:#fff;
-		color:#000;
+		background-color:var(--accent-color);
+		color:var(--accent-color-alt);
 		border:1px solid rgba(255,255,255,1);
 		opacity:1;
 	}
@@ -3026,8 +3034,8 @@ Primary use:	Showcase Portfolio
 	}
 	
 	.light-content .light-section .button-link:hover .button-icon i {
-		background-color:#000;
-		color:#fff;
+		background-color:var(--accent-color-alt);
+		color:var(--accent-color);
 		border:1px solid rgba(0,0,0,1);
 		opacity:1;
 	}
@@ -3078,7 +3086,7 @@ Primary use:	Showcase Portfolio
 		display: table;
 		width:auto;
 		padding:0;
-		color:#000;
+		color:var(--accent-color-alt);
 		-webkit-transition: color 0.05s ease-in-out;
 		transition: color 0.05s ease-in-out;
 	}
@@ -3095,11 +3103,11 @@ Primary use:	Showcase Portfolio
 	}
 	
 	.light-content .link-text, .dark-section .link-text {
-		color:#fff;
+		color:var(--accent-color);
 	}
 	
 	.light-content .light-section .link-text {
-		color:#000;
+		color:var(--accent-color-alt);
 	}
 	
 	.link-text span {
@@ -3350,11 +3358,11 @@ Primary use:	Showcase Portfolio
 	}
 	
 	.flexnav li a {
-		color:#000;
+		color:var(--accent-color-alt);
 	}
 	
 	.invert-header .flexnav li a {
-		color: #fff;
+		color: var(--accent-color);
 	}
 	
 	.flexnav:hover li a {

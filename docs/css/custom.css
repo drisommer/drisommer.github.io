@@ -1,5 +1,13 @@
 /* Custom CSS overrides */
 
+/* Hide default cursor globally but keep the magic-cursor */
+html, body, 
+a, button, input, textarea, select,
+.button-box, .button-border, .filter-option,
+.socials li a {
+  cursor: none !important;
+}
+
 /* Theme Color Applications */
 /* These styles will apply the colors from the hugo.toml variables */
 [data-bgcolor] {
@@ -10,29 +18,29 @@
 /* Apply to elements that use the primary color */
 body[data-primary-color] {
   /* Use CSS custom property instead of invalid data attribute as property */
-  --theme-primary-color: var(--primary-color);
+  --theme-primary-color: var(--accent-color);
 }
 
 #magic-cursor #ball {
-  border-color: var(--primary-color);
+  border-color: var(--accent-color);
 }
 
 #magic-cursor #ball.with-icon {
-  background-color: var(--primary-color);
+  background-color: var(--accent-color);
 }
 
 /* Link hover colors */
 a:hover, a:active {
-  color: var(--primary-color);
+  color: var(--accent-color);
 }
 
 /* Button hover effects */
 .button-border:hover {
-  border-color: var(--primary-color);
+  border-color: var(--accent-color);
 }
 
 .button-border:hover a {
-  color: var(--primary-color);
+  color: var(--accent-color);
 }
 
 /* Hero section fixes */
@@ -87,7 +95,7 @@ a:hover, a:active {
 
 /* Contact Page Styles */
 .box-icon {
-  color: var(--primary-color);
+  color: var(--accent-color);
   transition: all 0.3s ease;
   border-radius: 50%;
   width: 80px;
@@ -97,14 +105,15 @@ a:hover, a:active {
   align-items: center;
   justify-content: center;
   margin-bottom: 15px;
-  border: 1px solid rgba(var(--primary-color-rgb), 0.3);
+  border: 3px solid rgba(var(--accent-color-rgb), 0.8);
 }
 
 .box-icon-wrapper:hover .box-icon {
-  background-color: var(--primary-color);
-  color: var(--light-text);
+  background-color: var(--accent-color-alt);
+  color: var(--accent-color);
   transform: translateY(-5px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  border: 3px solid rgba(var(--accent-color-alt-rgb), 0.8);
 }
 
 .box-icon-content h6 {
@@ -114,17 +123,17 @@ a:hover, a:active {
 }
 
 .box-icon-content h6 a.link {
-  color: var(--light-text);
+  color: var(--accent-color-alt);
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .box-icon-content h6 a.link:hover {
-  color: var(--primary-color);
+  color: var(--accent-color);
 }
 
 .box-icon-content p {
-  color: var(--paragraph-color);
+  color: var(--accent-color);
   font-size: 14px;
   margin-top: 0;
 }
@@ -176,7 +185,7 @@ a:hover, a:active {
 
 .overlapping-image .change-header .slide-caption .slide-date span,
 .overlapping-image .change-header .slide-caption .slide-cat span {
-  color: #fff;
+  color: var(--accent-color);
   background: rgba(0, 0, 0, 0.4);
 }
 
@@ -235,7 +244,7 @@ a:hover, a:active {
 }
 
 .socials-wrap .socials-text {
-  color: var(--light-text);
+  color: var(--accent-color);
   margin-bottom: 15px;
   font-weight: 500;
 }
@@ -245,26 +254,26 @@ a:hover, a:active {
 }
 
 .socials li a {
-  color: var(--paragraph-color);
+  color: var(--accent-color);
   transition: color 0.3s ease;
   font-weight: 600;
 }
 
 .socials li a:hover {
-  color: var(--primary-color);
+  color: var(--accent-color);
 }
 
 /* Contact CTA section */
 .button-box .button-border {
   border: 2px solid var(--light-text);
-  padding: 15px 40px;
+  padding: 0px 30px;/* padding: 15px 40px; */
   border-radius: 30px;
   transition: all 0.3s ease;
 }
 
 .button-box .button-border:hover {
-  border-color: var(--primary-color);
-  background-color: rgba(var(--primary-color-rgb), 0.1);
+  border-color: var(--accent-color);
+  background-color: rgba(var(--accent-color-rgb), 0.1);
 }
 
 .button-box .button-border a {
@@ -275,12 +284,12 @@ a:hover, a:active {
 }
 
 .button-box .button-border:hover a {
-  color: var(--primary-color);
+  color: var(--accent-color);
 }
 
 /* About Page Styles */
 .list-rotator-title {
-  color: var(--primary-color);
+  color: var(--accent-color-alt);
 }
 
 .list-rotator li {
@@ -293,16 +302,16 @@ a:hover, a:active {
 }
 
 .start-thumbs-caption p {
-  color: var(--paragraph-color);
+  color: var(--light-text);
 }
 
 .flex-lists-wrapper .flex-list {
-  border-bottom: 1px solid rgba(var(--primary-color-rgb), 0.2);
+  border-bottom: 1px solid rgba(var(--accent-color-rgb), 0.2);
   transition: all 0.3s ease;
 }
 
 .flex-lists-wrapper .flex-list:hover {
-  color: var(--primary-color);
+  color: var(--accent-color);
 }
 
 .flex-list-left, .flex-list-center, .flex-list-right {
@@ -320,15 +329,15 @@ a:hover, a:active {
 }
 
 .accordion dt:hover .link {
-  color: var(--primary-color);
+  color: var(--accent-color);
 }
 
 .accordion dd {
-  color: var(--paragraph-color);
+  color: var(--light-text);
 }
 
 .accordion .acc-button-icon {
-  color: var(--primary-color);
+  color: var(--accent-color);
 }
 
 /* Collaborators Section */
@@ -362,6 +371,6 @@ a:hover, a:active {
 }
 
 .filters-options-wrapper .filter-option.is_active {
-  background-color: rgba(var(--primary-color-rgb), 0.1);
-  box-shadow: 0 0 0 1px var(--primary-color);
+  background-color: rgba(var(--accent-color-rgb), 0.1);
+  box-shadow: 0 0 0 1px var(--accent-color);
 }
