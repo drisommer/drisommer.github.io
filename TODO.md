@@ -1,6 +1,6 @@
-PORTFOLIO / CONTENT
-split portfolio page into 3 sections in the menu -- commercial, music content, immersive
-change the template of how content is shown
+PORTFOLIO / CONTENT  
+- split portfolio page into 3 sections in the menu -- commercial, music content, immersive
+- change the template of how content is shown
 
 ABOUT PAGE
 start with the circular picture that grows into a rectangle, remove the "who is dri" portion
