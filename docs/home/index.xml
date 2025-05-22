@@ -16,16 +16,23 @@
     </item>
     <item>
       <title></title>
+      <link>https://example.org/home/director-editor-marquee/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://example.org/home/director-editor-marquee/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title></title>
       <link>https://example.org/home/featured-projects/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://example.org/home/featured-projects/</guid>
       <description></description>
     </item>
     <item>
-      <title></title>
-      <link>https://example.org/home/skills/</link>
+      <title>Check Out Our Work</title>
+      <link>https://example.org/home/see-all-projects/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://example.org/home/skills/</guid>
+      <guid>https://example.org/home/see-all-projects/</guid>
       <description></description>
     </item>
     <item>
@@ -33,13 +40,6 @@
       <link>https://example.org/home/contact/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://example.org/home/contact/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>About Dri</title>
-      <link>https://example.org/home/our-studio/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://example.org/home/our-studio/</guid>
       <description></description>
     </item>
   </channel>

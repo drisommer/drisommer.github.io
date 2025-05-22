@@ -3284,12 +3284,26 @@
 	}
 
 	
-	
+/*--------------------------------------------------
+	Button Group
+---------------------------------------------------*/
+.buttons-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+@media only screen and (max-width: 479px) {
+  .buttons-group {
+    flex-direction: column;
+  }
+}
+
 /*--------------------------------------------------
 	Responsive
 ---------------------------------------------------*/			
-			
-
 
 @media only screen and (max-width: 1466px) {
 	
@@ -3823,6 +3837,5 @@
 		width: calc(50% - 20px);
 		height: calc(50vw - 20px);
 		margin: 5px 10px;
-  	}
-		
+  	}		
 }
