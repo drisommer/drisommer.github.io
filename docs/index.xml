@@ -100,9 +100,9 @@
     </item>
     <item>
       <title></title>
-      <link>https://example.org/music-videos/title-marquee/</link>
+      <link>https://example.org/music-content/title-marquee/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://example.org/music-videos/title-marquee/</guid>
+      <guid>https://example.org/music-content/title-marquee/</guid>
       <description></description>
     </item>
     <item>
@@ -135,9 +135,9 @@
     </item>
     <item>
       <title></title>
-      <link>https://example.org/music-videos/list/</link>
+      <link>https://example.org/music-content/list/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://example.org/music-videos/list/</guid>
+      <guid>https://example.org/music-content/list/</guid>
       <description></description>
     </item>
     <item>
@@ -205,9 +205,9 @@
     </item>
     <item>
       <title>Check Out Other Work</title>
-      <link>https://example.org/music-videos/other-projects/</link>
+      <link>https://example.org/music-content/other-projects/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://example.org/music-videos/other-projects/</guid>
+      <guid>https://example.org/music-content/other-projects/</guid>
       <description></description>
     </item>
     <item>
@@ -261,9 +261,9 @@
     </item>
     <item>
       <title></title>
-      <link>https://example.org/music-videos/contact/</link>
+      <link>https://example.org/music-content/contact/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://example.org/music-videos/contact/</guid>
+      <guid>https://example.org/music-content/contact/</guid>
       <description></description>
     </item>
     <item>

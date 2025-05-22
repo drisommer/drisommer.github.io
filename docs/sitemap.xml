@@ -28,7 +28,7 @@
   </url><url>
     <loc>https://example.org/immersive/title-marquee/</loc>
   </url><url>
-    <loc>https://example.org/music-videos/title-marquee/</loc>
+    <loc>https://example.org/music-content/title-marquee/</loc>
   </url><url>
     <loc>https://example.org/projects/cascadehollow_dickel/</loc>
   </url><url>
@@ -38,7 +38,7 @@
   </url><url>
     <loc>https://example.org/immersive/list/</loc>
   </url><url>
-    <loc>https://example.org/music-videos/list/</loc>
+    <loc>https://example.org/music-content/list/</loc>
   </url><url>
     <loc>https://example.org/about/clipped-image/</loc>
   </url><url>
@@ -58,7 +58,7 @@
   </url><url>
     <loc>https://example.org/immersive/other-projects/</loc>
   </url><url>
-    <loc>https://example.org/music-videos/other-projects/</loc>
+    <loc>https://example.org/music-content/other-projects/</loc>
   </url><url>
     <loc>https://example.org/home/see-all-projects/</loc>
   </url><url>
@@ -74,7 +74,7 @@
   </url><url>
     <loc>https://example.org/immersive/contact/</loc>
   </url><url>
-    <loc>https://example.org/music-videos/contact/</loc>
+    <loc>https://example.org/music-content/contact/</loc>
   </url><url>
     <loc>https://example.org/_shortcodes-examples/awards-list/</loc>
   </url><url>
@@ -102,7 +102,7 @@
   </url><url>
     <loc>https://example.org/immersive/</loc>
   </url><url>
-    <loc>https://example.org/music-videos/</loc>
+    <loc>https://example.org/music-content/</loc>
   </url><url>
     <loc>https://example.org/categories/</loc>
   </url><url>
