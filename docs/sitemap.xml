@@ -2,118 +2,118 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://example.org/projects/adidas--30-x-all-in/</loc>
+    <loc>http://localhost:1313/projects/adidas--30-x-all-in/</loc>
   </url><url>
-    <loc>https://example.org/projects/boysmells---what-s-your-ritual/</loc>
+    <loc>http://localhost:1313/projects/boysmells---what-s-your-ritual/</loc>
   </url><url>
-    <loc>https://example.org/projects/boysmells-x-woodphoria/</loc>
+    <loc>http://localhost:1313/projects/boysmells-x-woodphoria/</loc>
   </url><url>
-    <loc>https://example.org/projects/pfizer---disney-x-diana-taurasi/</loc>
+    <loc>http://localhost:1313/projects/pfizer---disney-x-diana-taurasi/</loc>
   </url><url>
-    <loc>https://example.org/home/video-hero/</loc>
+    <loc>http://localhost:1313/home/video-hero/</loc>
   </url><url>
-    <loc>https://example.org/projects/nba-x-sga-16-9/</loc>
+    <loc>http://localhost:1313/projects/nba-x-sga-16-9/</loc>
   </url><url>
-    <loc>https://example.org/projects/the-sims---series-trailer/</loc>
+    <loc>http://localhost:1313/projects/the-sims-x-episode-1/</loc>
   </url><url>
-    <loc>https://example.org/projects/the-sims-x-episode-1/</loc>
+    <loc>http://localhost:1313/projects/the-sims-x-episode-2/</loc>
   </url><url>
-    <loc>https://example.org/projects/the-sims-x-episode-2/</loc>
+    <loc>http://localhost:1313/projects/jukebox_dr--squatch/</loc>
   </url><url>
-    <loc>https://example.org/projects/jukebox_dr--squatch/</loc>
+    <loc>http://localhost:1313/commercials/title-marquee/</loc>
   </url><url>
-    <loc>https://example.org/commercials/title-marquee/</loc>
+    <loc>http://localhost:1313/home/director-editor-marquee/</loc>
   </url><url>
-    <loc>https://example.org/home/director-editor-marquee/</loc>
+    <loc>http://localhost:1313/immersive/title-marquee/</loc>
   </url><url>
-    <loc>https://example.org/immersive/title-marquee/</loc>
+    <loc>http://localhost:1313/music-content/title-marquee/</loc>
   </url><url>
-    <loc>https://example.org/music-content/title-marquee/</loc>
+    <loc>http://localhost:1313/projects/cascadehollow_dickel/</loc>
   </url><url>
-    <loc>https://example.org/projects/cascadehollow_dickel/</loc>
+    <loc>http://localhost:1313/commercials/list/</loc>
   </url><url>
-    <loc>https://example.org/commercials/list/</loc>
+    <loc>http://localhost:1313/home/featured-projects/</loc>
   </url><url>
-    <loc>https://example.org/home/featured-projects/</loc>
+    <loc>http://localhost:1313/immersive/list/</loc>
   </url><url>
-    <loc>https://example.org/immersive/list/</loc>
+    <loc>http://localhost:1313/music-content/list/</loc>
   </url><url>
-    <loc>https://example.org/music-content/list/</loc>
+    <loc>http://localhost:1313/about/clipped-image/</loc>
   </url><url>
-    <loc>https://example.org/about/clipped-image/</loc>
+    <loc>http://localhost:1313/projects/dickelwhiskey_bottledinbond/</loc>
   </url><url>
-    <loc>https://example.org/projects/dickelwhiskey_bottledinbond/</loc>
+    <loc>http://localhost:1313/_shortcodes-examples/contact-info/</loc>
   </url><url>
-    <loc>https://example.org/_shortcodes-examples/contact-info/</loc>
+    <loc>http://localhost:1313/projects/dominos_yumyum_hulu/</loc>
   </url><url>
-    <loc>https://example.org/projects/dominos_yumyum_hulu/</loc>
+    <loc>http://localhost:1313/projects/nutrilite_raysfordays/</loc>
   </url><url>
-    <loc>https://example.org/projects/nutrilite_raysfordays/</loc>
+    <loc>http://localhost:1313/projects/converse/</loc>
   </url><url>
-    <loc>https://example.org/projects/converse/</loc>
+    <loc>http://localhost:1313/projects/diablo-celebrity-dungeon-crawl_khleo-marcus/</loc>
   </url><url>
-    <loc>https://example.org/projects/diablo-celebrity-dungeon-crawl_khleo-marcus/</loc>
+    <loc>http://localhost:1313/commercials/other-projects/</loc>
   </url><url>
-    <loc>https://example.org/commercials/other-projects/</loc>
+    <loc>http://localhost:1313/immersive/other-projects/</loc>
   </url><url>
-    <loc>https://example.org/immersive/other-projects/</loc>
+    <loc>http://localhost:1313/music-content/other-projects/</loc>
   </url><url>
-    <loc>https://example.org/music-content/other-projects/</loc>
+    <loc>http://localhost:1313/home/see-all-projects/</loc>
   </url><url>
-    <loc>https://example.org/home/see-all-projects/</loc>
+    <loc>http://localhost:1313/projects/continental/</loc>
   </url><url>
-    <loc>https://example.org/_shortcodes-examples/contact-cta/</loc>
+    <loc>http://localhost:1313/_shortcodes-examples/contact-cta/</loc>
   </url><url>
-    <loc>https://example.org/_shortcodes-examples/awards-gallery/</loc>
+    <loc>http://localhost:1313/_shortcodes-examples/awards-gallery/</loc>
   </url><url>
-    <loc>https://example.org/about/contact/</loc>
+    <loc>http://localhost:1313/about/contact/</loc>
   </url><url>
-    <loc>https://example.org/commercials/contact/</loc>
+    <loc>http://localhost:1313/commercials/contact/</loc>
   </url><url>
-    <loc>https://example.org/home/contact/</loc>
+    <loc>http://localhost:1313/home/contact/</loc>
   </url><url>
-    <loc>https://example.org/immersive/contact/</loc>
+    <loc>http://localhost:1313/immersive/contact/</loc>
   </url><url>
-    <loc>https://example.org/music-content/contact/</loc>
+    <loc>http://localhost:1313/music-content/contact/</loc>
   </url><url>
-    <loc>https://example.org/_shortcodes-examples/awards-list/</loc>
+    <loc>http://localhost:1313/_shortcodes-examples/awards-list/</loc>
   </url><url>
-    <loc>https://example.org/_shortcodes-examples/services/</loc>
+    <loc>http://localhost:1313/_shortcodes-examples/services/</loc>
   </url><url>
-    <loc>https://example.org/_shortcodes-examples/collaborators-heading/</loc>
+    <loc>http://localhost:1313/_shortcodes-examples/collaborators-heading/</loc>
   </url><url>
-    <loc>https://example.org/_shortcodes-examples/moving-gallery/</loc>
+    <loc>http://localhost:1313/_shortcodes-examples/moving-gallery/</loc>
   </url><url>
-    <loc>https://example.org/_shortcodes-examples/team-members/</loc>
+    <loc>http://localhost:1313/_shortcodes-examples/team-members/</loc>
   </url><url>
-    <loc>https://example.org/projects/rico-nasty---teethsucker-visualizer/</loc>
+    <loc>http://localhost:1313/projects/rico-nasty---teethsucker-visualizer/</loc>
   </url><url>
-    <loc>https://example.org/projects/aint-afraid-x-that-s-final/</loc>
+    <loc>http://localhost:1313/projects/aint-afraid-x-that-s-final/</loc>
   </url><url>
-    <loc>https://example.org/projects/pina_snowthaproduct---lauren-jauregui/</loc>
+    <loc>http://localhost:1313/projects/pina_snowthaproduct---lauren-jauregui/</loc>
   </url><url>
-    <loc>https://example.org/projects/beginners-cant-get-enough/</loc>
+    <loc>http://localhost:1313/projects/beginners-cant-get-enough/</loc>
   </url><url>
-    <loc>https://example.org/projects/wise-gal-x-lauren-ruth-ward/</loc>
+    <loc>http://localhost:1313/projects/wise-gal-x-lauren-ruth-ward-copy/</loc>
   </url><url>
-    <loc>https://example.org/</loc>
+    <loc>http://localhost:1313/</loc>
   </url><url>
-    <loc>https://example.org/commercials/</loc>
+    <loc>http://localhost:1313/commercials/</loc>
   </url><url>
-    <loc>https://example.org/immersive/</loc>
+    <loc>http://localhost:1313/immersive/</loc>
   </url><url>
-    <loc>https://example.org/music-content/</loc>
+    <loc>http://localhost:1313/music-content/</loc>
   </url><url>
-    <loc>https://example.org/categories/</loc>
+    <loc>http://localhost:1313/categories/</loc>
   </url><url>
-    <loc>https://example.org/contact/</loc>
+    <loc>http://localhost:1313/contact/</loc>
   </url><url>
-    <loc>https://example.org/home/</loc>
+    <loc>http://localhost:1313/home/</loc>
   </url><url>
-    <loc>https://example.org/projects/</loc>
+    <loc>http://localhost:1313/projects/</loc>
   </url><url>
-    <loc>https://example.org/tags/</loc>
+    <loc>http://localhost:1313/tags/</loc>
   </url><url>
-    <loc>https://example.org/say-hi/</loc>
+    <loc>http://localhost:1313/say-hi/</loc>
   </url>
 </urlset>
