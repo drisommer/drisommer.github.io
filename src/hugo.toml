@@ -43,24 +43,9 @@ publishDir = "../docs"
     weight = 30
   
     [[menu.main]]
-    name = "Say Hi!"
-    url = "/say-hi/"
+    name = "About Dri!"
+    url = "/about/"
     weight = 5
-
-  [[menu.main]]
-    name = "More" #more
-    weight = 40
-    
-    # Submenu for "More"
-    [[menu.more]]
-      name = "Instagram"
-      url = "https://www.instagram.com/drisommer/"
-      weight = 10
-    
-    [[menu.more]]
-      name = "SVN QNS"
-      url = "https://www.svnqns.com/"
-      weight = 20
 
 [params.preloader]
   centerLine = "Loading"
