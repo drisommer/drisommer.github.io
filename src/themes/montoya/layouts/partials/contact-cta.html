@@ -1,0 +1,20 @@
+<!-- Contact CTA Partial -->
+<div class="content-row row_padding_bottom dark-section text-align-center" data-bgcolor="{{ .Site.Params.colors.darkBackground  }}">
+  <hr><hr>
+  
+  <h2 class="big-title has-mask-fill primary-font-title">{{ .Params.title }}</h2>
+  <p class="has-opacity">{{ .Params.subtitle | safeHTML }}</p>
+  
+  {{ if .Params.button_text }}
+  <div class="button-box has-animation" data-delay="100">             
+    <div class="clapat-button-wrap parallax-wrap link">
+      <div class="clapat-button parallax-element">
+        <div class="button-border rounded outline">
+          <a href="{{ .Params.button_url | relURL }}" class="{{ if .Params.is_external }}external-link{{ end }}">{{ .Params.button_text }}</a>
+        </div>
+      </div>
+    </div> 
+  </div>
+  {{ end }}
+</div>
+<!--/Contact CTA -->

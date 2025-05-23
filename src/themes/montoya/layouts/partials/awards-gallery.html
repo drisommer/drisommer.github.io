@@ -1,0 +1,27 @@
+<!-- Awards Gallery Partial -->
+<div class="content-row text-align-center dark-section" data-bgcolor="{{ .Site.Params.colors.darkBackground  }}">
+  <div class="move-thumbs-wrapper">
+    <div class="start-thumbs-caption">
+      <h2 class="primary-font-title big-title has-mask-fill">{{ .Params.title }}</h2>
+      <p>{{ .Params.subtitle }}</p>
+    </div>
+        
+    <div class="start-thumbs-wrapper">
+      {{ range $index, $award := .Params.awards }}      <div class="start-move-thumb" data-start="{{ $award.dataStart | default "top 100%" }}" data-stop="{{ $award.dataStop | default "600%" }}">
+        <div class="move-thumb-inner">                                                    
+          <div class="section-image">
+            <img src="{{ $award.image | relURL }}" class="item-image" alt="{{ $award.alt | default "Award Image" }}">
+          </div>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+    
+    <div class="end-thumbs-wrapper">
+      {{ range $index, $award := .Params.awards }}
+      <div class="end-move-thumb"></div>
+      {{ end }}
+    </div>
+  </div>
+</div>
+<!--/Awards Gallery -->

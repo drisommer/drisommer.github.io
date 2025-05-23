@@ -1,0 +1,48 @@
+<!-- Contact Info Partial -->
+<div class="content-row row_padding_top row_padding_bottom dark-section text-align-center" data-bgcolor="{{ .Site.Params.colors.darkBackground  }}">
+  
+  <h2 class="big-title has-mask-fill primary-font-title">{{ .Params.title }}</h2>
+  
+  <hr><hr>
+  
+  <div class="contact-info-wrapper">
+    {{ range $index, $info := .Params.contact_info }}
+    <div class="{{ if eq (add $index 1) (len $.Params.contact_info) }}one_third last{{ else }}one_third{{ end }} has-animation" data-delay="{{ mul $index 100 }}">
+      <div class="box-icon-wrapper block-boxes">
+        <div class="box-icon">
+          <i class="fa {{ $info.icon }} fa-2x" aria-hidden="true"></i>
+        </div>
+        <div class="box-icon-content">
+          {{ if $info.link }}
+          <h6 class="no-margins"><a href="{{ $info.link }}" class="link"><span>{{ $info.text }}</span></a></h6>
+          {{ else }}
+          <h6 class="no-margins">{{ $info.text }}</h6>
+          {{ end }}
+          <p>{{ $info.label }}</p>
+        </div>
+      </div>
+    </div>
+    {{ end }}
+  </div>
+  
+  {{ if .Params.description }}
+  <div class="row_padding_top text-align-center">
+    <p>{{ .Params.description | safeHTML }}</p>
+  </div>
+  {{ end }}
+  
+  {{ if .Params.show_social_links }}
+  <div class="row_padding_top text-align-center">
+    <div class="socials-wrap contact-socials">
+      <div class="socials-text">Connect With Us</div>
+      <ul class="socials">
+        {{ range $social := .Params.social_links }}
+        <li><span class="parallax-wrap"><a class="parallax-element" href="{{ $social.url }}" target="_blank">{{ $social.label }}</a></span></li>
+        {{ end }}
+      </ul>
+    </div>
+  </div>
+  {{ end }}
+                     
+</div>
+<!--/Contact Info -->

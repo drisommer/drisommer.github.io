@@ -1,0 +1,16 @@
+<!-- Marquee Text Partial -->
+<div class="content-row {{ if .Params.paddingTop }}row_padding_top{{ end }} {{ if .Params.paddingBottom }}row_padding_bottom{{ end }} dark-section change-header-color" data-bgcolor=".Site.Params.colors.darkBackground">
+  <div class="marquee-text-wrapper">
+    <h2 class="marquee-text bw big-title primary-font-title">{{ .Params.forwardText }}</h2>
+  </div>
+  
+  {{ if .Params.showDivider }}
+  <hr>
+  {{ end }}
+  
+  {{ if .Params.backwardText }}
+  <div class="marquee-text-wrapper">
+    <h2 class="marquee-text fw big-title primary-font-title">{{ .Params.backwardText }}</h2>
+  </div>
+  {{ end }}
+</div>

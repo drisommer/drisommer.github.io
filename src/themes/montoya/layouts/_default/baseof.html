@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language.LanguageCode }}" dir="{{ or .Site.Language.LanguageDirection `ltr` }}">
+
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  {{ partial "analytics.html" . }}
+
+
+  <title>{{ .Site.Params.Meta.Title }}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="{{ .Site.Params.Meta.description }}" />
+  <meta name="author" content="{{ .Site.Params.Meta.author }}">
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/ico" href="{{ "favicon.ico" | relURL }}" />
+  <link href="{{ "style.css" | relURL }}" rel="stylesheet" />
+  <link href="{{ "css/all.min.css" | relURL }}" rel="stylesheet" />
+  <link href="{{ "css/theme-colors.css" | relURL }}" rel="stylesheet" />
+  <link href="{{ "css/custom.css" | relURL }}" rel="stylesheet" />
+  <link href="{{ "css/video-trigger.css" | relURL }}" rel="stylesheet" />
+  
+  <!-- Theme Colors CSS - Injected from hugo.toml -->
+  <style>
+    /* Theme Colors - Configured from hugo.toml */
+    :root {
+      --accent-color: {{ .Site.Params.colors.accentColor }};
+      --accent-color-rgb: {{ if .Site.Params.colors.accentColor }}{{ index (slice (substr .Site.Params.colors.accentColor 1 2) (substr .Site.Params.colors.accentColor 3 2) (substr .Site.Params.colors.accentColor 5 2)) 0 | printf "0x%s" | int }}, {{ index (slice (substr .Site.Params.colors.accentColor 1 2) (substr .Site.Params.colors.accentColor 3 2) (substr .Site.Params.colors.accentColor 5 2)) 1 | printf "0x%s" | int }}, {{ index (slice (substr .Site.Params.colors.accentColor 1 2) (substr .Site.Params.colors.accentColor 3 2) (substr .Site.Params.colors.accentColor 5 2)) 2 | printf "0x%s" | int }}{{ else }}140, 97, 68{{ end }};
+      
+      --accent-color-alt: {{ .Site.Params.colors.accentColorAlt }};
+      --accent-color-alt-rgb: {{ if .Site.Params.colors.accentColorAlt }}{{ index (slice (substr .Site.Params.colors.accentColorAlt 1 2) (substr .Site.Params.colors.accentColorAlt 3 2) (substr .Site.Params.colors.accentColorAlt 5 2)) 0 | printf "0x%s" | int }}, {{ index (slice (substr .Site.Params.colors.accentColorAlt 1 2) (substr .Site.Params.colors.accentColorAlt 3 2) (substr .Site.Params.colors.accentColorAlt 5 2)) 1 | printf "0x%s" | int }}, {{ index (slice (substr .Site.Params.colors.accentColorAlt 1 2) (substr .Site.Params.colors.accentColorAlt 3 2) (substr .Site.Params.colors.accentColorAlt 5 2)) 2 | printf "0x%s" | int }}{{ else }}140, 97, 68{{ end }};
+      
+      --dark-background: {{ .Site.Params.colors.darkBackground }};
+      --dark-background-rgb: {{ if .Site.Params.colors.darkBackground }}{{ index (slice (substr .Site.Params.colors.darkBackground 1 2) (substr .Site.Params.colors.darkBackground 3 2) (substr .Site.Params.colors.darkBackground 5 2)) 0 | printf "0x%s" | int }}, {{ index (slice (substr .Site.Params.colors.darkBackground 1 2) (substr .Site.Params.colors.darkBackground 3 2) (substr .Site.Params.colors.darkBackground 5 2)) 1 | printf "0x%s" | int }}, {{ index (slice (substr .Site.Params.colors.darkBackground 1 2) (substr .Site.Params.colors.darkBackground 3 2) (substr .Site.Params.colors.darkBackground 5 2)) 2 | printf "0x%s" | int }}{{ else }}12, 12, 12{{ end }};
+      
+      --light-background: {{ .Site.Params.colors.lightBackground }};
+      --light-background-rgb: {{ if .Site.Params.colors.lightBackground }}{{ index (slice (substr .Site.Params.colors.lightBackground 1 2) (substr .Site.Params.colors.lightBackground 3 2) (substr .Site.Params.colors.lightBackground 5 2)) 0 | printf "0x%s" | int }}, {{ index (slice (substr .Site.Params.colors.lightBackground 1 2) (substr .Site.Params.colors.lightBackground 3 2) (substr .Site.Params.colors.lightBackground 5 2)) 1 | printf "0x%s" | int }}, {{ index (slice (substr .Site.Params.colors.lightBackground 1 2) (substr .Site.Params.colors.lightBackground 3 2) (substr .Site.Params.colors.lightBackground 5 2)) 2 | printf "0x%s" | int }}{{ else }}12, 12, 12{{ end }};
+      
+      --dark-text: {{ .Site.Params.colors.darkText }};
+      --light-text: {{ .Site.Params.colors.lightText }};
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Six+Caps&display=swap" rel="stylesheet">
+
+</head>
+
+
+<body class="hidden hidden-ball smooth-scroll1 rounded-borders" data-primary-color="{{ .Site.Params.colors.accentColor }}">
+
+  <main>
+    {{block "main" . }}
+    <!-- this is where content from home.html will be inserted -->
+    {{end}}
+  </main>
+
+  <div class="cd-cover-layer"></div>
+  <div id="magic-cursor">
+    <div id="ball">
+      <div id="ball-drag-x"></div>
+      <div id="ball-drag-y"></div>
+      <div id="ball-loader"></div>
+    </div>
+  </div>
+  <div id="clone-image">
+    <div class="hero-translate"></div>
+  </div>
+  <div id="rotate-device"></div>
+
+
+{{ partial "footer-scripts.html" . }}
+
+</body>
+
+</html>

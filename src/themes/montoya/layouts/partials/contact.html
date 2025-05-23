@@ -1,0 +1,33 @@
+<!-- Contact Section -->
+<div class="content-row dark-section text-align-center" data-bgcolor="{{ .Site.Params.colors.darkBackground  }}">
+  {{ $contacts := .Params.contacts }}
+  {{ if not $contacts }}
+    {{ $contacts = .Site.Params.contacts }}
+  {{ end }}
+  
+  {{ $totalContacts := len $contacts }}
+  {{ $lastIndex := sub $totalContacts 1 }}
+  
+  {{ range $index, $contact := $contacts }}
+    <div class="one_third{{ if eq $index $lastIndex }} last{{ end }} has-animation" data-delay="{{ mul $index 100 | add 100 }}">
+      <div class="box-icon-wrapper block-boxes">
+        <div class="box-icon">
+          <i class="fa {{ $contact.icon }} fa-2x" aria-hidden="true"></i>
+        </div>
+        <div class="box-icon-content">
+          <h6 class="no-margins">
+            {{ if eq $contact.type "email" }}
+              <a href="mailto:{{ $contact.info }}" class="link"><span>{{ $contact.info }}</span></a>
+            {{ else if eq $contact.type "link" }}
+              <a href="{{ $contact.info }}" class="link" target="_blank"><span>{{ $contact.info }}</span></a>
+            {{ else }}
+              {{ $contact.info }}
+            {{ end }}
+          </h6>
+          <p>{{ $contact.name }}</p>
+        </div>
+      </div>
+    </div>
+  {{ end }}
+</div>
+<!--/Contact Section -->

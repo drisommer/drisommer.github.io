@@ -1,0 +1,31 @@
+<!-- Main Page Content -->
+<div id="main-page-content" class="content-full-width">
+  <!-- Featured Projects -->
+  <div class="content-row full text-align-center row_padding_left row_padding_right dark-section"
+    data-bgcolor="{{ .Site.Params.colors.darkBackground }}">
+    <div id="itemsWrapperLinks">
+      <div id="itemsWrapper" class="webgl-fitthumbs fx-one">
+        <div class="overlapping-gallery">
+          {{ $allProjects := where (where .Site.RegularPages "Section" "projects") "Params.draft" "ne" true }}
+
+          {{ if .Params.filterByFeatured }}
+            {{ $allProjects = where $allProjects "Params.featured" true }}
+          {{ end }}
+
+          {{ if .Params.filterByProjectType }}
+            {{ $allProjects = where $allProjects "Params.projectType" "intersect" .Params.filterByProjectType }}
+          {{ end }}
+
+          {{ if .Params.filterByRole }}
+            {{ $allProjects = where $allProjects "Params.projectRole" "intersect" .Params.filterByRole }}
+          {{ end }}
+
+          {{ range sort $allProjects "Params.weight" }}
+            {{ $projectContext := dict "project" . "hideProjectType" $.Params.hideProjectType "hideProjectRole" $.Params.hideProjectRole }}
+            {{ partial "project-item.html" $projectContext }}
+          {{ end }}
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--/Featured Projects -->

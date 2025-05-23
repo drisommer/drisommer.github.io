@@ -1,0 +1,55 @@
+{{/* Set local variables from passed context */}}
+{{ $project := . }}
+{{ if isset . "project" }}
+  {{ $project = .project }}
+{{ end }}
+
+<div class="overlapping-image">
+  <div class="overlapping-image-inner trigger-item  {{ if $project.Params.projectVideo }} is-project-video{{ end }} {{ if $project.Params.heroVideo }} change-header{{ end }}" data-centerLine="OPEN"  {{ if $project.Params.projectVideo }} data-project-video="{{ $project.Params.projectVideo }}" {{end}}>
+    <div class="img-mask">
+      <a class="slide-link" data-type="page-transition" href="{{ $project.RelPermalink }}" {{ if $project.Params.projectVideo }} data-project-video="{{ $project.Params.projectVideo }}" {{end}}></a>
+      <div class="section-image trigger-item-link" {{ if $project.Params.projectVideo }} data-project-video="{{ $project.Params.projectVideo }}" {{end}}>
+        <img src="{{ $project.Params.heroImage }}" class="item-image grid__item-img" alt="{{ $project.Title }}">
+        {{ if $project.Params.heroVideo }}
+        <div class="hero-video-wrapper">
+          <video loop muted playsinline class="bgvid">
+            <source src="{{ $project.Params.heroVideo }}" type="video/mp4">
+          </video>
+        </div>
+        {{ end }}
+      </div>
+      <img src="{{ $project.Params.heroImage }}" class="grid__item-img grid__item-img--large" alt="{{ $project.Title }}">
+    </div>
+    <div class="slide-caption trigger-item-link-secondary" {{ if $project.Params.projectVideo }} data-project-video="{{ $project.Params.projectVideo }}" {{end}}>
+      <div class="slide-title primary-font-title">
+        <span class="{{if $project.Params.TitleColorAlt }} alt-accent-color {{else}} accent-color {{end}}" >
+          {{ $project.Title }}
+        </span>
+      </div>
+
+      {{ if not .hideProjectType }}
+        <div class="slide-date">
+          {{ if $project.Params.ProjectType }}
+            {{ range $project.Params.ProjectType }}
+              <span>{{ . }}</span>
+            {{ end }}
+          {{ else }}
+            <span>{{ dateFormat "2006" $project.Date }}</span>
+          {{ end }}
+        </div>
+      {{ end }}
+
+      {{ if not .hideProjectRole }}
+        <div class="slide-cat">
+          {{ if $project.Params.ProjectRole }}
+          {{ range $project.Params.ProjectRole }}
+          <span>{{ . }}</span>
+          {{ end }}
+          {{ else }}
+          <span>{{ $project.Params.projectType }}</span>
+          {{ end }}
+        </div>
+      {{ end }}
+    </div>
+  </div>
+</div>

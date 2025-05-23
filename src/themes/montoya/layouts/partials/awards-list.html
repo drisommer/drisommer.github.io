@@ -1,0 +1,20 @@
+<!-- Awards List Partial -->
+<div class="content-row full row_padding_left row_padding_right row_padding_bottom text-align-center dark-section" data-bgcolor="{{ .Site.Params.colors.darkBackground  }}">
+  <hr><hr><hr class="destroy">
+  <h2 class="big-title primary-font-title no-margins has-mask-fill">{{ .Params.title }}</h2>
+  <hr><hr><hr><hr class="destroy">
+  
+  <!-- Flex Lists --> 
+  <ul class="flex-lists-wrapper">
+    {{ range $award := .Params.awards_list }}
+    <li class="flex-list link has-animation">
+      <span class="flex-list-left">{{ $award.organization }}</span>
+      <span class="flex-list-center">{{ $award.description }}</span>
+      <span class="flex-list-right">{{ $award.count }}</span>
+    </li>
+    {{ end }}                         
+  </ul>
+  
+  <hr class="destroy">
+</div>
+<!--/Awards List -->

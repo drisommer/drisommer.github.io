@@ -1,0 +1,56 @@
+<!-- Navigation -->
+<nav>
+  <div class="nav-height">
+    <div class="outer">
+      <div class="inner">
+        <ul data-breakpoint="10025" class="flexnav">
+          {{ range .Site.Menus.main }}
+            <li class="link menu-timeline">
+              {{ if eq .Name "More" }}
+                <a class="" href="#">
+                  <div class="before-span"><span data-hover="{{ .Name }}">{{ .Name }}</span></div>
+                </a>
+                <ul>
+                  {{ range $.Site.Menus.more }}
+                    <li>                      {{ $isExternal := or (hasPrefix .URL "http://") (hasPrefix .URL "https://") .Params.external }}
+                      <a class="{{ if $isExternal }}external{{ else }}ajax-link{{ end }}" 
+                         href="{{ .URL }}" 
+                         {{ if $isExternal }}target="_blank" rel="noopener"{{ else }}data-type="page-transition"{{ end }}>
+                        {{ .Name }}{{ if $isExternal }} <i class="fa-solid fa-arrow-up-right-from-square fa-xs"></i>{{ end }}
+                      </a>
+                    </li>
+                  {{ end }}
+                </ul>
+              {{ else }}                {{ $isExternal := or (hasPrefix .URL "http://") (hasPrefix .URL "https://") .Params.external }}
+                <a class="{{ if $isExternal }}external{{ else }}ajax-link{{ end }}" 
+                   href="{{ .URL }}" 
+                   {{ if $isExternal }}target="_blank" rel="noopener"{{ else }}data-type="page-transition"{{ end }}>
+                  <div class="before-span"><span data-hover="{{ .Name }}">{{ .Name }}{{ if $isExternal }} <i class="fa-solid fa-arrow-up-right-from-square fa-xs"></i>{{ end }}</span></div>
+                </a>
+              {{ end }}
+            </li>
+          {{ end }}
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+<!--/Navigation -->
+
+
+<!-- Menu Burger -->
+<div class="button-wrap right menu burger-lines">
+  <div class="icon-wrap parallax-wrap">
+    <div class="button-icon parallax-element">
+      <div id="burger-wrapper">
+        <div id="menu-burger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="button-text sticky right"><span data-hover="Menu">Menu</span></div>
+</div>
+<!--/Menu Burger -->

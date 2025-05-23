@@ -1,0 +1,376 @@
+/* Custom CSS overrides */
+
+/* Hide default cursor globally but keep the magic-cursor */
+html, body, 
+a, button, input, textarea, select,
+.button-box, .button-border, .filter-option,
+.socials li a {
+  cursor: none !important;
+}
+
+/* Theme Color Applications */
+/* These styles will apply the colors from the hugo.toml variables */
+[data-bgcolor] {
+  transition: background-color 0.3s ease;
+}
+
+/* Primary color applications */
+/* Apply to elements that use the primary color */
+body[data-primary-color] {
+  /* Use CSS custom property instead of invalid data attribute as property */
+  --theme-primary-color: var(--accent-color);
+}
+
+#magic-cursor #ball {
+  border-color: var(--accent-color);
+}
+
+#magic-cursor #ball.with-icon {
+  background-color: var(--accent-color);
+}
+
+/* Link hover colors */
+a:hover, a:active {
+  color: var(--accent-color);
+}
+
+/* Button hover effects */
+.button-border:hover {
+  border-color: var(--accent-color);
+}
+
+.button-border:hover a {
+  color: var(--accent-color);
+}
+
+/* Hero section fixes */
+#hero {
+  position: relative;
+}
+
+#hero-styles {
+  position: relative;
+  z-index: 5;
+}
+
+#hero-caption {
+  position: relative; 
+  z-index: 6;
+}
+
+#hero-footer {
+  position: relative;
+  z-index: 100; /* Very high z-index to ensure it stays above everything */
+  pointer-events: auto;
+}
+
+.hero-footer-left {
+  position: relative;
+  z-index: 101;
+  pointer-events: auto;
+}
+
+.hero-footer-right {
+  position: relative;
+  z-index: 101;
+  pointer-events: auto;
+}
+
+.filters-options-wrapper {
+  position: relative;
+  z-index: 102;
+  pointer-events: auto !important; /* Force pointer events */
+}
+
+.filter-option {
+  position: relative;
+  z-index: 103;
+  pointer-events: auto !important; /* Force pointer events */
+}
+
+/* Make sure scroll button is clickable too */
+.button-wrap.scroll-down {
+  pointer-events: auto !important;
+}
+
+/* Contact Page Styles */
+.box-icon {
+  color: var(--accent-color);
+  transition: all 0.3s ease;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+  border: 3px solid rgba(var(--accent-color-rgb), 0.8);
+}
+
+.box-icon-wrapper:hover .box-icon {
+  background-color: var(--accent-color-alt);
+  color: var(--accent-color);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  border: 3px solid rgba(var(--accent-color-alt-rgb), 0.8);
+}
+
+.box-icon-content h6 {
+  font-size: 18px;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.box-icon-content h6 a.link {
+  color: var(--accent-color-alt);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.box-icon-content h6 a.link:hover {
+  color: var(--accent-color);
+}
+
+.box-icon-content p {
+  color: var(--accent-color);
+  font-size: 14px;
+  margin-top: 0;
+}
+
+/* Project Item Tags Styling */
+/* Common styles for both slide-date and slide-cat */
+.overlapping-image .slide-date span,
+.overlapping-image .slide-cat span {
+  display: block;
+  margin-bottom: 8px;
+  padding: 2px 16px;
+  background: rgba(255,255,255,0.2);
+  border-radius: 35px;
+  font-size: 14px;
+}
+
+/* Last item shouldn't have margin at bottom */
+.overlapping-image .slide-date span:last-child,
+.overlapping-image .slide-cat span:last-child {
+  margin-bottom: 0;
+}
+
+/* Adjust the base containers to act as wrapper containers */
+.overlapping-image .slide-caption .slide-date {
+  position: absolute;
+  top: 24px;
+  bottom: auto;
+  left: 40px;
+  padding: 0;
+  background: transparent;
+  border-radius: 0;
+}
+
+.overlapping-image .slide-caption .slide-cat {
+  position: absolute;
+  top: 24px;
+  bottom: auto;
+  right: 40px;
+  padding: 0;
+  background: transparent;
+  border-radius: 0;
+}
+
+/* For dark header videos/images */
+.overlapping-image .change-header .slide-caption .slide-date,
+.overlapping-image .change-header .slide-caption .slide-cat {
+  background: rgba(0, 0, 0, 0.0);
+}
+
+.overlapping-image .change-header .slide-caption .slide-date span,
+.overlapping-image .change-header .slide-caption .slide-cat span {
+  color: var(--accent-color);
+  background: rgba(0, 0, 0, 0.4);
+}
+
+/* Responsive adjustments */
+@media only screen and (max-width: 1466px) {
+  .overlapping-image .slide-caption .slide-date,
+  .overlapping-image .slide-caption .slide-cat {
+    top: 24px;
+  }
+
+  .overlapping-image .slide-caption .slide-date {
+    left: 10px;
+  }
+
+  .overlapping-image .slide-caption .slide-cat {
+    right: 10px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .overlapping-image .slide-caption .slide-date,
+  .overlapping-image .slide-caption .slide-cat {
+    top: 12px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .overlapping-image .slide-caption .slide-date,
+  .overlapping-image .slide-caption .slide-cat {
+    top: 12px;
+  }
+
+  .overlapping-image .slide-date span,
+  .overlapping-image .slide-cat span {
+    margin-bottom: 6px;
+  }
+}
+
+@media only screen and (max-width: 479px) {
+  .overlapping-image .slide-caption .slide-date,
+  .overlapping-image .slide-caption .slide-cat {
+    top: 12px;
+  }
+
+  .overlapping-image .slide-date span,
+  .overlapping-image .slide-cat span {
+    margin-bottom: 4px;
+    padding: 2px 12px;
+    font-size: 12px;
+  }
+}
+
+/* Social links styling */
+.socials-wrap.contact-socials {
+  margin-top: 40px;
+}
+
+.socials-wrap .socials-text {
+  color: var(--accent-color);
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+.socials li {
+  margin: 0 10px;
+}
+
+.socials li a {
+  color: var(--accent-color);
+  transition: color 0.3s ease;
+  font-weight: 600;
+}
+
+.socials li a:hover {
+  color: var(--accent-color);
+}
+
+/* Contact CTA section */
+.button-box .button-border {
+  border: 2px solid var(--light-text);
+  padding: 0px 30px;/* padding: 15px 40px; */
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+.button-box .button-border:hover {
+  border-color: var(--accent-color);
+  background-color: rgba(var(--accent-color-rgb), 0.1);
+}
+
+.button-box .button-border a {
+  color: var(--light-text);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.button-box .button-border:hover a {
+  color: var(--accent-color);
+}
+
+/* About Page Styles */
+.list-rotator-title {
+  color: var(--accent-color-alt);
+}
+
+.list-rotator li {
+  color: var(--light-text);
+}
+
+/* Awards and Recognition Styles */
+.start-thumbs-caption h2 {
+  color: var(--light-text);
+}
+
+.start-thumbs-caption p {
+  color: var(--light-text);
+}
+
+.flex-lists-wrapper .flex-list {
+  border-bottom: 1px solid rgba(var(--accent-color-rgb), 0.2);
+  transition: all 0.3s ease;
+}
+
+.flex-lists-wrapper .flex-list:hover {
+  color: var(--accent-color);
+}
+
+.flex-list-left, .flex-list-center, .flex-list-right {
+  color: var(--light-text);
+}
+
+/* Services Section Styles */
+.accordion dt {
+  border-bottom: 1px solid rgba(var(--dark-text-rgb, 0, 0, 0), 0.1);
+}
+
+.accordion dt .link {
+  color: var(--dark-text);
+  transition: color 0.3s ease;
+}
+
+.accordion dt:hover .link {
+  color: var(--accent-color);
+}
+
+.accordion dd {
+  color: var(--light-text);
+}
+
+.accordion .acc-button-icon {
+  color: var(--accent-color);
+}
+
+/* Collaborators Section */
+.collaborators-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.collaborator-item {
+  transition: transform 0.3s ease;
+}
+
+.collaborator-item:hover {
+  transform: translateY(-5px);
+}
+
+/* Project Filter Enhancement */
+#hero-footer .hero-footer-right .filters-options-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.filters-options-wrapper .filter-option {
+  margin: 5px;
+  padding: 5px 12px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.filters-options-wrapper .filter-option.is_active {
+  background-color: rgba(var(--accent-color-rgb), 0.1);
+  box-shadow: 0 0 0 1px var(--accent-color);
+}

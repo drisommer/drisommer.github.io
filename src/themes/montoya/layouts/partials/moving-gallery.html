@@ -1,0 +1,24 @@
+<!-- Moving Gallery Partial -->
+<div class="content-row full row_padding_bottom dark-section" data-bgcolor="{{ .Site.Params.colors.darkBackground  }}">
+  <div class="moving-gallery bw-gallery">
+    <ul class="wrapper-gallery">
+      {{ range $client := .Params.gallery_backwards }}
+      <li class="link">
+        <a target="_blank" href="{{ $client.url }}"><img src="{{ $client.image | relURL }}" alt="{{ $client.name }}"></a>
+        <div class="moving-gallery-caption">{{ $client.name }}</div>                                          
+      </li>
+      {{ end }}
+    </ul>
+  </div>
+  <div class="moving-gallery fw-gallery">
+    <ul class="wrapper-gallery">
+      {{ range $client := .Params.gallery_forwards }}
+      <li class="link">
+        <a target="_blank" href="{{ $client.url }}"><img src="{{ $client.image | relURL }}" alt="{{ $client.name }}"></a>
+        <div class="moving-gallery-caption">{{ $client.name }}</div>                                          
+      </li>
+      {{ end }}
+    </ul>
+  </div>
+</div>
+<!--/Moving Gallery -->

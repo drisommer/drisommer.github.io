@@ -1,0 +1,109 @@
+baseURL = "https://example.org/"
+languageCode = "en-us"
+theme = "montoya"
+publishDir = "../docs"
+disableKinds = ["taxonomy", "term", "page", "section"]
+
+[params.meta]
+  title = "Dri Sommer"
+  author = "Dri Sommer"
+  description = "Dri Sommer - Directing and Editing"
+
+[params]
+  googleAnalyticsCode = "UA-XXXXXXXXX-X"
+  
+  # Theme Colors
+  #  - MAIN PINK - #D1004D
+  #  - SECOND MAIN YELLOW  - #EDC716
+  #  - ACCENT BLUE - #85B6FF
+  [params.colors]
+    accentColor = "#EDC716"
+    accentColorAlt = "#85B6FF"
+
+    darkBackground = "#D1004D"
+    lightBackground = "#f5f9fc"
+    
+    darkText = "#000000"
+    lightText = "#ffffff"
+
+# Main navigation menu
+[menu]
+  [[menu.main]]
+    name = "Commercials"
+    url = "/commercials/"
+    weight = 10
+
+  [[menu.main]]
+    name = "Music Content"
+    url = "/music-content/"
+    weight = 20
+
+  [[menu.main]]
+    name = "Immersive"
+    url = "/immersive/"
+    weight = 30
+  
+    [[menu.main]]
+    name = "Say Hi!"
+    url = "/say-hi/"
+    weight = 5
+
+  [[menu.main]]
+    name = "More" #more
+    weight = 40
+    
+    # Submenu for "More"
+    [[menu.more]]
+      name = "Instagram"
+      url = "https://www.instagram.com/drisommer/"
+      weight = 10
+    
+    [[menu.more]]
+      name = "SVN QNS"
+      url = "https://www.svnqns.com/"
+      weight = 20
+
+[params.preloader]
+  centerLine = "Loading"
+  percentageIntro = "Please wait, content is loading"
+
+[params.footer]
+  backTopText = "Back Top"
+  copyright = "2025 © Dri Sommer. All rights reserved."
+  followUsText = "Follow Us"
+
+[[params.footer.socialLinks]]
+  name = "Dribbble"
+  code = "Db"
+  url = "https://www.dribbble.com/drisommer"
+
+[[params.footer.socialLinks]]
+  name = "Twitter"
+  code = "Tw"
+  url = "https://www.twitter.com/drisommerdesign"
+
+[[params.footer.socialLinks]]
+  name = "Instagram"
+  code = "In"
+  url = "https://www.instagram.com/drisommer/"
+  
+# Contact information that acts as fallback if the markdown doesn't define contacts
+
+[[params.contacts]]
+info = "@drisommer"
+name = "instagram"
+icon = "fa-brands fa-instagram"
+type = "link"
+
+[[params.contacts]]
+info = "Los Angeles 🛫 New York 🛬 London"
+name = "usually hanging out in one of these places"
+icon = "fa-location-dot"
+type = "text"
+
+[[params.contacts]]
+info = "say-hi@drisommer.com"
+name = "shoot me an email"
+icon = "fa-paper-plane"
+type = "email"
+

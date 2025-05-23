@@ -1,0 +1,24 @@
+<!-- Buttons Partial - displays multiple buttons in a row (or stacked on mobile) -->
+<div class="content-row row_padding_bottom dark-section text-align-center" data-bgcolor="{{ .Site.Params.colors.darkBackground  }}">
+  <hr><hr>
+  
+  <h2 class="big-title has-mask-fill primary-font-title">{{ .Params.title }}</h2>
+  <p class="has-opacity">{{ .Params.subtitle | safeHTML }}</p>
+  
+  {{ if .Params.buttons }}
+  <div class="buttons-group">
+    {{ range .Params.buttons }}
+    <div class="button-box has-animation" data-delay="100">             
+      <div class="clapat-button-wrap">
+        <div class="clapat-button">
+          <div class="button-border rounded outline">
+            <a href="{{ .url | relURL }}">{{ .text }}</a>
+          </div>
+        </div>
+      </div> 
+    </div>
+    {{ end }}
+  </div>
+  {{ end }}
+</div>
+<!--/Buttons -->

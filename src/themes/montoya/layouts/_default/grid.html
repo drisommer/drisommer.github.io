@@ -1,0 +1,144 @@
+{{ define "main" }}
+{{ partial "preloader.html" . }}
+
+<div class="cd-index cd-main-content">
+  <!-- Page Content -->
+  <div id="clapat-page-content" class="light-content" data-bgcolor="{{ .Site.Params.colors.darkBackground  }}">
+
+    <!-- Header -->
+    <header class="fullscreen-menu invert-header" data-menucolor="{{ .Site.Params.colors.darkBackground  }}">
+      <div id="header-container">
+
+        {{ partial "logo.html" . }}
+        {{ partial "menu.html" . }}
+
+      </div>
+    </header>
+    <!--/Header -->
+
+    <!-- Content Scroll -->
+    <div id="content-scroll">
+
+      <!-- Main -->
+      <div id="main">
+
+        <!-- Hero Section -->
+        <div id="hero">
+          <div id="hero-styles">
+            <div id="hero-caption" class="content-full-width parallax-scroll-caption text-align-center height-title">
+              <div class="inner">
+                <div class="hero-subtitle caption-timeline">{{ .Title }}</div>
+              </div>
+            </div>
+            <div id="hero-footer" >
+              <div class="hero-footer-left">
+                <div class="button-wrap right scroll-down">
+                  <div class="icon-wrap parallax-wrap">
+                    <div class="button-icon parallax-element">
+                      <i class="fa-solid fa-angle-down"></i>
+                    </div>
+                  </div>
+                  <div class="button-text sticky right"><span data-hover="Scroll to Explore">Scroll to Explore</span></div>
+                </div>
+              </div>
+
+              <div class="hero-footer-right">
+                <div class="filters-options-wrapper">
+                  <a id="all" class="filter-option is_active" href="#" data-filter=""><span class="link" data-hover="All">All</span></a>
+                  {{ $projectTypes := slice }}
+                  {{ range .Pages }}
+                    {{ $projectTypes = $projectTypes | append .Params.projectType }}
+                  {{ end }}
+                  {{ range uniq $projectTypes }}
+                    <a class="filter-option" href="#" data-filter="{{ lower . | urlize }}-filter"><span class="link" data-hover="{{ . }}">{{ . }}</span></a>
+                  {{ end }}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--/Hero Section -->
+
+        <!-- Main Content -->
+        <div id="main-content">
+          <!-- Main Page Content -->
+          <div id="main-page-content">
+
+            <!-- Showcase Portfolio Holder -->
+            <div id="itemsWrapperLinks">
+              <div id="itemsWrapper" class="webgl-fitthumbs fx-one">
+
+                <!-- ClaPat Portfolio -->
+                <div class="showcase-portfolio">
+                  {{ $currentSection := .Section }}
+                  {{ $currentTag := .Title }}
+                  
+                  {{ $projects := where site.RegularPages "Section" "projects" }}
+                  {{ $projects = where $projects "Params.projectType" "intersect" (slice .Params.ProjectType) }}
+                  
+                  {{ range $projects }}
+                  <div class="clapat-item {{ lower .Params.projectType | urlize }}-filter{{ if isset .Params "verticalparallax" }} vertical-parallax{{ end }}">
+                    <div class="slide-inner trigger-item{{ if .Params.heroVideo }} change-header{{ end }}" data-centerLine="OPEN">
+                      <div class="img-mask">
+                        <div class="curtains" data-curtain-color="{{ $.Site.Params.colors.darkBackground  }}">
+                          <div class="curtain-row"></div>
+                        </div>                        <a class="slide-link" data-type="page-transition" href="{{ .RelPermalink }}"></a>
+                        <div class="section-image trigger-item-link">
+                          <img src="{{ .Params.heroImage | relURL }}" class="item-image grid__item-img" alt="{{ .Title }}">
+                          {{ if .Params.heroVideo }}
+                          <div class="hero-video-wrapper">
+                            <video loop muted class="bgvid">
+                              <source src="{{ .Params.heroVideo | relURL }}" type="video/mp4">
+                            </video>
+                          </div>
+                          {{ end }}
+                        </div>
+                        <img src="{{ .Params.heroImage | relURL }}" class="grid__item-img grid__item-img--large" alt="{{ .Title }}">
+                      </div>
+                      <div class="slide-caption trigger-item-link-secondary">
+                        <div class="slide-title"><span>{{ .Title }}</span></div>
+                        <div class="slide-date"><span>{{ dateFormat "2006" .Date }}</span></div>
+                        <div class="slide-cat"><span>{{ index .Params.projectType 0 }}</span></div>
+                      </div>
+                    </div>
+                  </div>
+                  {{ end }}
+                </div>
+                <!-- /ClaPat Portfolio -->
+
+              </div>
+            </div>
+            <!-- /Showcase Portfolio Holder -->
+
+          </div>
+          <!--/Main Page Content -->
+
+          <!-- Page Navigation --> 
+          <div id="page-nav">
+            <div class="page-nav-wrap">
+              <div class="page-nav-caption content-full-width text-align-center height-title">                                 
+                <div class="inner">
+                  <div class="next-hero-subtitle caption-timeline"><span>EXPLORING OUR WORLD OF VISUAL AND INTERACTIVE DESIGN</span></div>
+                  <a class="page-title next-ajax-link-page" data-type="page-transition" data-centerline="HOME" href="/">
+                    <div class="next-hero-title primary-font-title caption-timeline"><span>Back</span> <span>Home</span></div>
+                  </a>                                        
+                </div>               
+              </div>
+            </div>
+          </div>      
+          <!--/Page Navigation -->
+
+        </div>
+        <!--/Main Content -->
+
+      </div>
+      <!--/Main -->
+
+      {{ partial "footer.html" . }}
+    </div>
+    <!--/Content Scroll -->
+    <div id="app"></div>
+  </div>
+  <!--/Page Content -->
+</div>
+{{ end }}

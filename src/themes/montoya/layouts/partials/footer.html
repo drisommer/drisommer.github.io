@@ -1,0 +1,31 @@
+<!-- Footer -->
+<footer class="hidden">
+  <div id="footer-container">
+
+    <div id="backtotop" class="button-wrap left">
+      <div class="icon-wrap parallax-wrap">
+        <div class="button-icon parallax-element">
+          <i class="fa-solid fa-angle-up"></i>
+        </div>
+      </div>
+      <div class="button-text sticky left"><span data-hover="{{ .Site.Params.footer.backTopText }}">{{ .Site.Params.footer.backTopText }}</span></div>
+    </div>
+
+    <div class="footer-middle">
+      <div class="copyright">{{ .Site.Params.footer.copyright }}</div>
+    </div>
+
+    <div class="socials-wrap">
+      <div class="socials-icon"><i class="fa-solid fa-share-nodes"></i></div>
+      <div class="socials-text">{{ .Site.Params.footer.followUsText }}</div>
+      <ul class="socials">
+        {{ range .Site.Params.footer.socialLinks }}
+        <li><span class="parallax-wrap"><a class="parallax-element" href="{{ .url }}"
+              target="_blank">{{ .code }}</a></span></li>
+        {{ end }}
+      </ul>
+    </div>
+
+  </div>
+</footer>
+<!--/Footer -->

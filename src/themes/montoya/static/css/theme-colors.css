@@ -1,0 +1,10 @@
+/* Theme Colors - Configured from hugo.toml */
+:root {
+  --accent-color: {{ .Site.Params.colors.accentColor }};
+  --accent-color-alt: {{ .Site.Params.colors.accentColorAlt }};
+  --accent-color: {{ .Site.Params.colors.accentColor }};
+  --dark-background: {{ .Site.Params.colors.darkBackground }};
+  --light-background: {{ .Site.Params.colors.lightBackground }};
+  --dark-text: {{ .Site.Params.colors.darkText }};
+  --light-text: {{ .Site.Params.colors.lightText }};
+}

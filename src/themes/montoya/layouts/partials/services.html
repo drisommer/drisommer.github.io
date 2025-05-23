@@ -1,0 +1,29 @@
+<!-- Services Partial -->
+<div class="content-row row_padding_top row_padding_bottom light-section change-header-color has-clip-path" data-bgcolor="{{ .Site.Params.colors.lightBackground  }}">
+  <hr class="destroy"><hr class="destroy">
+  
+  <div class="pinned-section">
+    <div class="pinned-element left">
+      <h2 class="big-title primary-font-title no-margins"><span class="has-mask-fill">{{ .Params.title_line1 }}</span><br><span class="has-mask-fill">{{ .Params.title_line2 }}</span></h2>
+    </div>
+    
+    <div class="scrolling-element right">
+      <dl class="accordion has-animation">
+        {{ range $service := .Params.services }}
+        <dt>
+          <span class="link"><div>{{ $service.name }}</div></span>
+          <div class="acc-icon-wrap parallax-wrap">
+            <div class="acc-button-icon parallax-element">
+              <i class="fa fa-arrow-right"></i>
+            </div>
+          </div>
+        </dt>
+        <dd class="accordion-content">{{ $service.description }}</dd>
+        {{ end }}
+      </dl>    
+    </div>
+  </div>
+  
+  <hr class="destroy">
+</div>
+<!--/Services Partial -->

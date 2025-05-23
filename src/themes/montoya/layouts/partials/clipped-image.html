@@ -1,0 +1,22 @@
+<!-- Clipped Image/Video Partial -->
+<div class="content-row dark-section" data-bgcolor="{{ .Site.Params.colors.darkBackground  }}">
+  <div class="clipped-image-wrapper">    <div class="clipped-image-pin">                                    	
+      <div class="clipped-image">
+        <img src="{{ .Params.image | relURL }}" alt="{{ .Params.imageAlt | default "Image" }}">
+        {{ if .Params.videoSrc }}
+        <div class="content-video-wrapper">
+          <video loop muted playsinline class="bgvid">
+            <source src="{{ .Params.videoSrc | relURL }}" type="video/mp4">
+          </video>
+        </div>
+        {{ end }}
+        <div class="clipped-image-gradient"></div>
+      </div>
+    </div>
+    
+    <div class="clipped-image-content text-align-center content-full-width">
+      <!-- Any additional content can go here -->
+    </div>
+  </div>
+</div>
+<!--/Clipped Image/Video -->

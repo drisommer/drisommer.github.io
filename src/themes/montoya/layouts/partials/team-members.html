@@ -1,0 +1,14 @@
+<!-- Team Members Partial -->
+<div class="content-row full row_padding_top row_padding_bottom dark-section" data-bgcolor="{{ .Site.Params.colors.darkBackground  }}">
+  <ul class="team-members-list" data-fx="{{ .Params.dataFx | default "1" }}">
+    {{ range $member := .Params.team_members }}    <li class="link has-hover-image" data-img="{{ $member.image | relURL }}">
+      <div class="team-member has-animation">
+        <span>{{ $member.since }}</span>
+        <div class="primary-font-title">{{ $member.name }}</div>
+        <span>{{ $member.role }}</span>
+      </div>
+    </li>
+    {{ end }}
+  </ul>
+</div>
+<!--/Team Members Partial -->

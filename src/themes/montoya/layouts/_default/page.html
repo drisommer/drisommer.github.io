@@ -1,0 +1,50 @@
+{{ define "main" }}
+{{ partial "preloader.html" . }}
+
+<div class="cd-index cd-main-content">
+
+  <!-- Page Content -->
+  <div id="clapat-page-content" class="light-content" data-bgcolor="{{ .Site.Params.colors.darkBackground  }}">
+
+    <!-- Header -->
+    <header class="fullscreen-menu invert-header" data-menucolor="{{ .Site.Params.colors.darkBackground  }}">
+      <div id="header-container">
+
+        {{ partial "logo.html" . }}
+        {{ partial "menu.html" . }}
+
+      </div>
+    </header>
+    <!--/Header -->
+
+    <!-- Content Scroll -->
+    <div id="content-scroll">
+
+      <!-- Main -->
+      <div id="main">
+
+        <!-- Main Content -->
+        <div id="main-content">
+          {{ $sections := where .Site.RegularPages "Section" .Section }}
+          {{ range sort $sections "Params.weight" }}
+            {{ if .Params.partial }}
+              {{ partial .Params.partial . }}
+            {{ end }}
+          {{ end }}
+        </div>
+        <!--/Main Content -->
+
+        </div>
+        <!--/Main Content -->
+
+      </div>
+      <!--/Main -->
+
+      {{ partial "footer.html" . }}
+    </div>
+    <!--/Content Scroll -->
+    <div id="app"></div>
+  </div>
+  <!--/Page Content -->
+</div>
+{{ end }}
