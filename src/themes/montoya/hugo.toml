@@ -1,0 +1,27 @@
+baseURL = 'https://example.org/'
+languageCode = 'en-US'
+# Basic site information
+title = "Montoya - Creative Portfolio Template"
+description = "Download the best Creative Portfolio HTML Template in 2024"
+author = "ClaPat Studio"
+
+# Theme features
+[params]
+  favicon = "favicon.ico"
+  accentColor = "#8c6144"
+  googleAnalyticsCode = "code_here"
+  
+  # Fonts
+  [params.fonts]
+    primaryFont = "Poppins:300,400,500,600,700"
+    secondaryFont = "Six+Caps"
+    
+  # CSS files
+  [params.css]
+    main = "style.css"
+    fontAwesome = "css/all.min.css"
+
+[module]
+  [module.hugoVersion]
+    extended = false
+    min = "0.116.0"
