@@ -19,5 +19,5 @@ gallery_forwards = [
 ]
 
 paddingTop = false
-paddingBottom = false
+paddingBottom = true
 +++
