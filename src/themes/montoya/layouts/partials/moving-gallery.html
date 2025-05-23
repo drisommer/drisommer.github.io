@@ -2,20 +2,24 @@
 <div class="content-row full row_padding_bottom dark-section" data-bgcolor="{{ .Site.Params.colors.darkBackground  }}">
   <div class="moving-gallery bw-gallery">
     <ul class="wrapper-gallery">
-      {{ range $client := .Params.gallery_backwards }}
+      {{ range $item := .Params.galleryBackwards }}
       <li class="link">
-        <a target="_blank" href="{{ $client.url }}"><img src="{{ $client.image | relURL }}" alt="{{ $client.name }}"></a>
-        <div class="moving-gallery-caption">{{ $client.name }}</div>                                          
+        <a target="_blank" href="{{ $item.url }}">
+          <img src="{{ $item.image | relURL }}" alt="{{ $item.caption }}">
+        </a>
+        <div class="moving-gallery-caption">{{ $item.caption }}</div>                                          
       </li>
       {{ end }}
     </ul>
   </div>
   <div class="moving-gallery fw-gallery">
     <ul class="wrapper-gallery">
-      {{ range $client := .Params.gallery_forwards }}
+      {{ range $item := .Params.galleryForwards }}
       <li class="link">
-        <a target="_blank" href="{{ $client.url }}"><img src="{{ $client.image | relURL }}" alt="{{ $client.name }}"></a>
-        <div class="moving-gallery-caption">{{ $client.name }}</div>                                          
+        {{if $item.url }} <a target="_blank" href="{{ $item.url }}"> {{ end }}
+          <img src="{{ $item.image | relURL }}" alt="{{ $item.caption }}">
+        </a>
+        <div class="moving-gallery-caption">{{ $item.caption }}</div>                                          
       </li>
       {{ end }}
     </ul>
