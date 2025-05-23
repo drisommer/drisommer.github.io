@@ -1,5 +1,5 @@
 +++
-weight = 30
+weight = 40
 partial = "contact"
 
 ## if contact info is not defined here, it gets pulled from hugo.toml
