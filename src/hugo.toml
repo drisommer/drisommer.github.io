@@ -2,7 +2,6 @@ baseURL = "https://example.org/"
 languageCode = "en-us"
 theme = "montoya"
 publishDir = "../docs"
-disableKinds = ["taxonomy", "term", "page", "section"]
 
 [params.meta]
   title = "Dri Sommer"
