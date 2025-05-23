@@ -6,5 +6,5 @@ heroImage = "https://drisommer.blob.core.windows.net/datastorage/videos/021_Diab
 heroVideo = "https://drisommer.blob.core.windows.net/datastorage/videos/021_DiabloCelebrityDungeonCrawlKhleoMarcus-preview.mp4"
 projectVideo = "https://drisommer.blob.core.windows.net/datastorage/videos/021-DiabloCelebrityDungeonCrawlKhleoMarcus.mp4"
 projectType = ["Commercial"]
-projectRole = ["Director", "Editor", "Production"]
+projectRole = ["Director", "Editor"]
 +++

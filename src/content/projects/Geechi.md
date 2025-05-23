@@ -1,6 +1,6 @@
 +++
 title = "Geechi"
-featured = false
+featured = true
 weight = 108
 heroImage = "https://drisommer.blob.core.windows.net/datastorage/videos/025_Geechi.preview.png"
 heroVideo = "https://drisommer.blob.core.windows.net/datastorage/videos/025_Geechi.preview.mp4"
