@@ -1,5 +1,5 @@
 +++
-title = "Adidas  30 X All In"
+title = "Adidas x All In"
 featured = true
 weight = 1
 heroImage = "https://drisommer.blob.core.windows.net/datastorage/videos/007_Adidas30xAllIn-preview.jpg"

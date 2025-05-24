@@ -1,5 +1,5 @@
 +++
-title = "Rico Nasty   Teethsucker Visualizer"
+title = "Teethsucker x Rico Nasty"
 featured = true
 weight = 103
 heroImage = "https://drisommer.blob.core.windows.net/datastorage/videos/001-RicoNastyTeethsuckerVisualizer-preview.jpg"

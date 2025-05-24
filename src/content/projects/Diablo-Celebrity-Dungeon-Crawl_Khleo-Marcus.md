@@ -1,5 +1,5 @@
 +++
-title = "Diablo Celebrity Dungeon Crawl Khleo&Marcus"
+title = "Blizzard x Diablo Dungeon Crawl"
 featured = false
 weight = 14
 heroImage = "https://drisommer.blob.core.windows.net/datastorage/videos/021_DiabloCelebrityDungeonCrawlKhleoMarcus-preview.jpg"

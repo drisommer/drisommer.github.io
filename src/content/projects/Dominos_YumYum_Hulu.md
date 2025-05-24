@@ -1,5 +1,5 @@
 +++
-title = "Dominos Yumyum Hulu"
+title = "Dominos x Yum Yum"
 featured = false
 weight = 11
 heroImage = "https://drisommer.blob.core.windows.net/datastorage/videos/018_DominosYumYumHulu-preview.jpg"

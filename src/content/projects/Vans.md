@@ -1,5 +1,5 @@
 +++
-title = "Vans - Sound of the Archive"
+title = "VANS x Sound of the Archive"
 featured = false
 weight = 16
 heroImage = "https://drisommer.blob.core.windows.net/datastorage/videos/023_Vans-preview.jpg"

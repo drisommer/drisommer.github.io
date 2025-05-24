@@ -1,5 +1,5 @@
 +++
-title = "Pina Snowthaproduct & Lauren Jauregui"
+title = "Pina x Snow Tha Product & Lauren Jauregui"
 featured = true
 weight = 101
 heroImage = "https://drisommer.blob.core.windows.net/datastorage/videos/003-PinaSnowThaProductLaurenJauregui-preview.jpg"

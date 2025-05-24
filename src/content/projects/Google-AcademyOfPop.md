@@ -1,5 +1,5 @@
 +++
-title = "Academy Of Pop - Google"
+title = "Academy Of Pop x Google"
 featured = false
 weight = 1000
 heroImage = "https://drisommer.blob.core.windows.net/datastorage/videos/032_AcademyOfPop-Google-Preview.png"
