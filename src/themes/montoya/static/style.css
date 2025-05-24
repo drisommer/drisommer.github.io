@@ -2222,6 +2222,7 @@ Primary use:	Showcase Portfolio
 			transition: transform 0.2s;
 			transform-origin: 100% 0%;
 			overflow:hidden;
+			font-size: var(--menu-size);
 		}
 		
 		.fullscreen-menu .open .flexnav li a span {
@@ -3340,7 +3341,7 @@ Primary use:	Showcase Portfolio
 	}
 	
 	.flexnav > li > a {
-		font-size: calc(1rem + 12vw);
+		font-size: var(--menu-size);
 		line-height: calc(1rem + 11.5vw);
 		font-family: var(--font-family-secondary), 'sans-serif';
 		text-transform: lowercase;		
@@ -3844,7 +3845,7 @@ Primary use:	Showcase Portfolio
 	}
 	
 	.flexnav > li > a {
-		font-size: calc(1rem + 14vw);
+		font-size: var(--menu-size-small);
 		line-height: calc(1rem + 13.5vw);
 	}
 	

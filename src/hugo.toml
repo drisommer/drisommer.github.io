@@ -48,6 +48,9 @@ publishDir = "../docs"
     bodySize = "16px"
     smallBodySize = "15px"
     captionSize = "12px"
+    # Menu font sizes (vw values)
+    menuSize = "30"
+    menuSizeSmall = "35"
     # Responsive title variations
     nextHeroTitle = "22.15"
     

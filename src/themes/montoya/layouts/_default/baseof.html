@@ -50,7 +50,9 @@
       {{ $h3Size := mul (float (.Site.Params.fontSizes.h3Size )) (float $multiplier) }}
       {{ $h4Size := mul (float (.Site.Params.fontSizes.h4Size )) (float $multiplier) }}
       {{ $h5Size := mul (float (.Site.Params.fontSizes.h5Size )) (float $multiplier) }}
-      {{ $nextHeroTitle := mul (float (.Site.Params.fontSizes.nextHeroTitle | default "22.15")) (float $multiplier) }}
+      {{ $nextHeroTitle := mul (float (.Site.Params.fontSizes.nextHeroTitle )) (float $multiplier) }}
+      {{ $menuSize := mul (float (.Site.Params.fontSizes.menuSize )) (float $multiplier) }}
+      {{ $menuSizeSmall := mul (float (.Site.Params.fontSizes.menuSizeSmall )) (float $multiplier) }}
       --header-title-size: {{ $headerTitle }}vw;
       --hero-title-size: {{ $heroTitle }}vw;
       --big-title-size: {{ $bigTitle }}vw;
@@ -63,6 +65,9 @@
       --body-size: {{ .Site.Params.fontSizes.bodySize }};
       --small-body-size: {{ .Site.Params.fontSizes.smallBodySize }};
       --caption-size: {{ .Site.Params.fontSizes.captionSize }};
+      /* Menu font sizes */
+      --menu-size: {{ $menuSize }}vw;
+      --menu-size-small: {{ $menuSizeSmall }}vw;
       /* Responsive font sizes */
       --next-hero-title-size: {{ $nextHeroTitle }}vw;
       
