@@ -42,19 +42,30 @@
       --font-family-secondary: '{{ .Site.Params.fonts.secondaryFont }}', sans-serif;
       
       /* Font sizes (vw values for calc() and fixed sizes) */
-      --hero-title-size: {{ .Site.Params.fontSizes.heroTitle }}vw;
-      --big-title-size: {{ .Site.Params.fontSizes.bigTitle }}vw;
-      --h1-size: {{ .Site.Params.fontSizes.h1Size }}vw;
-      --h2-size: {{ .Site.Params.fontSizes.h2Size }}vw;
-      --h3-size: {{ .Site.Params.fontSizes.h3Size }}vw;
-      --h4-size: {{ .Site.Params.fontSizes.h4Size }}vw;
-      --h5-size: {{ .Site.Params.fontSizes.h5Size }}vw;
+      {{ $multiplier := .Site.Params.fonts.fontSizeMultiplier }}
+      {{ $headerTitle := mul (float (.Site.Params.fontSizes.headerTitle )) (float $multiplier) }}
+      {{ $heroTitle := mul (float (.Site.Params.fontSizes.heroTitle )) (float $multiplier) }}
+      {{ $bigTitle := mul (float (.Site.Params.fontSizes.bigTitle )) (float $multiplier) }}
+      {{ $h1Size := mul (float (.Site.Params.fontSizes.h1Size )) (float $multiplier) }}
+      {{ $h2Size := mul (float (.Site.Params.fontSizes.h2Size )) (float $multiplier) }}
+      {{ $h3Size := mul (float (.Site.Params.fontSizes.h3Size )) (float $multiplier) }}
+      {{ $h4Size := mul (float (.Site.Params.fontSizes.h4Size )) (float $multiplier) }}
+      {{ $h5Size := mul (float (.Site.Params.fontSizes.h5Size )) (float $multiplier) }}
+      {{ $nextHeroTitle := mul (float (.Site.Params.fontSizes.nextHeroTitle | default "22.15")) (float $multiplier) }}
+      --header-title-size: {{ $headerTitle }}vw;
+      --hero-title-size: {{ $heroTitle }}vw;
+      --big-title-size: {{ $bigTitle }}vw;
+      --h1-size: {{ $h1Size }}vw;
+      --h2-size: {{ $h2Size }}vw;
+      --h3-size: {{ $h3Size }}vw;
+      --h4-size: {{ $h4Size }}vw;
+      --h5-size: {{ $h5Size }}vw;
       --h6-size: {{ .Site.Params.fontSizes.h6Size }};
       --body-size: {{ .Site.Params.fontSizes.bodySize }};
       --small-body-size: {{ .Site.Params.fontSizes.smallBodySize }};
       --caption-size: {{ .Site.Params.fontSizes.captionSize }};
       /* Responsive font sizes */
-      --next-hero-title-size: {{ .Site.Params.fontSizes.nextHeroTitle | default "22.15" }}vw;
+      --next-hero-title-size: {{ $nextHeroTitle }}vw;
       
       /* Line heights (vw values for calc() and fixed sizes) */
       --hero-line-height: {{ .Site.Params.lineHeights.heroLineHeight }}vw;

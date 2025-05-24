@@ -23,7 +23,7 @@ a, button, input, textarea, select,
 
 #site-title .title-text {
   font-weight: 400;
-  font-size: calc(1rem + 6vw);
+  font-size: calc(1rem + var(--header-title-size));
   line-height: 80px;
   color: var(--accent-color-alt);
   letter-spacing: 1px;
@@ -43,14 +43,14 @@ a, button, input, textarea, select,
 /* Hide title on mobile screens */
 @media only screen and (max-width: 767px) {
   #site-title {
-    font-size: calc(1rem + 6vw);
+    font-size: calc(1rem + var(--header-title-size));
   }
 }
 
 /* Adjust title size for medium screens */
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
   #site-title .title-text {
-    font-size: calc(1rem + 6vw);
+    font-size: calc(1rem + var(--header-title-size));
   }
 }
 
