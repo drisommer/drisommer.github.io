@@ -318,7 +318,7 @@
 		color: var(--accent-color-alt);
 		text-align: center;
 		line-height: 36px;
-		font-size: 14px;
+		font-size: var(--showcase-button-size);
 		background-color:var(--accent-color);
 		border-radius:36px;
 	}
@@ -342,7 +342,7 @@
 	
 	.cp-button-prev .button-text, .cp-button-next .button-text {
 		font-weight: 500;
-		font-size: 14px;
+		font-size: var(--showcase-button-size);
 		line-height: 44px;
 		margin: 0;
 		overflow: hidden;
@@ -382,7 +382,7 @@
 		margin-top:30px;
 		height:20px;
 		line-height:20px;
-		font-size:14px;
+		font-size: var(--showcase-progress-size);
 		font-weight: 500;
 		left:0;
 		right:0;
@@ -501,7 +501,7 @@
 		padding: 2px 16px;
 		background: rgba(255,255,255,0.2);
 		border-radius: 35px;
-		font-size: 14px;
+		font-size: var(--showcase-caption-size);
 	}
 	
 	.overlapping-image .change-header .slide-caption .slide-date {
@@ -517,7 +517,7 @@
 		padding: 2px 16px;
 		background: rgba(255,255,255,0.2);
 		border-radius: 35px;
-		font-size: 14px;
+		font-size: var(--showcase-caption-size);
 	}
 	
 	.overlapping-image .change-header .slide-caption .slide-cat {
@@ -760,7 +760,7 @@
 	}
 	
 	.showcase-portfolio .slide-caption .slide-title {
-		font-size: 24px;
+		font-size: var(--showcase-title-size);
 		line-height:32px;
 		font-weight: 500;
 		color: var(--accent-color-alt);
@@ -776,7 +776,7 @@
 	}
 	
 	.showcase-portfolio .slide-caption .slide-cat {
-		font-size: 14px;
+		font-size: var(--showcase-caption-size);
 		line-height:32px;
 		font-weight: 500;
 		color: var(--accent-color-alt);
@@ -802,7 +802,7 @@
 		padding: 2px 16px;
 		background: rgba(255,255,255,0.2);
 		border-radius: 35px;
-		font-size: 14px;
+		font-size: var(--showcase-caption-size);
 	}
 	
 	.showcase-portfolio .clapat-item .change-header .slide-date {
@@ -1038,7 +1038,7 @@
 	}
 	
 	.showcase-gallery a.slide-link {
-		font-size:14px;
+		font-size:var(--showcase-caption-size);
 		font-weight:500;
 		position:absolute;
 		width:auto;
@@ -1070,11 +1070,11 @@
 		width: 40px;
 		text-align: center;
 		line-height: 40px;
-		font-size: 18px;
+		font-size: var(--showcase-title-small-size);
 	}
 	
 	.showcase-gallery a.slide-link > i {
-		font-size:18px;
+		font-size:var(--showcase-title-small-size);
 	}
 	
 	.showcase-gallery .img-mask {
@@ -1145,7 +1145,7 @@
 	}
 	
 	.showcase-gallery .slide-caption .slide-title {
-		font-size: 20px;
+		font-size: var(--showcase-gallery-title-size);
 		line-height:30px;
 		font-weight: 500;
 		color: var(--accent-color-alt);
@@ -1173,7 +1173,7 @@
 		position: absolute;
 		bottom: 0;
 		right: 0;
-		font-size: 14px;
+		font-size: var(--showcase-caption-size);
 		line-height:30px;
 		font-weight: 500;
 		color: var(--accent-color-alt);
@@ -1274,7 +1274,7 @@
 	}
 	
 	.slide-hero-subtitle {
-		font-size:18px;
+		font-size:var(--showcase-title-small-size);
 		line-height:24px;
 		font-weight: 400;
 		color: var(--accent-color-alt);
@@ -1408,7 +1408,7 @@
 	}
 	
 	.showcase-portfolio .slide-caption .slide-title {
-		font-size: 20px;
+		font-size: var(--showcase-gallery-title-size);
 		line-height: 28px;
 	}
 	
@@ -1524,7 +1524,7 @@
 	}
 	
 	.showcase-portfolio .slide-caption .slide-title {
-		font-size: 18px;
+		font-size: var(--showcase-title-small-size);
 	}
 	
 	/* Showcase Gallery */
@@ -1700,7 +1700,7 @@
 	}
 	
 	.slide-hero-subtitle {
-		font-size:16px;
+		font-size:var(--showcase-subtitle-mobile-size);
 		line-height:24px;
 		margin-top:20px;
 		max-width: 100%;
@@ -1713,8 +1713,8 @@
 	}
 	
 	.overlapping-image .slide-caption .slide-title {
-		font-size: calc(1rem + 7vw);
-		line-height: calc(1rem + 13.5vw);
+		font-size: calc(1rem + var(--showcase-overlapping-title-mobile-size));
+		line-height: calc(1rem + var(--showcase-overlapping-title-mobile-size));
 	}
 	
 	.overlapping-image .slide-caption .slide-date {

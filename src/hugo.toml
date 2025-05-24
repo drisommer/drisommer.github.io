@@ -51,6 +51,15 @@ publishDir = "../docs"
     # Menu font sizes (vw values)
     menuSize = "30"
     menuSizeSmall = "35"
+    # Showcase component font sizes
+    showcaseTitle = "24px"
+    showcaseGalleryTitle = "20px"
+    showcaseTitleSmall = "18px"
+    showcaseButton = "14px"
+    showcaseCaption = "14px"
+    showcaseProgress = "14px"
+    showcaseSubtitleMobile = "16px"
+    showcaseOverlappingTitleMobile = "0.5"
     # Responsive title variations
     nextHeroTitle = "22.15"
     
