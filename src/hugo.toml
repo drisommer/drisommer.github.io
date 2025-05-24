@@ -24,10 +24,62 @@ publishDir = "../docs"
     
     darkText = "#000000"
     lightText = "#ffffff"
-    
+  # font sources
+  # https://fonts.google.com/specimen/Splash?preview.text=DIRECTOR%20*%20EDITOR%20*%20DRI%20SOMMER&categoryFilters=Feeling:%2FExpressive%2FArtistic
+  # https://fonts.google.com/specimen/Monoton?preview.text=DIRECTOR%20*%20EDITOR%20*%20DRI%20SOMMER&categoryFilters=Feeling:%2FExpressive%2FArtistic
+  # https://fonts.google.com/specimen/Fredericka+the+Great?preview.text=DIRECTOR%20*%20EDITOR%20*%20DRI%20SOMMER&categoryFilters=Feeling:%2FExpressive%2FArtistic
   [params.fonts]
     primaryFont = "Poppins"
-    secondaryFont = "Six Caps"
+    secondaryFont = "Monoton"
+    # Global multiplier for font sizes with vw units
+    fontSizeMultiplier = "0.25"
+    
+  [params.fontSizes]
+    # Title font sizes (vw values)
+    headerTitle = "6"
+    heroTitle = "24.15"
+    bigTitle = "12"
+    h1Size = "4.15"
+    h2Size = "3"
+    h3Size = "2"
+    h4Size = "1"
+    h5Size = "0.6"
+    h6Size = "18px"
+    bodySize = "16px"
+    smallBodySize = "15px"
+    captionSize = "12px"
+    # Responsive title variations
+    nextHeroTitle = "22.15"
+    
+  [params.lineHeights]
+    # Title line heights (vw values)
+    heroLineHeight = "22"
+    bigLineHeight = "7.5"
+    h1LineHeight = "4.5"
+    h2LineHeight = "3.5"
+    h3LineHeight = "2.5"
+    h4LineHeight = "1.6"
+    h5LineHeight = "1.5"
+    h6LineHeight = "36px"
+    bodyLineHeight = "30px"
+    # Responsive line height variations
+    nextHeroLineHeight = "14.5"
+    responsiveHeroLineHeight = "20.5"
+    responsiveNextHeroLineHeight = "12.5"
+    
+  [params.layout]
+    # Layout spacing and dimensions (vw values)
+    galleryPadding = "42"
+    galleryPaddingSmall = "35"
+    titleMarginLeft = "-0.6"
+    minElementWidth = "3"
+    
+  [params.dimensions]
+    # Gallery item dimensions (vw values)
+    galleryItemSmall = "18"
+    galleryItemStandard = "22"
+    galleryItemMedium = "33"
+    galleryItemLarge = "44"
 
 # Main navigation menu
 [menu]

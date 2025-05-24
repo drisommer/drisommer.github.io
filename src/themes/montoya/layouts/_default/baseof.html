@@ -40,6 +40,48 @@
       /* Font families */
       --font-family-primary: '{{ .Site.Params.fonts.primaryFont }}', sans-serif;
       --font-family-secondary: '{{ .Site.Params.fonts.secondaryFont }}', sans-serif;
+      
+      /* Font sizes (vw values for calc() and fixed sizes) */
+      --hero-title-size: {{ .Site.Params.fontSizes.heroTitle }}vw;
+      --big-title-size: {{ .Site.Params.fontSizes.bigTitle }}vw;
+      --h1-size: {{ .Site.Params.fontSizes.h1Size }}vw;
+      --h2-size: {{ .Site.Params.fontSizes.h2Size }}vw;
+      --h3-size: {{ .Site.Params.fontSizes.h3Size }}vw;
+      --h4-size: {{ .Site.Params.fontSizes.h4Size }}vw;
+      --h5-size: {{ .Site.Params.fontSizes.h5Size }}vw;
+      --h6-size: {{ .Site.Params.fontSizes.h6Size }};
+      --body-size: {{ .Site.Params.fontSizes.bodySize }};
+      --small-body-size: {{ .Site.Params.fontSizes.smallBodySize }};
+      --caption-size: {{ .Site.Params.fontSizes.captionSize }};
+      /* Responsive font sizes */
+      --next-hero-title-size: {{ .Site.Params.fontSizes.nextHeroTitle | default "22.15" }}vw;
+      
+      /* Line heights (vw values for calc() and fixed sizes) */
+      --hero-line-height: {{ .Site.Params.lineHeights.heroLineHeight }}vw;
+      --big-line-height: {{ .Site.Params.lineHeights.bigLineHeight }}vw;
+      --h1-line-height: {{ .Site.Params.lineHeights.h1LineHeight }}vw;
+      --h2-line-height: {{ .Site.Params.lineHeights.h2LineHeight }}vw;
+      --h3-line-height: {{ .Site.Params.lineHeights.h3LineHeight }}vw;
+      --h4-line-height: {{ .Site.Params.lineHeights.h4LineHeight }}vw;
+      --h5-line-height: {{ .Site.Params.lineHeights.h5LineHeight }}vw;
+      --h6-line-height: {{ .Site.Params.lineHeights.h6LineHeight }};
+      --body-line-height: {{ .Site.Params.lineHeights.bodyLineHeight }};
+      /* Responsive line heights */
+      --next-hero-line-height: {{ .Site.Params.lineHeights.nextHeroLineHeight | default "14.5" }}vw;
+      --responsive-hero-line-height: {{ .Site.Params.lineHeights.responsiveHeroLineHeight | default "20.5" }}vw;
+      --responsive-next-hero-line-height: {{ .Site.Params.lineHeights.responsiveNextHeroLineHeight | default "12.5" }}vw;
+      
+      /* Layout spacing and dimensions */
+      --gallery-padding: {{ .Site.Params.layout.galleryPadding | default "42" }}vw;
+      --gallery-padding-small: {{ .Site.Params.layout.galleryPaddingSmall | default "35" }}vw;
+      --title-margin-left: {{ .Site.Params.layout.titleMarginLeft | default "-0.6" }}vw;
+      --min-element-width: {{ .Site.Params.layout.minElementWidth | default "3" }}vw;
+      
+      /* Gallery item dimensions */
+      --gallery-item-small: {{ .Site.Params.dimensions.galleryItemSmall | default "18" }}vw;
+      --gallery-item-standard: {{ .Site.Params.dimensions.galleryItemStandard | default "22" }}vw;
+      --gallery-item-medium: {{ .Site.Params.dimensions.galleryItemMedium | default "33" }}vw;
+      --gallery-item-large: {{ .Site.Params.dimensions.galleryItemLarge | default "44" }}vw;
     }
   </style>
   {{ $primaryFont := .Site.Params.fonts.primaryFont | default "Poppins" }}
