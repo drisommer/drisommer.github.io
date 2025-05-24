@@ -19,7 +19,7 @@
             {{ if eq $contact.type "email" }}
               <a href="mailto:{{ $contact.info }}" class="link"><span>{{ $contact.info }}</span></a>
             {{ else if eq $contact.type "link" }}
-              <a href="{{ $contact.info }}" class="link" target="_blank"><span>{{ $contact.info }}</span></a>
+              <a href="{{ $contact.url | relURL }}" class="link" target="_blank"><span>{{ $contact.info }}</span></a>
             {{ else }}
               {{ $contact.info }}
             {{ end }}
