@@ -2228,6 +2228,10 @@ Primary use:	Showcase Portfolio
 		.fullscreen-menu .open .flexnav li a span {
 			overflow:visible;
 		}
+
+		.fullscreen-menu .open .flexnav li a span:hover {
+			color: var(--accent-color-alt);
+		}
 		
 		.fullscreen-menu .flexnav li a span::before {
 			position: absolute;
