@@ -73,9 +73,7 @@ document.addEventListener("DOMContentLoaded", function() {
       });
     });
 
-    // Keep the existing hover functionality for desktop
-    if (!isMobile()) {
-      // The hover functionality should already be set up in your scripts.js or common.js
-    }
+    // All devices now use scroll-based video autoplay
+    // Hover functionality for cursor effects only (no video control) is handled in scripts.js
   }
 });
