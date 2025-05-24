@@ -7,9 +7,8 @@
     </div>
     {{ end }}
     
-    <div class="{{ if .Params.header }}two_third last{{ else }}full{{ end }}">
-      {{ range $paragraph := .Params.paragraphs }}
-        <p class="has-animation">{{ $paragraph | safeHTML }}</p>
+    <div class="{{ if .Params.header }}two_third last{{ else }}full{{ end }}">      {{ range $paragraph := .Params.paragraphs }}
+        <p class="has-animation">{{ $paragraph | markdownify }}</p>
       {{ end }}
     </div>
   </div>
