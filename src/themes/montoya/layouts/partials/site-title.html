@@ -2,7 +2,9 @@
 {{ $scrollFadeTitle := default false .scrollFadeTitle }}
 {{ $scrollFadeHeight := default 1.2 .scrollFadeHeight }}
 {{ $titleText := default .Site.Params.meta.title .titleText }}
+{{ if $titleText }}
 <div id="site-title" class="primary-font-title hide-ball{{ if $scrollFadeTitle }} scroll-fade-title hidden{{ end }}" {{ if $scrollFadeTitle }}data-scroll-fade-height="{{ $scrollFadeHeight }}"{{ end }}>
   <div class="title-text">{{ $titleText }}</div>
 </div>
+{{ end }}
 <!--/Site Title -->
