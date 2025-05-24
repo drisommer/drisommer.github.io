@@ -1,5 +1,6 @@
 <!-- Logo -->
-<div id="logo" class="hide-ball">
+{{ $iconHeight := default 35 .iconHeight }}
+<div id="logo" class="hide-ball" {{ if .iconHeight }}style="--logo-height: {{ $iconHeight }}px;"{{ end }}>
   <a class="ajax-link" data-type="page-transition" href="{{ "/" | relURL }}">
     <img class="black-logo" src="{{ "images/logo.png" | relURL }}" alt="ClaPat Logo">
     <img class="white-logo" src="{{ "images/logo-white.png" | relURL }}" alt="ClaPat Logo">

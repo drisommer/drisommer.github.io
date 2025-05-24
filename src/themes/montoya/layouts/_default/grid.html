@@ -9,7 +9,12 @@
     <header class="fullscreen-menu invert-header" data-menucolor="{{ .Site.Params.colors.darkBackground  }}">
       <div id="header-container">
 
-        {{ partial "logo.html" . }}
+        {{ $iconHeight := 35 }}
+        {{ if gt .Params.iconHeight 0 }}
+          {{ $iconHeight = .Params.iconHeight }}
+        {{ end }}
+
+        {{ partial "logo.html" (dict "iconHeight" $iconHeight) }}
         {{ partial "site-title.html" (dict "Site" .Site "titleText" .Title) }}
         {{ partial "menu.html" . }}
 

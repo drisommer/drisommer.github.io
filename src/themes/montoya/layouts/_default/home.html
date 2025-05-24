@@ -10,16 +10,20 @@
     <header class="fullscreen-menu invert-header" data-menucolor="{{ .Site.Params.colors.darkBackground  }}">
       {{ $homeTitleText := "" }}
       {{ $scrollFadeHeight := 1.15 }}
+      {{ $iconHeight := 70 }}
       {{ with .Site.GetPage "/home" }}
         {{ $homeTitleText = .Title }}
         {{ if gt .Params.scrollFadeHeight 0 }}
           {{ $scrollFadeHeight = .Params.scrollFadeHeight }}
         {{ end }}
+        {{ if gt .Params.iconHeight 0 }}
+          {{ $iconHeight = .Params.iconHeight }}
+        {{ end }}
       {{ end }}
       
       <div id="header-container">
 
-        {{ partial "logo.html" . }}
+        {{ partial "logo.html" (dict "iconHeight" $iconHeight) }}
         {{ partial "site-title.html" (dict "Site" .Site "scrollFadeTitle" true "scrollFadeHeight" $scrollFadeHeight "titleText" $homeTitleText) }}
         {{ partial "menu.html" . }}
 
