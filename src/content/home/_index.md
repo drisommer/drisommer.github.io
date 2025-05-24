@@ -1,5 +1,5 @@
 +++
-title = "Dri Sommer"
+title = " "
 scrollFadeHeight = 1.2
 iconHeight = 70
 +++

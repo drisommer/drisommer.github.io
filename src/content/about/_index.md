@@ -1,6 +1,6 @@
 +++
 layout = "about"
 url = "/about/"
-title = "Who is Dri?"
+title = " "
 iconHeight = 35
 +++

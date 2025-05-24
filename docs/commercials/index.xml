@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Commercials on </title>
-    <link>https://example.org/commercials/</link>
+    <link>http://localhost:1313/commercials/</link>
     <description>Recent content in Commercials on </description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="https://example.org/commercials/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/commercials/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title></title>
-      <link>https://example.org/commercials/list/</link>
+      <link>http://localhost:1313/commercials/list/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://example.org/commercials/list/</guid>
+      <guid>http://localhost:1313/commercials/list/</guid>
       <description></description>
     </item>
     <item>
-      <title>Check Out Other Work</title>
-      <link>https://example.org/commercials/other-projects/</link>
+      <title>Check Out My Work</title>
+      <link>http://localhost:1313/commercials/other-projects/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://example.org/commercials/other-projects/</guid>
+      <guid>http://localhost:1313/commercials/other-projects/</guid>
       <description></description>
     </item>
     <item>
       <title></title>
-      <link>https://example.org/commercials/contact/</link>
+      <link>http://localhost:1313/commercials/contact/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://example.org/commercials/contact/</guid>
+      <guid>http://localhost:1313/commercials/contact/</guid>
       <description></description>
     </item>
   </channel>

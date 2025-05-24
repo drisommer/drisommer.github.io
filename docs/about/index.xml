@@ -1,45 +1,45 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Who is Dri? on </title>
-    <link>https://example.org/about/</link>
-    <description>Recent content in Who is Dri? on </description>
+    <title>  on </title>
+    <link>http://localhost:1313/about/</link>
+    <description>Recent content in   on </description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="https://example.org/about/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/about/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Clipped Image</title>
-      <link>https://example.org/about/clipped-image/</link>
+      <link>http://localhost:1313/about/clipped-image/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://example.org/about/clipped-image/</guid>
+      <guid>http://localhost:1313/about/clipped-image/</guid>
       <description></description>
     </item>
     <item>
       <title></title>
-      <link>https://example.org/about/bio-info/</link>
+      <link>http://localhost:1313/about/bio-info/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://example.org/about/bio-info/</guid>
+      <guid>http://localhost:1313/about/bio-info/</guid>
       <description></description>
     </item>
     <item>
       <title></title>
-      <link>https://example.org/about/bio-gallery/</link>
+      <link>http://localhost:1313/about/bio-gallery/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://example.org/about/bio-gallery/</guid>
+      <guid>http://localhost:1313/about/bio-gallery/</guid>
       <description></description>
     </item>
     <item>
       <title></title>
-      <link>https://example.org/about/contact/</link>
+      <link>http://localhost:1313/about/contact/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://example.org/about/contact/</guid>
+      <guid>http://localhost:1313/about/contact/</guid>
       <description></description>
     </item>
     <item>
-      <title>Check Out Our Work</title>
-      <link>https://example.org/about/see-all-projects/</link>
+      <title>Check Out My Work</title>
+      <link>http://localhost:1313/about/see-all-projects/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://example.org/about/see-all-projects/</guid>
+      <guid>http://localhost:1313/about/see-all-projects/</guid>
       <description></description>
     </item>
   </channel>
