@@ -1,6 +1,8 @@
 <!-- Site Title -->
 {{ $scrollFadeTitle := default false .scrollFadeTitle }}
-<div id="site-title" class="primary-font-title hide-ball{{ if $scrollFadeTitle }} scroll-fade-title hidden{{ end }}">
-  <div class="title-text">{{ .Site.Params.meta.title }}</div>
+{{ $scrollFadeHeight := default 1.2 .scrollFadeHeight }}
+{{ $titleText := default .Site.Params.meta.title .titleText }}
+<div id="site-title" class="primary-font-title hide-ball{{ if $scrollFadeTitle }} scroll-fade-title hidden{{ end }}" {{ if $scrollFadeTitle }}data-scroll-fade-height="{{ $scrollFadeHeight }}"{{ end }}>
+  <div class="title-text">{{ $titleText }}</div>
 </div>
 <!--/Site Title -->

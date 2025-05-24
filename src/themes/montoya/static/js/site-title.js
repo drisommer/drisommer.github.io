@@ -14,13 +14,13 @@ jQuery(function($) {
                     opacity: 0,
                     visibility: 'hidden'
                 });
-                
-                // Calculate 80% of window height
-                const scrollThreshold = window.innerHeight * 1.2;
+                  // Get threshold from data attribute or default to 1.2 times window height
+                const fadeHeightFactor = parseFloat(siteTitleElement.attr('data-scroll-fade-height') || 1.2);
+                const scrollThreshold = window.innerHeight * fadeHeightFactor;
                 
                 // Create a ScrollTrigger for the animation
                 ScrollTrigger.create({
-                    start: scrollThreshold + " top", // Start at 80% of window height
+                    start: scrollThreshold + " top", // Start at configured threshold of window height
                     end: "bottom top",
                     onEnter: () => {
                         // When scrolling down past the threshold
@@ -43,11 +43,11 @@ jQuery(function($) {
                 });
             } else {
                 console.warn("ScrollTrigger not available, falling back to basic animation");
-                
-                // Fallback to basic scroll-based animation
+                  // Fallback to basic scroll-based animation
                 $(window).on('scroll', function() {
                     const scrollTop = $(window).scrollTop();
-                    const threshold = window.innerHeight * 1.2;
+                    const fadeHeightFactor = parseFloat(siteTitleElement.attr('data-scroll-fade-height') || 1.2);
+                    const threshold = window.innerHeight * fadeHeightFactor;
                     
                     if (scrollTop > threshold) {
                         siteTitleElement.css({

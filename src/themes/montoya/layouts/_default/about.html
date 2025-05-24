@@ -11,7 +11,7 @@
       <div id="header-container">
 
         {{ partial "logo.html" . }}
-        {{ partial "site-title.html" (dict "Site" .Site) }}
+        {{ partial "site-title.html" (dict "Site" .Site "titleText" .Site.Params.meta.title) }}
         {{ partial "menu.html" . }}
 
       </div>
