@@ -12,7 +12,7 @@ paragraphs = [
     
     "Throughout my career, I have worked on award-winning {{< vhoverimg img=\"/images/about.png\" >}}short films{{< /vhoverimg >}}, commercials, and music videos, creating visually compelling narratives that resonate across cultural boundaries.",
     
-    "When I'm not behind the camera or in the editing suite, you can find me exploring new locations for future shoots or mentoring emerging filmmakers, passing on the knowledge and passion that has driven my career."
+    "When I'm not behind the {{< vhoverimg img=\"/images/about.png\" >}}camera{{< /vhoverimg >}} or in the editing suite, you can find me exploring new locations for future shoots or mentoring emerging filmmakers, passing on the knowledge and passion that has driven my career."
 ]
 +++
 
