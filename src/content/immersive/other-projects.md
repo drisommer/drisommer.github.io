@@ -5,8 +5,8 @@ weight = 15
 subtitle = "We're excited to collaborate with you and bring your vision to life."
 
 [[buttons]]
-text = "Music Content"
-url = "/music-content/"
+text = "Music Videos"
+url = "/music-videos/"
 
 [[buttons]]
 text = "Commercials"

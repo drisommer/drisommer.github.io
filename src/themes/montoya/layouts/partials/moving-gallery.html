@@ -1,21 +1,25 @@
 <!-- Moving Gallery Partial -->
-<div class="content-row full row_padding_bottom dark-section" data-bgcolor="{{ .Site.Params.colors.darkBackground  }}">
+<div class="content-row full {{ if .Params.PaddingTop }} row_padding_top {{ end }} {{ if .Params.PaddingBottom }} row_padding_bottom {{ end }} dark-section" data-bgcolor="{{ .Site.Params.colors.darkBackground  }}">
   <div class="moving-gallery bw-gallery">
     <ul class="wrapper-gallery">
-      {{ range $client := .Params.gallery_backwards }}
+      {{ range $item := .Params.gallery_backwards }}
       <li class="link">
-        <a target="_blank" href="{{ $client.url }}"><img src="{{ $client.image | relURL }}" alt="{{ $client.name }}"></a>
-        <div class="moving-gallery-caption">{{ $client.name }}</div>                                          
+        {{if $item.url }} <a target="_blank" href="{{ $item.url }}"> {{ end }}
+          <img src="{{ $item.image | relURL }}" alt="{{ $item.name }}">
+        {{if $item.url }}</a>{{ end }}
+        <div class="moving-gallery-caption">{{ $item.name }}</div>                                          
       </li>
       {{ end }}
     </ul>
   </div>
   <div class="moving-gallery fw-gallery">
     <ul class="wrapper-gallery">
-      {{ range $client := .Params.gallery_forwards }}
+      {{ range $item := .Params.gallery_forwards }}
       <li class="link">
-        <a target="_blank" href="{{ $client.url }}"><img src="{{ $client.image | relURL }}" alt="{{ $client.name }}"></a>
-        <div class="moving-gallery-caption">{{ $client.name }}</div>                                          
+        {{if $item.url }} <a target="_blank" href="{{ $item.url }}"> {{ end }}
+          <img src="{{ $item.image | relURL }}" alt="{{ $item.name }}">
+        {{if $item.url }}</a>{{ end }}
+        <div class="moving-gallery-caption">{{ $item.name }}</div>                                          
       </li>
       {{ end }}
     </ul>

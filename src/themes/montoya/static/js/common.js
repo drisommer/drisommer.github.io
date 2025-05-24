@@ -2365,6 +2365,8 @@ Function Shortcodes
 								top : document.body.scrollTop + document.documentElement.scrollTop
 							};
 							gsap.to($('.hover-reveal'), { duration: 1, top: `${mousePos.y+40-docScrolls.top}px`, left: `${mousePos.x+10-docScrolls.left}px`, ease:Power4.easeOut });
+							// console log top and left positions calculated
+							console.log(`Top: ${mousePos.y+40-docScrolls.top}px, Left: ${mousePos.x+10-docScrolls.left}px`);
 						}
 						
 					};

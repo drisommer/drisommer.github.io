@@ -1,6 +1,8 @@
 +++
-weight = 30
+weight = 100
 partial = "contact"
+
+paddingTop = true
 
 ## if contact info is not defined here, it gets pulled from hugo.toml
 ## remove '#' from the lines below to define contact info for this page
