@@ -8,10 +8,15 @@
 
     <!-- Header -->
     <header class="fullscreen-menu invert-header" data-menucolor="{{ .Site.Params.colors.darkBackground  }}">
+      {{ $homeTitleText := "" }}
+      {{ with .Site.GetPage "/home" }}
+        {{ $homeTitleText = .Title }}
+      {{ end }}
+      
       <div id="header-container">
 
         {{ partial "logo.html" . }}
-        {{ partial "site-title.html" (dict "Site" .Site "scrollFadeTitle" true "scrollFadeHeight" 1.15 "titleText" .Title) }}
+        {{ partial "site-title.html" (dict "Site" .Site "scrollFadeTitle" true "scrollFadeHeight" 1.15 "titleText" "Sommer Dri") }}
         {{ partial "menu.html" . }}
 
       </div>
