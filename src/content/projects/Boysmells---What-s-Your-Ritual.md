@@ -1,6 +1,6 @@
 +++
 title = "Boysmells x What's Your Ritual"
-featured = true
+featured = 10
 weight = 2
 heroImage = "https://drisommer.blob.core.windows.net/datastorage/videos/008_BoysmellsWhatsYourRitual-preview.jpg"
 heroVideo = "https://drisommer.blob.core.windows.net/datastorage/videos/008_BoysmellsWhatsYourRitual-preview.mp4"

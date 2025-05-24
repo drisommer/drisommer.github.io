@@ -9,7 +9,7 @@
           {{ $allProjects := where (where .Site.RegularPages "Section" "projects") "Params.draft" "ne" true }}
 
           {{ if .Params.filterByFeatured }}
-            {{ $allProjects = where $allProjects "Params.featured" true }}
+            {{ $allProjects = where $allProjects "Params.featured" "gt" 0 }}
           {{ end }}
 
           {{ if .Params.filterByProjectType }}
@@ -20,7 +20,14 @@
             {{ $allProjects = where $allProjects "Params.projectRole" "intersect" .Params.filterByRole }}
           {{ end }}
 
-          {{ range sort $allProjects "Params.weight" }}
+          {{ $sortField := "Params.weight" }}
+          {{ if .Params.sortBy }}
+            {{ if eq .Params.sortBy "featured" }}
+              {{ $sortField = "Params.featured" }}
+            {{ end }}
+          {{ end }}
+
+          {{ range sort $allProjects $sortField }}
             {{ $projectContext := dict "project" . "hideProjectType" $.Params.hideProjectType "hideProjectRole" $.Params.hideProjectRole }}
             {{ partial "project-item.html" $projectContext }}
           {{ end }}

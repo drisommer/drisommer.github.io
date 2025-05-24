@@ -3,19 +3,19 @@ weight = 30
 partial = "moving-gallery"
 
 gallery_backwards = [
-  {image = "images/about.png", name = "Image 1"},
-  {image = "images/about.png", name = "Image 2"},
-  {image = "images/about.png", name = "Image 3"},
-  {image = "images/about.png", name = "Image 4"},
-  {image = "images/about.png", name = "Image 5"},
+  {image = "images/about.png"},
+  {image = "images/about.png"},
+  {image = "images/about.png"},
+  {image = "images/about.png"},
+  {image = "images/about.png"},
 ]
 
 gallery_forwards = [
-  {image = "images/about.png", name = "Image 1"},
-  {image = "images/about.png", name = "Image 2"},
-  {image = "images/about.png", name = "Image 3"},
-  {image = "images/about.png", name = "Image 4"},
-  {image = "images/about.png", name = "Image 5"},
+  {image = "images/about.png"},
+  {image = "images/about.png"},
+  {image = "images/about.png"},
+  {image = "images/about.png"},
+  {image = "images/about.png"},
 ]
 
 paddingTop = false

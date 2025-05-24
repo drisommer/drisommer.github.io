@@ -1,6 +1,6 @@
 +++
 title = "Converse"
-featured = true
+featured = 2
 weight = 13
 heroImage = "https://drisommer.blob.core.windows.net/datastorage/videos/020_Converse-preview.jpg"
 heroVideo = "https://drisommer.blob.core.windows.net/datastorage/videos/020_Converse-preview.mp4"

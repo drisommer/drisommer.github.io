@@ -87,7 +87,7 @@ icon = "fa-location-dot"
 type = "text"
 
 [[params.contacts]]
-info = "say-hi@drisommer.com"
+info = "drika.sommer@gmail.com"
 name = "shoot me an email"
 icon = "fa-paper-plane"
 type = "text"

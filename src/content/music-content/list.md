@@ -5,6 +5,8 @@ partial = "overlapping-gallery"
 filterByProjectType = ["Music Videos"]
 # filterByRole = ["Editor", "Director"]
 
+sortBy = "weight"
+
 hideProjectType = true
 # hideProjectRole = true
 +++

@@ -1,7 +1,7 @@
 +++
 partial = "buttons"
 title = "Check Out Our Work"
-weight = 15
+weight = 100
 subtitle = "We're excited to collaborate with you and bring your vision to life."
 
 [[buttons]]

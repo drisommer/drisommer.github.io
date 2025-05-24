@@ -1,6 +1,6 @@
 +++
 title = "Jukebox Dr. Squatch"
-featured = true
+featured = 10
 weight = 8
 heroImage = "https://drisommer.blob.core.windows.net/datastorage/videos/015_JukeboxDrSquatch-preview.jpg"
 heroVideo = "https://drisommer.blob.core.windows.net/datastorage/videos/015_JukeboxDrSquatch-preview.mp4"

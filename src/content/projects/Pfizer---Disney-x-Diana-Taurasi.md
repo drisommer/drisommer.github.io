@@ -1,6 +1,6 @@
 +++
 title = "Diana Taurasi - Pfizer x Disney"
-featured = true
+featured = 10
 weight = 4
 heroImage = "https://drisommer.blob.core.windows.net/datastorage/videos/010_PfizerDisneyxDianaTaurasi-preview.jpg"
 heroVideo = "https://drisommer.blob.core.windows.net/datastorage/videos/010_PfizerDisneyxDianaTaurasi-preview.mp4"

@@ -5,6 +5,8 @@ partial = "overlapping-gallery"
 filterByProjectType = ["Immersive"]
 # filterByRole = ["Editor", "Director"]
 
+sortBy = "weight"
+
 hideProjectType = true
 # hideProjectRole = true
 +++
