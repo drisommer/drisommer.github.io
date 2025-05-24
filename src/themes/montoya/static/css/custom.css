@@ -28,11 +28,16 @@ a, button, input, textarea, select,
   color: var(--accent-color-alt);
   letter-spacing: 1px;
   text-align: center;
-  transition: all 0.2s ease;
 }
 
 .light-content #site-title .title-text {
   color: var(--accent-color);
+}
+
+/* Home page specific styling */
+#site-title.home-page {
+  will-change: opacity, visibility;
+  /* GSAP will handle the animations */
 }
 
 /* Hide title on mobile screens */
