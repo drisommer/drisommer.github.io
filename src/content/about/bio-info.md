@@ -8,7 +8,7 @@ PaddingBottom = true
 header = "Biography"
 
 paragraphs = [
-    "Born and raised in <mark>the vibrant landscapes of Brazil,</mark> Adriane Sommer Damasceno, known professionally as Dri Sommer, developed an early passion for visual storytelling that eventually led her to the prestigious <mark>UNC School of Arts</mark>, where she <mark>dual majored</mark> in Directing and Cinematography.",
+    "Born and raised in the vibrant landscapes of Brazil, Adriane Sommer Damasceno, known professionally as Dri Sommer, developed an early passion for visual storytelling that eventually led her to the prestigious UNC School of Arts, where she dual majored in Directing and Cinematography.",
     
     "Her multicultural background gives Dri a unique perspective that she brings to every project, blending South American emotional depth with technical precision in her work as both a director and editor.",
     
