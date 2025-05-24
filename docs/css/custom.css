@@ -8,6 +8,52 @@ a, button, input, textarea, select,
   cursor: none !important;
 }
 
+/* Site Title Styling */
+#site-title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+#site-title .title-text {
+  font-weight: 400;
+  font-size: calc(1rem + var(--header-title-size));
+  line-height: 80px;
+  color: var(--accent-color-alt);
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.light-content #site-title .title-text {
+  color: var(--accent-color);
+}
+
+/* Title that fades in/out on scroll */
+#site-title.scroll-fade-title {
+  will-change: opacity, visibility;
+  /* GSAP will handle the animations */
+}
+
+/* Hide title on mobile screens */
+@media only screen and (max-width: 767px) {
+  #site-title {
+    font-size: calc(1rem + var(--header-title-size));
+  }
+}
+
+/* Adjust title size for medium screens */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  #site-title .title-text {
+    font-size: calc(1rem + var(--header-title-size));
+  }
+}
+
 /* Theme Color Applications */
 /* These styles will apply the colors from the hugo.toml variables */
 [data-bgcolor] {

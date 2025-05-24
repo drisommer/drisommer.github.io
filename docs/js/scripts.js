@@ -949,17 +949,13 @@ Function Showcase Overlapping Gallery
 					gsap.to('#ball-loader', {duration: 0.2, borderWidth: '2px', top: 2, left: 2});
 					$("#ball").addClass("with-blur");
 					$( "#ball" ).append( '<p class="center-first">' + $this.data("centerline") + '</p>' );
-					$(this).find('video').each(function() {
-						$(this).get(0).play();
-					});								
+					// Video play/pause is now handled by scroll-based autoplay							
 				}).on('mouseleave', function() {	
 					gsap.to('#ball', {duration: 0.2, borderWidth: '4px', scale:0.5, borderColor:'#999999', backgroundColor:'transparent'});
 					gsap.to('#ball-loader', {duration: 0.2, borderWidth: '4px', top: 0, left: 0});
 					$("#ball").removeClass("with-blur");
 					$('#ball p').remove();		
-					$(this).find('video').each(function() {
-						$(this).get(0).pause();
-					});
+					// Video play/pause is now handled by scroll-based autoplay
 				});
 			
 			}
@@ -2235,6 +2231,8 @@ Function Showcase Gallery
 		Lightbox();
 		PlayVideo();
 		ProjectVideoModal();
+		ProjectVideoAutoplay();
+		SiteTitleAnimations();
 		ContactForm();
 		ContactMap();
 		CustomFunction();

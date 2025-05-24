@@ -1,5 +1,7 @@
 // Auto-play videos when they come into the viewport
-document.addEventListener("DOMContentLoaded", function() {
+
+// Global function to initialize video autoplay (can be called from AJAX page loads)
+window.ProjectVideoAutoplay = function() {
   // Wait for GSAP and ScrollTrigger to be available
   if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
     initVideoAutoplay();
@@ -73,9 +75,12 @@ document.addEventListener("DOMContentLoaded", function() {
       });
     });
 
-    // Keep the existing hover functionality for desktop
-    if (!isMobile()) {
-      // The hover functionality should already be set up in your scripts.js or common.js
-    }
+    // All devices now use scroll-based video autoplay
+    // Hover functionality for cursor effects only (no video control) is handled in scripts.js
   }
+};
+
+// Initialize on DOMContentLoaded for the first page load
+document.addEventListener("DOMContentLoaded", function() {
+  window.ProjectVideoAutoplay();
 });

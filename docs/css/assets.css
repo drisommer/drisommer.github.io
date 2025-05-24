@@ -340,7 +340,7 @@
 		content:attr(data-tooltip);
 		font-size:12px;
 		font-weight:500;
-		font-family:Poppins,sans-serif;
+		font-family:var(--font-family-primary), 'sans-serif';
 		color:var(--accent-color-alt);
 		padding:5px;
 		border-radius:5px;

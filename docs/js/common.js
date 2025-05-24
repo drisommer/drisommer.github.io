@@ -4044,8 +4044,8 @@ Function Project Video Modal
 			});	
 			
 			$(".clapat-video-modal-close .parallax-wrap").mousemove(function(e) {
-				parallaxCursor(e, this, 2);
-				callParallax(e, this);
+				// Parallax cursor effects removed to prevent runtime errors
+				// The visual effects are handled by the mouseenter/mouseleave handlers above
 			});
 	} // End ProjectVideoModal
 });

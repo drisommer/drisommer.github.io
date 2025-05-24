@@ -1097,7 +1097,7 @@
 		display: inline;
 		vertical-align: top;
 		line-height: inherit;
-		font-family: 'Poppins', sans-serif;
+		font-family: var(--font-family-primary), 'sans-serif';
 		font-weight: 400;
 		font-size: 16px;
 		text-transform: initial;
@@ -2075,7 +2075,7 @@
 	
 	input, textarea {
 		color: rgba(0,0,0,1);
-		font-family: 'Poppins', sans-serif;
+		font-family: var(--font-family-primary), 'sans-serif';
 		font-size: 16px;
 		font-weight: 500;
 		height: 50px;
@@ -2212,7 +2212,7 @@
 		background:transparent;
 		border:none;
 		color:var(--accent-color);
-		font-family: 'Poppins', sans-serif;
+		font-family: var(--font-family-primary), 'sans-serif';
 		font-size: 18px;
 		font-weight: 500;
 		padding-left:50px;

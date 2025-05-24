@@ -118,17 +118,17 @@
   </url><url>
     <loc>https://example.org/</loc>
   </url><url>
-    <loc>https://example.org/commercials/</loc>
-  </url><url>
-    <loc>https://example.org/immersive/</loc>
-  </url><url>
-    <loc>https://example.org/music-videos/</loc>
-  </url><url>
     <loc>https://example.org/categories/</loc>
+  </url><url>
+    <loc>https://example.org/commercials/</loc>
   </url><url>
     <loc>https://example.org/contact/</loc>
   </url><url>
     <loc>https://example.org/home/</loc>
+  </url><url>
+    <loc>https://example.org/immersive/</loc>
+  </url><url>
+    <loc>https://example.org/music-videos/</loc>
   </url><url>
     <loc>https://example.org/projects/</loc>
   </url><url>
