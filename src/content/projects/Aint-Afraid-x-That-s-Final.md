@@ -1,5 +1,5 @@
 +++
-title = "Aint Afraid X That's Final"
+title = "That's Final x Aint Afraid"
 featured = true
 weight = 102
 heroImage = "https://drisommer.blob.core.windows.net/datastorage/videos/002-AintAfraidxThatsFinal-preview.jpg"

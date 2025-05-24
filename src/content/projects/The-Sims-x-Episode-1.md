@@ -1,5 +1,5 @@
 +++
-title = "The Sims X Episode 1"
+title = "The Sims x Episode 1"
 featured = true
 weight = 7
 heroImage = "https://drisommer.blob.core.windows.net/datastorage/videos/013_TheSimsxEpisode1-preview.jpg"

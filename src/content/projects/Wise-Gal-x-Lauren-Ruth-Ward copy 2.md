@@ -1,5 +1,5 @@
 +++
-title = "Wise Gal X Lauren Ruth Ward"
+title = "Wise Gal x Lauren Ruth Ward"
 featured = false
 weight = 106
 heroImage = "https://drisommer.blob.core.windows.net/datastorage/videos/006-WiseGalxLaurenRuthWard.jpg"

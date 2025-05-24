@@ -1,5 +1,5 @@
 +++
-title = "Cascadehollow Dickel"
+title = "Cascade Hollow x Dickel Whiskey"
 featured = false
 weight = 9
 heroImage = "https://drisommer.blob.core.windows.net/datastorage/videos/016_CascadeHollowDickel-preview.jpg"

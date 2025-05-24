@@ -1,5 +1,5 @@
 +++
-title = "Dickelwhiskey Bottledinbond"
+title = "Dickel Whiskey"
 featured = true
 weight = 10
 heroImage = "https://drisommer.blob.core.windows.net/datastorage/videos/017_DickelWhiskeyBottledInBond-preview.jpg"

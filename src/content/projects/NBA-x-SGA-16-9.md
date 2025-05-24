@@ -1,5 +1,5 @@
 +++
-title = "NBA - Shai Gilgeous-Alexander"
+title = "NBA x Shai Gilgeous-Alexander"
 featured = true
 weight = 5
 heroImage = "https://drisommer.blob.core.windows.net/datastorage/videos/011_NBAxSGA169-preview.jpg"
