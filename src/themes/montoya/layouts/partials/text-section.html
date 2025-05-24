@@ -7,7 +7,7 @@
     
     <div >
       {{ range $paragraph := .Params.paragraphs }}
-        <p class="has-animation">{{ $paragraph | markdownify }}</p>
+        <p class="has-animation">{{ $paragraph | safeHTML }}</p>
       {{ end }}
     </div>
   </div>

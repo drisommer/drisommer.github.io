@@ -142,12 +142,12 @@ Primary use:	Showcase Portfolio
 	}
 	
 	.light-content mark, .light-content ins, .dark-section mark, .dark-section ins {
-		background: none repeat scroll 0 0 var(--accent-color);
-		color:var(--accent-color-alt);
+		background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), var(--accent-color-alt);
+		color:var(--accent-color);
 	}
 	
 	.light-content .light-section mark, .light-content .light-section ins {
-		background: none repeat scroll 0 0 #111;
+		background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), #111;
 		color:var(--accent-color);
 	}
 	
