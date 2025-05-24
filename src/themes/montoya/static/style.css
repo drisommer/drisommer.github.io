@@ -30,7 +30,7 @@ Primary use:	Showcase Portfolio
 ---------------------------------------------------*/
 
 	html,body{
-		font-family: 'Poppins', sans-serif;
+		font-family: var(--font-family-primary), 'sans-serif';
 		font-weight: 400;
 		font-size:16px;
 		height:100%;
@@ -558,7 +558,7 @@ Primary use:	Showcase Portfolio
 	}
 	
 	.primary-font-title {
-		font-family: 'Six Caps', sans-serif;
+		font-family: var(--font-family-secondary), 'sans-serif';
 		text-transform:lowercase;
 		font-weight:500;
 	}
@@ -2121,7 +2121,7 @@ Primary use:	Showcase Portfolio
 		}
 		
 		.fullscreen-menu .flexnav > li > a {
-			font-family: 'Six Caps', sans-serif;
+			font-family: var(--font-family-secondary), 'sans-serif';
 			font-weight: 500;
 			font-size: calc(1rem + 8vw);
   			line-height: calc(1rem + 7.5vw);
@@ -3342,7 +3342,7 @@ Primary use:	Showcase Portfolio
 	.flexnav > li > a {
 		font-size: calc(1rem + 12vw);
 		line-height: calc(1rem + 11.5vw);
-		font-family: 'Six Caps', sans-serif;
+		font-family: var(--font-family-secondary), 'sans-serif';
 		text-transform: lowercase;		
 	}
 	

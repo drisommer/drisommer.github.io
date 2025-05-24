@@ -18,9 +18,9 @@
   <link href="{{ "css/custom.css" | relURL }}" rel="stylesheet" />
   <link href="{{ "css/video-trigger.css" | relURL }}" rel="stylesheet" />
   
-  <!-- Theme Colors CSS - Injected from hugo.toml -->
+  <!-- Theme Colors and Fonts - Injected from hugo.toml -->
   <style>
-    /* Theme Colors - Configured from hugo.toml */
+    /* Theme Colors and Fonts - Configured from hugo.toml */
     :root {
       --accent-color: {{ .Site.Params.colors.accentColor }};
       --accent-color-rgb: {{ if .Site.Params.colors.accentColor }}{{ index (slice (substr .Site.Params.colors.accentColor 1 2) (substr .Site.Params.colors.accentColor 3 2) (substr .Site.Params.colors.accentColor 5 2)) 0 | printf "0x%s" | int }}, {{ index (slice (substr .Site.Params.colors.accentColor 1 2) (substr .Site.Params.colors.accentColor 3 2) (substr .Site.Params.colors.accentColor 5 2)) 1 | printf "0x%s" | int }}, {{ index (slice (substr .Site.Params.colors.accentColor 1 2) (substr .Site.Params.colors.accentColor 3 2) (substr .Site.Params.colors.accentColor 5 2)) 2 | printf "0x%s" | int }}{{ else }}140, 97, 68{{ end }};
@@ -36,10 +36,20 @@
       
       --dark-text: {{ .Site.Params.colors.darkText }};
       --light-text: {{ .Site.Params.colors.lightText }};
+      
+      /* Font families */
+      --font-family-primary: '{{ .Site.Params.fonts.primaryFont }}', sans-serif;
+      --font-family-secondary: '{{ .Site.Params.fonts.secondaryFont }}', sans-serif;
     }
   </style>
-  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Six+Caps&display=swap" rel="stylesheet">
+  {{ $primaryFont := .Site.Params.fonts.primaryFont | default "Poppins" }}
+  {{ $secondaryFont := .Site.Params.fonts.secondaryFont | default "Six Caps" }}
+  {{ $primaryFontURL := replace $primaryFont " " "+" }}
+  {{ $secondaryFontURL := replace $secondaryFont " " "+" }}
+  {{ $primaryFontHref := printf "https://fonts.googleapis.com/css?family=%s:300,400,500,600,700" $primaryFontURL }}
+  {{ $secondaryFontHref := printf "https://fonts.googleapis.com/css2?family=%s&display=swap" $secondaryFontURL }}
+  <link href="{{ $primaryFontHref }}" rel="stylesheet">
+  <link href="{{ $secondaryFontHref }}" rel="stylesheet">
 
 </head>
 

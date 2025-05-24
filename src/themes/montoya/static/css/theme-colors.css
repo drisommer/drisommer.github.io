@@ -7,4 +7,6 @@
   --light-background: {{ .Site.Params.colors.lightBackground }};
   --dark-text: {{ .Site.Params.colors.darkText }};
   --light-text: {{ .Site.Params.colors.lightText }};
+  --font-family-primary: '{{ .Site.Params.fonts.primaryFont }}';
+  --font-family-secondary: '{{ .Site.Params.fonts.secondaryFont }}';
 }
