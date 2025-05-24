@@ -2,6 +2,6 @@
 weight = 10
 partial = "overlapping-gallery"
 filterByFeatured = true
-# filterByProjectType = ["Music Video"]
+# filterByProjectType = ["Music Videos"]
 # filterByRole = ["Editor", "Director"]
 +++

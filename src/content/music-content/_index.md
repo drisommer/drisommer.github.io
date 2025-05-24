@@ -1,4 +1,4 @@
 +++
 layout = "page"
-url = "/music-content/"
+url = "/music-videos/"
 +++

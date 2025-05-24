@@ -18,7 +18,7 @@ name = "Video Editing"
 description = "Expert editing services that transform raw footage into polished, engaging narratives with perfect pacing and flow."
 
 [[services]]
-name = "Music Video Direction"
+name = "Music Videos Direction"
 description = "Creative direction for music videos that capture the essence of the music and create memorable visual experiences."
 
 [[services]]
