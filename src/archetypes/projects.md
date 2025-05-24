@@ -2,7 +2,7 @@
 title = "{{ replace .File.ContentBaseName "-" " " | title }}"
 date = "{{ .Date }}"
 draft = false
-featured = false
+featured = 0
 weight = 100
 projectType = "Photography"
 heroImage = "images/01hero.jpg"

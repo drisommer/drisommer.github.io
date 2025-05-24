@@ -1,6 +1,6 @@
 +++
 title = "Song About You - Mike Posner Live"
-featured = false
+featured = 0
 weight = 114
 heroImage = "https://drisommer.blob.core.windows.net/datastorage/videos/031_MikePosnerSongAboutYou-Preview.png"
 heroVideo = "https://drisommer.blob.core.windows.net/datastorage/videos/031_MikePosnerSongAboutYou-Preview.mp4"

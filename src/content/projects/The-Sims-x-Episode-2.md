@@ -1,6 +1,6 @@
 +++
 title = "The Sims x Episode 2"
-featured = false
+featured = 0
 weight = 7
 heroImage = "https://drisommer.blob.core.windows.net/datastorage/videos/014_TheSimsxEpisode2-preview.jpg"
 heroVideo = "https://drisommer.blob.core.windows.net/datastorage/videos/014_TheSimsxEpisode2-preview.mp4"

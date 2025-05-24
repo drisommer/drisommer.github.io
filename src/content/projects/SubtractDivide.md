@@ -1,6 +1,6 @@
 +++
 title = "Subtract & Divide x Glory Daze"
-featured = false
+featured = 0
 weight = 112
 heroImage = "https://drisommer.blob.core.windows.net/datastorage/videos/029_Subtract&Divide-preview.png"
 heroVideo = "https://drisommer.blob.core.windows.net/datastorage/videos/029_Subtract&Divide-preview.mp4"

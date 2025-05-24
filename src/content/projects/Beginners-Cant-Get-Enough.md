@@ -1,6 +1,6 @@
 +++
 title = "Cant Get Enough x Beginners"
-featured = false
+featured = 0
 weight = 105
 heroImage = "https://drisommer.blob.core.windows.net/datastorage/videos/005-BeginnersCantGetEnough-preview.jpg"
 heroVideo = "https://drisommer.blob.core.windows.net/datastorage/videos/005-BeginnersCantGetEnough-preview.mp4"
