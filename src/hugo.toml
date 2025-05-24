@@ -14,7 +14,7 @@ publishDir = "../docs"
   # Theme Colors
   #  - MAIN PINK - #D1004D
   #  - SECOND MAIN YELLOW  - #EDC716
-  #  - ACCENT BLUE - #85B6FF
+  #  - ACCENT BLUE -rgb(32, 106, 0)
   [params.colors]
     accentColor = "#EDC716"
     accentColorAlt = "#85B6FF"

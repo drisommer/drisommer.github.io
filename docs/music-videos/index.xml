@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Music Videos on </title>
-    <link>https://example.org/music-videos/</link>
+    <link>http://localhost:1313/music-videos/</link>
     <description>Recent content in Music Videos on </description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="https://example.org/music-videos/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/music-videos/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title></title>
-      <link>https://example.org/music-content/list/</link>
+      <link>http://localhost:1313/music-content/list/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://example.org/music-content/list/</guid>
+      <guid>http://localhost:1313/music-content/list/</guid>
       <description></description>
     </item>
     <item>
       <title>Check Out My Work</title>
-      <link>https://example.org/music-content/other-projects/</link>
+      <link>http://localhost:1313/music-content/other-projects/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://example.org/music-content/other-projects/</guid>
+      <guid>http://localhost:1313/music-content/other-projects/</guid>
       <description></description>
     </item>
     <item>
       <title></title>
-      <link>https://example.org/music-content/contact/</link>
+      <link>http://localhost:1313/music-content/contact/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://example.org/music-content/contact/</guid>
+      <guid>http://localhost:1313/music-content/contact/</guid>
       <description></description>
     </item>
   </channel>
