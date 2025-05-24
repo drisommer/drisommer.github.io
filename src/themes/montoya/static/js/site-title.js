@@ -1,8 +1,8 @@
 jQuery(function($) {
     // Function to initialize site title animations
     function initSiteTitleAnimations() {
-        // Check if we're on the home page by looking for the home-page class
-        const siteTitleElement = $('#site-title.home-page');
+        // Check if we have a title that should fade on scroll by looking for the scroll-fade-title class
+        const siteTitleElement = $('#site-title.scroll-fade-title');
         
         if (siteTitleElement.length) {
             // Make sure ScrollTrigger is available
@@ -16,7 +16,7 @@ jQuery(function($) {
                 });
                 
                 // Calculate 80% of window height
-                const scrollThreshold = window.innerHeight * 0.8;
+                const scrollThreshold = window.innerHeight * 1.2;
                 
                 // Create a ScrollTrigger for the animation
                 ScrollTrigger.create({
@@ -47,7 +47,7 @@ jQuery(function($) {
                 // Fallback to basic scroll-based animation
                 $(window).on('scroll', function() {
                     const scrollTop = $(window).scrollTop();
-                    const threshold = window.innerHeight * 0.8;
+                    const threshold = window.innerHeight * 1.2;
                     
                     if (scrollTop > threshold) {
                         siteTitleElement.css({

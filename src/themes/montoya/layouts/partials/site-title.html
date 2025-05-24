@@ -1,5 +1,6 @@
 <!-- Site Title -->
-<div id="site-title" class="primary-font-title hide-ball{{ if .isHome }} home-page hidden{{ end }}">
+{{ $scrollFadeTitle := default false .scrollFadeTitle }}
+<div id="site-title" class="primary-font-title hide-ball{{ if $scrollFadeTitle }} scroll-fade-title hidden{{ end }}">
   <div class="title-text">{{ .Site.Params.meta.title }}</div>
 </div>
 <!--/Site Title -->

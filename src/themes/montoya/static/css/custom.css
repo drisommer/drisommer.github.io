@@ -34,8 +34,8 @@ a, button, input, textarea, select,
   color: var(--accent-color);
 }
 
-/* Home page specific styling */
-#site-title.home-page {
+/* Title that fades in/out on scroll */
+#site-title.scroll-fade-title {
   will-change: opacity, visibility;
   /* GSAP will handle the animations */
 }
