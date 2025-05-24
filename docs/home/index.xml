@@ -2,44 +2,44 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Homes on </title>
-    <link>http://localhost:1313/home/</link>
+    <link>https://example.org/home/</link>
     <description>Recent content in Homes on </description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="http://localhost:1313/home/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://example.org/home/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title></title>
-      <link>http://localhost:1313/home/video-hero/</link>
+      <link>https://example.org/home/video-hero/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/home/video-hero/</guid>
+      <guid>https://example.org/home/video-hero/</guid>
       <description></description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/home/director-editor-marquee/</link>
+      <link>https://example.org/home/director-editor-marquee/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/home/director-editor-marquee/</guid>
+      <guid>https://example.org/home/director-editor-marquee/</guid>
       <description></description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/home/featured-projects/</link>
+      <link>https://example.org/home/featured-projects/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/home/featured-projects/</guid>
+      <guid>https://example.org/home/featured-projects/</guid>
       <description></description>
     </item>
     <item>
       <title>Check Out Our Work</title>
-      <link>http://localhost:1313/home/see-all-projects/</link>
+      <link>https://example.org/home/see-all-projects/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/home/see-all-projects/</guid>
+      <guid>https://example.org/home/see-all-projects/</guid>
       <description></description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/home/contact/</link>
+      <link>https://example.org/home/contact/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/home/contact/</guid>
+      <guid>https://example.org/home/contact/</guid>
       <description></description>
     </item>
   </channel>
