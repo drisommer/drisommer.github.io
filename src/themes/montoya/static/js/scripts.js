@@ -231,6 +231,16 @@ Function Page Load
 						gsap.to($(".hero-video-wrapper"), {duration: 0.2, opacity:1, delay:0, ease:Power2.easeOut}); 
 					}
 					
+					// Also initialize video hero background
+					if( $('.hero-video-background-wrapper').length > 0 ){
+						$('.hero-video-background-wrapper').find('video').each(function() {
+							$(this).get(0).play().catch(function(error) {
+								console.log('Video autoplay prevented:', error);
+							});
+						});
+						gsap.to($(".hero-video-background-wrapper"), {duration: 0.2, opacity:1, delay:0, ease:Power2.easeOut}); 
+					}
+					
 					gsap.to($("#main"), {duration: 0, opacity:1, delay:0, ease:Power2.easeOut});
 					
 					if( $('#hero').hasClass("has-image")) {								
@@ -783,6 +793,12 @@ Function Lazy Load
 				if (isMobile()) {
 					$('#hero-image-wrapper').find('video').each(function() {
 						$(this).get(0).play();
+					});
+					// Also initialize video hero background for mobile
+					$('.hero-video-background-wrapper').find('video').each(function() {
+						$(this).get(0).play().catch(function(error) {
+							console.log('Video autoplay prevented:', error);
+						});
 					});											
 				}					
 				setTimeout( function(){					
@@ -797,9 +813,23 @@ Function Lazy Load
 						$('#hero-image-wrapper').find('video').each(function() {
 							$(this).get(0).play();
 						});	
-						gsap.to($(".hero-video-wrapper"), {duration: 0.2, opacity:1, delay:0.1, ease:Power2.easeOut});										
+						gsap.to($(".hero-video-wrapper"), {duration: 0.2, opacity:1, delay:0.1, ease:Power2.easeOut});
+						// Also initialize video hero background
+						$('.hero-video-background-wrapper').find('video').each(function() {
+							$(this).get(0).play().catch(function(error) {
+								console.log('Video autoplay prevented:', error);
+							});
+						});
+						gsap.to($(".hero-video-background-wrapper"), {duration: 0.2, opacity:1, delay:0.1, ease:Power2.easeOut});									
 					} else if (isMobile()) {				
-						gsap.to($(".hero-video-wrapper"), {duration: 0.2, opacity:1, delay:0.5, ease:Power2.easeOut});					
+						gsap.to($(".hero-video-wrapper"), {duration: 0.2, opacity:1, delay:0.5, ease:Power2.easeOut});
+						// Also initialize video hero background for mobile
+						$('.hero-video-background-wrapper').find('video').each(function() {
+							$(this).get(0).play().catch(function(error) {
+								console.log('Video autoplay prevented:', error);
+							});
+						});
+						gsap.to($(".hero-video-background-wrapper"), {duration: 0.2, opacity:1, delay:0.5, ease:Power2.easeOut});					
 					}
 				} , 450 );
 			});
@@ -808,6 +838,12 @@ Function Lazy Load
 				if (isMobile()) {
 					$('#hero-image-wrapper').find('video').each(function() {
 						$(this).get(0).play();
+					});
+					// Also initialize video hero background for mobile
+					$('.hero-video-background-wrapper').find('video').each(function() {
+						$(this).get(0).play().catch(function(error) {
+							console.log('Video autoplay prevented:', error);
+						});
 					});											
 				}				
 				setTimeout( function(){					
@@ -822,9 +858,23 @@ Function Lazy Load
 						$('#hero-image-wrapper').find('video').each(function() {
 							$(this).get(0).play();
 						});	
-						gsap.to($(".hero-video-wrapper"), {duration: 0.2, opacity:1, delay:0.1, ease:Power2.easeOut});										
+						gsap.to($(".hero-video-wrapper"), {duration: 0.2, opacity:1, delay:0.1, ease:Power2.easeOut});
+						// Also initialize video hero background
+						$('.hero-video-background-wrapper').find('video').each(function() {
+							$(this).get(0).play().catch(function(error) {
+								console.log('Video autoplay prevented:', error);
+							});
+						});
+						gsap.to($(".hero-video-background-wrapper"), {duration: 0.2, opacity:1, delay:0.1, ease:Power2.easeOut});									
 					} else if (isMobile()) {				
-						gsap.to($(".hero-video-wrapper"), {duration: 0.2, opacity:1, delay:0.5, ease:Power2.easeOut});					
+						gsap.to($(".hero-video-wrapper"), {duration: 0.2, opacity:1, delay:0.5, ease:Power2.easeOut});
+						// Also initialize video hero background for mobile
+						$('.hero-video-background-wrapper').find('video').each(function() {
+							$(this).get(0).play().catch(function(error) {
+								console.log('Video autoplay prevented:', error);
+							});
+						});
+						gsap.to($(".hero-video-background-wrapper"), {duration: 0.2, opacity:1, delay:0.5, ease:Power2.easeOut});					
 					}
 					$('body').removeClass("load-project-thumb-with-title").removeClass("show-loader");	
 				} , 200 );
@@ -834,6 +884,13 @@ Function Lazy Load
 				$('#hero-image-wrapper').find('video').each(function() {
 					$(this).get(0).play();
 				});
+				// Also initialize video hero background
+				$('.hero-video-background-wrapper').find('video').each(function() {
+					$(this).get(0).play().catch(function(error) {
+						console.log('Video autoplay prevented:', error);
+					});
+				});
+				gsap.to($(".hero-video-background-wrapper"), {duration: 0.2, opacity:1, delay:0, ease:Power2.easeOut});
 				setTimeout( function(){					
 					$("#app.active").remove();	
 					$("#canvas-slider.active").remove();					
@@ -858,6 +915,37 @@ Function Lazy Load
 	
 	}// End Lazy Load
 	
+
+
+/*--------------------------------------------------
+Function Init Video Hero
+---------------------------------------------------*/
+
+	function InitVideoHero() {
+		// Initialize video hero background for AJAX page transitions
+		if( $('.hero-video-background-wrapper').length > 0 ){
+			$('.hero-video-background-wrapper').find('video').each(function() {
+				// Ensure the video is ready to play
+				$(this).get(0).load();
+				$(this).get(0).play().catch(function(error) {
+					console.log('Video autoplay prevented:', error);
+				});
+			});
+			
+			// Fade in the video wrapper
+			gsap.to($(".hero-video-background-wrapper"), {duration: 0.2, opacity:1, delay:0, ease:Power2.easeOut}); 
+		}
+		
+		// Also handle regular hero video wrapper for consistency
+		if( $('.hero-video-wrapper').length > 0 ){
+			$('#hero-image-wrapper').find('video').each(function() {
+				$(this).get(0).play().catch(function(error) {
+					console.log('Video autoplay prevented:', error);
+				});
+			});
+			gsap.to($(".hero-video-wrapper"), {duration: 0.2, opacity:1, delay:0, ease:Power2.easeOut}); 
+		}
+	}// End Init Video Hero
 
 
 
@@ -2232,6 +2320,8 @@ Function Showcase Gallery
 		PlayVideo();
 		ProjectVideoModal();
 		ProjectVideoAutoplay();
+		// Initialize video hero for page transitions
+		InitVideoHero();
 		SiteTitleAnimations();
 		ContactForm();
 		ContactMap();
@@ -2242,6 +2332,6 @@ Function Showcase Gallery
 });	
 
 
-var LoadViaAjax = window.LoadViaAjax;	
-	
-	
+var LoadViaAjax = window.LoadViaAjax;
+
+
