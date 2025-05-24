@@ -30,7 +30,7 @@ publishDir = "../docs"
   # https://fonts.google.com/specimen/Fredericka+the+Great?preview.text=DIRECTOR%20*%20EDITOR%20*%20DRI%20SOMMER&categoryFilters=Feeling:%2FExpressive%2FArtistic
   [params.fonts]
     primaryFont = "Newsreader"
-    secondaryFont = "Tilt Prism"
+    secondaryFont = "Permanent Marker"
     # Global multiplier for font sizes with vw units
     fontSizeMultiplier = "0.25"
     
