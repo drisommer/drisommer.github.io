@@ -1,6 +1,6 @@
 +++
 title = "Nutrilite x Rays For Days"
-featured = 0
+# featured = 0
 weight = 12
 heroImage = "https://drisommer.blob.core.windows.net/datastorage/videos/019_NutriliteRaysForDays-preview.jpg"
 heroVideo = "https://drisommer.blob.core.windows.net/datastorage/videos/019_NutriliteRaysForDays-preview.mp4"

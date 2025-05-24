@@ -1,6 +1,6 @@
 +++
 title = "MLS x Continental"
-featured = 0
+# featured = 0
 weight = 15
 heroImage = "https://drisommer.blob.core.windows.net/datastorage/videos/022_Continental-preview.jpg"
 heroVideo = "https://drisommer.blob.core.windows.net/datastorage/videos/022_Continental-preview.mp4"

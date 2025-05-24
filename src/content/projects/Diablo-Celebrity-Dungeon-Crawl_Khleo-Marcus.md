@@ -1,6 +1,6 @@
 +++
 title = "Blizzard x Diablo Dungeon Crawl"
-featured = 0
+# featured = 0
 weight = 14
 heroImage = "https://drisommer.blob.core.windows.net/datastorage/videos/021_DiabloCelebrityDungeonCrawlKhleoMarcus-preview.jpg"
 heroVideo = "https://drisommer.blob.core.windows.net/datastorage/videos/021_DiabloCelebrityDungeonCrawlKhleoMarcus-preview.mp4"

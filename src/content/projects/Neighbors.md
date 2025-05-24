@@ -1,6 +1,6 @@
 +++
 title = "Waking Up The Neighbors x Bahari"
-featured = 0
+# featured = 0
 weight = 111
 heroImage = "https://drisommer.blob.core.windows.net/datastorage/videos/028_Neighbors-preview.png"
 heroVideo = "https://drisommer.blob.core.windows.net/datastorage/videos/028_Neighbors-preview.mp4"
