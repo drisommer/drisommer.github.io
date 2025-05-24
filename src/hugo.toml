@@ -111,6 +111,7 @@ publishDir = "../docs"
   backTopText = "Back Top"
   copyright = "2025 © Dri Sommer. All rights reserved."
   followUsText = "Follow Us"
+  showSocials = false  # Set to false to hide the social links section
 
 [[params.footer.socialLinks]]
   name = "Dribbble"

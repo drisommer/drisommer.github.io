@@ -15,6 +15,7 @@
       <div class="copyright">{{ .Site.Params.footer.copyright }}</div>
     </div>
 
+    {{ if .Site.Params.footer.showSocials }}
     <div class="socials-wrap">
       <div class="socials-icon"><i class="fa-solid fa-share-nodes"></i></div>
       <div class="socials-text">{{ .Site.Params.footer.followUsText }}</div>
@@ -25,6 +26,7 @@
         {{ end }}
       </ul>
     </div>
+    {{ end }}
 
   </div>
 </footer>
