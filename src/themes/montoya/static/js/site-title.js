@@ -1,4 +1,5 @@
-jQuery(function($) {
+// Global function to initialize site title animations (can be called from AJAX page loads)
+window.SiteTitleAnimations = function() {
     // Function to initialize site title animations
     function initSiteTitleAnimations() {
         // Check if we have a title that should fade on scroll by looking for the scroll-fade-title class
@@ -61,25 +62,32 @@ jQuery(function($) {
                         });
                     }
                 });
-                
-                // Trigger initial check
+                  // Trigger initial check
                 $(window).trigger('scroll');
             }
         }
     }
     
+    // Initialize the animations
+    initSiteTitleAnimations();
+};
+
+// jQuery wrapper for initial page load and fallback compatibility
+jQuery(function($) {
     // Initialize on document ready
     $(document).ready(function() {
-        initSiteTitleAnimations();
+        window.SiteTitleAnimations();
     });
     
     // Also initialize on window load to ensure all resources are loaded
     $(window).on('load', function() {
-        initSiteTitleAnimations();
+        window.SiteTitleAnimations();
     });
     
     // Handle AJAX page transitions if the theme uses them
     $(document).on('ajaxLoaded', function() {
-        setTimeout(initSiteTitleAnimations, 100);
+        setTimeout(function() {
+            window.SiteTitleAnimations();
+        }, 100);
     });
 });
