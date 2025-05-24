@@ -1,5 +1,7 @@
 // Auto-play videos when they come into the viewport
-document.addEventListener("DOMContentLoaded", function() {
+
+// Global function to initialize video autoplay (can be called from AJAX page loads)
+window.ProjectVideoAutoplay = function() {
   // Wait for GSAP and ScrollTrigger to be available
   if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
     initVideoAutoplay();
@@ -76,4 +78,9 @@ document.addEventListener("DOMContentLoaded", function() {
     // All devices now use scroll-based video autoplay
     // Hover functionality for cursor effects only (no video control) is handled in scripts.js
   }
+};
+
+// Initialize on DOMContentLoaded for the first page load
+document.addEventListener("DOMContentLoaded", function() {
+  window.ProjectVideoAutoplay();
 });

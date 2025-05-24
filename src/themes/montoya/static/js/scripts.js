@@ -2231,6 +2231,7 @@ Function Showcase Gallery
 		Lightbox();
 		PlayVideo();
 		ProjectVideoModal();
+		ProjectVideoAutoplay();
 		ContactForm();
 		ContactMap();
 		CustomFunction();
