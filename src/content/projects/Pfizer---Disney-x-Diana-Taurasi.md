@@ -7,5 +7,5 @@ heroVideo = "https://drisommer.blob.core.windows.net/datastorage/videos/010_Pfiz
 projectVideo = "https://drisommer.blob.core.windows.net/datastorage/videos/010-PfizerDisneyxDianaTaurasi.mp4"
 projectType = ["Commercial"]
 projectRole = ["Editor"]
-TitleColorAlt = true
+TitleColorAlt = false
 +++
