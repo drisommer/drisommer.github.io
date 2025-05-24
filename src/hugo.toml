@@ -150,7 +150,7 @@ url = "https://www.instagram.com/drisommer/"
 type = "link"
 
 [[params.contacts]]
-info = "Los Angeles 🛫 New York 🛬 London"
+info = "Los Angeles 🛫 São Paulo"
 name = "usually hanging out in one of these places"
 icon = "fa-location-dot"
 type = "text"
