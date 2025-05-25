@@ -3933,6 +3933,7 @@ Function Project Video Modal
 							<video controls class="clapat-video-modal-player">
 								<source type="video/mp4">
 							</video>
+							<iframe class="clapat-video-modal-iframe" frameborder="0" allow="autoplay; fullscreen" allowfullscreen style="display:none;"></iframe>
 						</div>
 					</div>
 				`);
@@ -3943,6 +3944,31 @@ Function Project Video Modal
 			const modalBg = $('.clapat-video-modal-bg');
 			const modalClose = $('.clapat-video-modal-close');
 			const modalVideo = $('.clapat-video-modal-player')[0];
+			const modalIframe = $('.clapat-video-modal-iframe')[0];
+			
+			// Helper function to detect if URL is a YouTube URL
+			function isYouTubeUrl(url) {
+				return url && (url.includes('youtube.com/watch') || url.includes('youtu.be/'));
+			}
+			
+			// Helper function to extract YouTube video ID
+			function getYouTubeVideoId(url) {
+				let videoId = '';
+				if (url.includes('youtube.com/watch')) {
+					videoId = url.split('v=')[1];
+					const ampersandPosition = videoId.indexOf('&');
+					if (ampersandPosition !== -1) {
+						videoId = videoId.substring(0, ampersandPosition);
+					}
+				} else if (url.includes('youtu.be/')) {
+					videoId = url.split('youtu.be/')[1];
+					const questionPosition = videoId.indexOf('?');
+					if (questionPosition !== -1) {
+						videoId = videoId.substring(0, questionPosition);
+					}
+				}
+				return videoId;
+			}
 			
 			// Style buttons on hover
 			$(".play-project-video").mouseenter(function(e) {	
@@ -3971,11 +3997,34 @@ Function Project Video Modal
 				if (!videoUrl) {
 					//log this classes
 					console.log($(this).classList);
+					return;
 				}
 				
-				// Set video source
-				modalVideo.querySelector('source').src = videoUrl;
-				modalVideo.load();
+				// Check if it's a YouTube URL
+				if (isYouTubeUrl(videoUrl)) {
+					// Handle YouTube URL
+					const videoId = getYouTubeVideoId(videoUrl);
+					if (videoId) {
+						// Hide video element and show iframe
+						$(modalVideo).hide();
+						$(modalIframe).show();
+						
+						// Set YouTube embed URL with autoplay
+						modalIframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
+					}
+				} else {
+					// Handle direct video file
+					// Hide iframe and show video element
+					$(modalIframe).hide();
+					$(modalVideo).show();
+					
+					// Set video source
+					modalVideo.querySelector('source').src = videoUrl;
+					modalVideo.load();
+					
+					// Auto play video
+					modalVideo.play();
+				}
 				
 				// Open modal with animations
 				gsap.set(modal, {visibility: 'visible', opacity: 0});
@@ -3984,9 +4033,6 @@ Function Project Video Modal
 				
 				// Prevent body scrolling
 				$('body').addClass('no-scroll');
-				
-				// Auto play video
-				modalVideo.play();
 			});
 			
 			// Close modal when clicking close button or background
@@ -3994,8 +4040,10 @@ Function Project Video Modal
 			modalBg.on('click', closeModal);
 			
 			function closeModal() {
-				// Pause video
-				modalVideo.pause();
+				// Pause video if it's playing
+				if (!modalVideo.paused) {
+					modalVideo.pause();
+				}
 				
 				// Close with animations
 				gsap.to(modal, {
@@ -4003,8 +4051,17 @@ Function Project Video Modal
 					opacity: 0, 
 					onComplete: function() {
 						gsap.set(modal, {visibility: 'hidden'});
+						
+						// Clear video source
 						modalVideo.querySelector('source').src = '';
 						modalVideo.load();
+						
+						// Clear iframe source
+						modalIframe.src = '';
+						
+						// Reset visibility
+						$(modalVideo).show();
+						$(modalIframe).hide();
 					}
 				});
 				
