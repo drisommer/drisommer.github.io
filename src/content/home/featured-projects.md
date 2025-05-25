@@ -6,4 +6,6 @@ filterByFeatured = true
 # filterByRole = ["Editor", "Director"]
 
 sortBy = "featured"
+paddingTop = false
+paddingBottom = false
 +++

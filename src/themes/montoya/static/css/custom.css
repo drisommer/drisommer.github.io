@@ -18,7 +18,7 @@ a, button, input, textarea, select,
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 10;
+  z-index: 5;
 }
 
 #site-title .title-text {
@@ -78,6 +78,27 @@ body[data-primary-color] {
 /* Link hover colors */
 a:hover, a:active {
   color: var(--accent-color);
+}
+
+/* Menu z-index fixes to ensure menu appears above site title */
+.button-wrap.right.menu {
+  z-index: 15;
+}
+
+#burger-wrapper {
+  z-index: 15;
+}
+
+#logo {
+  z-index: 16;
+}
+
+.fullscreen-menu nav {
+  z-index: 12;
+}
+
+.fullscreen-menu nav.open {
+  z-index: 12;
 }
 
 /* Button hover effects */
