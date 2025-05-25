@@ -302,6 +302,13 @@
       <description></description>
     </item>
     <item>
+      <title>Academy Of Pop x Google</title>
+      <link>http://localhost:1313/projects/google-academyofpop/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/google-academyofpop/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Check Out My Work</title>
       <link>http://localhost:1313/about/see-all-projects/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -397,13 +404,6 @@
       <link>http://localhost:1313/projects/posnerlive/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/projects/posnerlive/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Academy Of Pop x Google</title>
-      <link>http://localhost:1313/projects/google-academyofpop/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/projects/google-academyofpop/</guid>
       <description></description>
     </item>
   </channel>

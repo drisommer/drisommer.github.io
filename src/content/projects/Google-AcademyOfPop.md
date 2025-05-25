@@ -1,7 +1,7 @@
 +++
 title = "Academy Of Pop x Google"
-featured = 109
-weight = 1000
+featured = 10
+weight = 100
 heroImage = "https://drisommer.blob.core.windows.net/datastorage/videos/032_AcademyOfPop-Google-Preview.png"
 heroVideo = "https://drisommer.blob.core.windows.net/datastorage/videos/032_AcademyOfPop-Google-Preview.mp4"
 projectVideo = "https://drisommer.blob.core.windows.net/datastorage/videos/032_AcademyOfPop-Google.mp4"
