@@ -29,7 +29,7 @@ publishDir = "../docs"
   # https://fonts.google.com/specimen/Monoton?preview.text=DIRECTOR%20*%20EDITOR%20*%20DRI%20SOMMER&categoryFilters=Feeling:%2FExpressive%2FArtistic
   # https://fonts.google.com/specimen/Fredericka+the+Great?preview.text=DIRECTOR%20*%20EDITOR%20*%20DRI%20SOMMER&categoryFilters=Feeling:%2FExpressive%2FArtistic
   [params.fonts]
-    primaryFont = "Newsreader"
+    primaryFont = "Roboto"
     secondaryFont = "Permanent Marker"
     # Global multiplier for font sizes with vw units
     fontSizeMultiplier = "0.25"

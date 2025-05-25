@@ -330,13 +330,6 @@
       <description></description>
     </item>
     <item>
-      <title>Cant Get Enough x Beginners</title>
-      <link>http://localhost:1313/projects/beginners-cant-get-enough/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/projects/beginners-cant-get-enough/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Wise Gal x Lauren Ruth Ward</title>
       <link>http://localhost:1313/projects/wise-gal-x-lauren-ruth-ward-copy-2/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -358,10 +351,17 @@
       <description></description>
     </item>
     <item>
-      <title>JP Saxe - The Few Things</title>
-      <link>http://localhost:1313/projects/jp/</link>
+      <title>Bent x Simone Torres</title>
+      <link>http://localhost:1313/projects/bent-simone/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/projects/jp/</guid>
+      <guid>http://localhost:1313/projects/bent-simone/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Cant Get Enough x Beginners</title>
+      <link>http://localhost:1313/projects/beginners-cant-get-enough/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/beginners-cant-get-enough/</guid>
       <description></description>
     </item>
     <item>
@@ -386,10 +386,10 @@
       <description></description>
     </item>
     <item>
-      <title>Bent x Simone Torres</title>
-      <link>http://localhost:1313/projects/bent-simone/</link>
+      <title>JP Saxe - The Few Things</title>
+      <link>http://localhost:1313/projects/jp/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/projects/bent-simone/</guid>
+      <guid>http://localhost:1313/projects/jp/</guid>
       <description></description>
     </item>
     <item>

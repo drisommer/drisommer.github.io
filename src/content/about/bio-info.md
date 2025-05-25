@@ -8,7 +8,7 @@ PaddingBottom = true
 # header = "Biography"
 
 paragraphs = [
-    "DRI SOMMER, born and raised in São Paulo - Brasil, kicked off her career at Within, an Immersive Experience Studio, back in 2016.",
+    "Dri Sommer, born and raised in São Paulo - Brasil, kicked off her career at Within, an Immersive Experience Studio, back in 2016.",
     
     "Driven by her dance & VR backgrounds, everything she creates builds on the fundamentals of play, rhythm and community. Bursting with color, her work is people-centric and stylized, exploring the bold, bright and down right dazzling.",
     
