@@ -2,5 +2,5 @@
 layout = "about"
 url = "/about/"
 title = " "
-iconHeight = 35
+iconHeight = 70
 +++
