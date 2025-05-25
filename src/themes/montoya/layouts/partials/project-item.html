@@ -4,21 +4,70 @@
   {{ $project = .project }}
 {{ end }}
 
+{{/* Define portrait media with fallbacks */}}
+{{ $heroImageSrc := $project.Params.heroImage }}
+{{ $heroImagePortraitSrc := $project.Params.heroImagePortrait | default $project.Params.heroImage }}
+{{ $heroVideoSrc := $project.Params.heroVideo }}
+{{ $heroVideoPortraitSrc := $project.Params.heroVideoPortrait | default $project.Params.heroVideo }}
+
+<style>
+  /* Desktop images and videos - shown by default, hidden on mobile portrait */
+  .desktop-image, .desktop-video {
+    display: block;
+  }
+  .mobile-image, .mobile-video {
+    display: none;
+  }
+  
+  /* Mobile portrait - show mobile versions, hide desktop versions */
+  @media screen and (max-width: 768px) and (orientation: portrait) {
+    .desktop-image, .desktop-video {
+      display: none;
+    }
+    .mobile-image, .mobile-video {
+      display: block;
+    }
+  }
+  
+  /* Also handle narrow mobile screens regardless of orientation */
+  @media screen and (max-width: 480px) {
+    .desktop-image, .desktop-video {
+      display: none;
+    }
+    .mobile-image, .mobile-video {
+      display: block;
+    }
+  }
+</style>
+
 <div class="overlapping-image">
   <div class="overlapping-image-inner trigger-item  {{ if $project.Params.projectVideo }} is-project-video{{ end }} {{ if $project.Params.heroVideo }} change-header{{ end }}" data-centerLine="OPEN"  {{ if $project.Params.projectVideo }} data-project-video="{{ $project.Params.projectVideo }}" {{end}}>
     <div class="img-mask">
       <a class="slide-link" data-type="page-transition" href="{{ $project.RelPermalink }}" {{ if $project.Params.projectVideo }} data-project-video="{{ $project.Params.projectVideo }}" {{end}}></a>
       <div class="section-image trigger-item-link" {{ if $project.Params.projectVideo }} data-project-video="{{ $project.Params.projectVideo }}" {{end}}>
-        <img src="{{ $project.Params.heroImage }}" class="item-image grid__item-img" alt="{{ $project.Title }}">
-        {{ if $project.Params.heroVideo }}
-        <div class="hero-video-wrapper">
+        <img src="{{ $heroImageSrc }}" class="item-image grid__item-img desktop-image" alt="{{ $project.Title }}">
+        {{ if $project.Params.heroImagePortrait }}
+        <img src="{{ $heroImagePortraitSrc }}" class="item-image grid__item-img mobile-image" alt="{{ $project.Title }}">
+        {{ end }}
+        {{ if $heroVideoSrc }}
+        <div class="hero-video-wrapper desktop-video">
           <video loop muted playsinline class="bgvid">
-            <source src="{{ $project.Params.heroVideo }}" type="video/mp4">
+            <source src="{{ $heroVideoSrc }}" type="video/mp4">
+          </video>
+        </div>
+        {{ end }}
+        {{ if $heroVideoPortraitSrc and $project.Params.heroVideoPortrait }}
+        <div class="hero-video-wrapper mobile-video">
+          <video loop muted playsinline class="bgvid">
+            <source src="{{ $heroVideoPortraitSrc }}" type="video/mp4">
           </video>
         </div>
         {{ end }}
       </div>
-      <img src="{{ $project.Params.heroImage }}" class="grid__item-img grid__item-img--large" alt="{{ $project.Title }}">
+      <img src="{{ $heroImageSrc }}" class="grid__item-img grid__item-img--large desktop-image" alt="{{ $project.Title }}">
+      {{ if $project.Params.heroImagePortrait }}
+      <img src="{{ $heroImagePortraitSrc }}" class="grid__item-img grid__item-img--large mobile-image" alt="{{ $project.Title }}">
+      {{ end }}
     </div>
     <div class="slide-caption trigger-item-link-secondary" {{ if $project.Params.projectVideo }} data-project-video="{{ $project.Params.projectVideo }}" {{end}}>
       <div class="slide-title primary-font-title">
