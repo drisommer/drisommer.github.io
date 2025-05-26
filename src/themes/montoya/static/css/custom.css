@@ -1,5 +1,49 @@
 /* Custom CSS overrides */
 
+/* Portrait/Landscape Hero Image and Video Support */
+/* Default: show landscape versions, hide portrait versions */
+.item-image--portrait,
+.grid__item-img--portrait,
+.bgvid--portrait {
+  display: none;
+}
+
+.item-image--landscape,
+.grid__item-img--landscape,
+.bgvid--landscape {
+  display: block;
+}
+
+/* Mobile and tablet portrait: show portrait versions if available, hide landscape versions */
+@media only screen and (max-width: 767px) and (orientation: portrait) {
+  .item-image--portrait,
+  .grid__item-img--portrait,
+  .bgvid--portrait {
+    display: block;
+  }
+  
+  .item-image--landscape,
+  .grid__item-img--landscape,
+  .bgvid--landscape {
+    display: none;
+  }
+}
+
+/* Tablet portrait mode (up to 1024px in portrait) */
+@media only screen and (max-width: 1024px) and (orientation: portrait) {
+  .item-image--portrait,
+  .grid__item-img--portrait,
+  .bgvid--portrait {
+    display: block;
+  }
+  
+  .item-image--landscape,
+  .grid__item-img--landscape,
+  .bgvid--landscape {
+    display: none;
+  }
+}
+
 /* Hide default cursor globally but keep the magic-cursor */
 html, body, 
 a, button, input, textarea, select,
