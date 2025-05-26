@@ -15,36 +15,46 @@
     <div class="img-mask">
       <a class="slide-link" data-type="page-transition" href="{{ $project.RelPermalink }}" {{ if $project.Params.projectVideo }} data-project-video="{{ $project.Params.projectVideo }}" {{end}}></a>
       <div class="section-image trigger-item-link" {{ if $project.Params.projectVideo }} data-project-video="{{ $project.Params.projectVideo }}" {{end}}>
-        <!-- Landscape hero image (default) -->
-        <img src="{{ $heroImage }}" class="item-image grid__item-img item-image--landscape" alt="{{ $project.Title }}">
-        
-        <!-- Portrait hero image (mobile/tablet portrait) -->
+        <!-- Hero image -->
         {{ if ne $heroImagePortrait $heroImage }}
+        <!-- Landscape hero image (when portrait version exists) -->
+        <img src="{{ $heroImage }}" class="item-image grid__item-img item-image--landscape" alt="{{ $project.Title }}">
+        <!-- Portrait hero image (mobile/tablet portrait) -->
         <img src="{{ $heroImagePortrait }}" class="item-image grid__item-img item-image--portrait" alt="{{ $project.Title }}">
+        {{ else }}
+        <!-- Single hero image (no portrait variant) -->
+        <img src="{{ $heroImage }}" class="item-image grid__item-img" alt="{{ $project.Title }}">
         {{ end }}
         
         {{ if $heroVideo }}
         <div class="hero-video-wrapper">
-          <!-- Landscape hero video (default) -->
+          {{ if ne $heroVideoPortrait $heroVideo }}
+          <!-- Landscape hero video (when portrait version exists) -->
           <video loop muted playsinline class="bgvid bgvid--landscape">
             <source src="{{ $heroVideo }}" type="video/mp4">
           </video>
-          
           <!-- Portrait hero video (mobile/tablet portrait) -->
-          {{ if ne $heroVideoPortrait $heroVideo }}
           <video loop muted playsinline class="bgvid bgvid--portrait">
             <source src="{{ $heroVideoPortrait }}" type="video/mp4">
+          </video>
+          {{ else }}
+          <!-- Single hero video (no portrait variant) -->
+          <video loop muted playsinline class="bgvid">
+            <source src="{{ $heroVideo }}" type="video/mp4">
           </video>
           {{ end }}
         </div>
         {{ end }}
       </div>
-      <!-- Landscape hero image for large layout -->
-      <img src="{{ $heroImage }}" class="grid__item-img grid__item-img--large grid__item-img--landscape" alt="{{ $project.Title }}">
-      
-      <!-- Portrait hero image for large layout -->
+      <!-- Hero image for large layout -->
       {{ if ne $heroImagePortrait $heroImage }}
+      <!-- Landscape hero image for large layout (when portrait version exists) -->
+      <img src="{{ $heroImage }}" class="grid__item-img grid__item-img--large grid__item-img--landscape" alt="{{ $project.Title }}">
+      <!-- Portrait hero image for large layout -->
       <img src="{{ $heroImagePortrait }}" class="grid__item-img grid__item-img--large grid__item-img--portrait" alt="{{ $project.Title }}">
+      {{ else }}
+      <!-- Single hero image for large layout (no portrait variant) -->
+      <img src="{{ $heroImage }}" class="grid__item-img grid__item-img--large" alt="{{ $project.Title }}">
       {{ end }}
     </div>
     <div class="slide-caption trigger-item-link-secondary" {{ if $project.Params.projectVideo }} data-project-video="{{ $project.Params.projectVideo }}" {{end}}>
