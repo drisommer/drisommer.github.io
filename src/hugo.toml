@@ -1,7 +1,7 @@
-baseURL = "https://example.org/"
+baseURL = "https://www.drisommer.com"
 languageCode = "en-us"
 theme = "montoya"
-publishDir = "../docs"
+publishDir = "../public"
 
 [params.meta]
   title = "Dri Sommer"
