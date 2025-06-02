@@ -9,4 +9,6 @@ sortBy = "weight"
 
 hideProjectType = true
 # hideProjectRole = true
+paddingTop = true
+
 +++
