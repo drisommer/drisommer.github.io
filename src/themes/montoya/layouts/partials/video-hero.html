@@ -28,9 +28,20 @@
     
     <!-- Video Background -->
     <div class="hero-video-background-wrapper">
+      {{ if .Params.heroVideoPortrait }}
+      <!-- Portrait and Landscape videos -->
+      <video loop autoplay muted playsinline class="bgvid bgvid--landscape">
+        <source src="{{ .Params.hero_video | relURL }}" type="video/mp4">
+      </video>
+      <video loop autoplay muted playsinline class="bgvid bgvid--portrait">
+        <source src="{{ .Params.heroVideoPortrait | relURL }}" type="video/mp4">
+      </video>
+      {{ else }}
+      <!-- Single video -->
       <video loop autoplay muted playsinline class="bgvid">
         <source src="{{ .Params.hero_video | relURL }}" type="video/mp4">
       </video>
+      {{ end }}
       <div class="hero-video-gradient" style="background: linear-gradient(to bottom, transparent 0%, {{ .Site.Params.colors.darkBackground  }} 100%);"></div>
     </div>
     <!-- /Video Background -->

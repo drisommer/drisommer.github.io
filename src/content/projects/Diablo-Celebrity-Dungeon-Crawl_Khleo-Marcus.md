@@ -4,6 +4,9 @@ title = "Blizzard x Diablo Dungeon Crawl"
 weight = 14
 heroImage = "https://drisommer.blob.core.windows.net/datastorage/videos/021_DiabloCelebrityDungeonCrawlKhleoMarcus-preview.jpg"
 heroVideo = "https://drisommer.blob.core.windows.net/datastorage/videos/021_DiabloCelebrityDungeonCrawlKhleoMarcus-preview.mp4"
+
+heroVideoPortrait = "https://drisommer.blob.core.windows.net/datastorage/videos/021_DiabloCelebrityDungeonCrawlKhleoMarcus-portrait.mp4"
+
 projectVideo = "https://drisommer.blob.core.windows.net/datastorage/videos/021-DiabloCelebrityDungeonCrawlKhleoMarcus.mp4"
 projectType = ["Commercial"]
 projectRole = ["Director", "Editor"]

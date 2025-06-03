@@ -1,0 +1,18 @@
+/* Portrait Video Support for Hero */
+.hero-video-background-wrapper .bgvid--landscape {
+    display: block;
+}
+
+.hero-video-background-wrapper .bgvid--portrait {
+    display: none;
+}
+
+@media (orientation: portrait), (max-width: 767px) {
+    .hero-video-background-wrapper .bgvid--landscape {
+        display: none;
+    }
+    
+    .hero-video-background-wrapper .bgvid--portrait {
+        display: block;
+    }
+}
