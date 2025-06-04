@@ -1,5 +1,5 @@
 +++
-title = "Heavy Guarded Heart - Aint Afraid"
+title = "Mindseye - Lauren Ruth Ward"
 # featured = 0
 weight = 116
 heroImage = "https://drisommer.blob.core.windows.net/datastorage/videos/034_Mindseye-preview.png"

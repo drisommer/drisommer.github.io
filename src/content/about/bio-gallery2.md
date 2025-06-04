@@ -3,12 +3,12 @@ weight = 30
 partial = "moving-gallery"
 
 gallery_backwards = [
-  {image = "images/004.png"},
-  {image = "images/008.jpg"},
-  {image = "images/002.JPG"},
-  {image = "images/010.jpg"},
-  {image = "images/005.png"},
-  {image = "images/003.JPG"},
+  {image = "images/015.png"},
+  {image = "images/012.png"},
+  {image = "images/016.png"},
+  {image = "images/013.png"},
+  {image = "images/018.png"},
+  {image = "images/019.png"},
 ]
 
 

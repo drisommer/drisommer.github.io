@@ -1,5 +1,5 @@
 +++
-title = "Biggest Fan x Lorelei Marcell"
+title = "Biggest Fan - Lorelei Marcell"
 
 weight = 107
 heroImage = "https://drisommer.blob.core.windows.net/datastorage/videos/024_BiggestFan-preview.png"

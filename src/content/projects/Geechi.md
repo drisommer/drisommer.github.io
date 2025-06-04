@@ -1,5 +1,5 @@
 +++
-title = "Geechi x Aint Afraid"
+title = "Geechi - Aint Afraid"
 featured = 10
 weight = 108
 heroImage = "https://drisommer.blob.core.windows.net/datastorage/misc/ThePossible-SpeedMachine.png"

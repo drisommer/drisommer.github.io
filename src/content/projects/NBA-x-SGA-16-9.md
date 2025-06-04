@@ -1,5 +1,5 @@
 +++
-title = "NBA x Shai Gilgeous-Alexander"
+title = "NBA - Shai"
 featured = 2
 weight = 5
 

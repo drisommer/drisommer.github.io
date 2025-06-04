@@ -1,5 +1,5 @@
 +++
-title = "Jukebox Dr. Squatch"
+title = "Jukebox Is My Vibe - Dr. Squatch"
 # featured = 3
 weight = 3
 heroImage = "https://drisommer.blob.core.windows.net/datastorage/videos/015_JukeboxDrSquatch-preview.jpg"

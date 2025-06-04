@@ -1,5 +1,5 @@
 +++
-title = "Cant Get Enough x Beginners"
+title = "Can't Get Enough x Beginners"
 # featured = 0
 weight = 109
 heroImage = "https://drisommer.blob.core.windows.net/datastorage/videos/005-BeginnersCantGetEnough-preview.jpg"

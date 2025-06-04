@@ -1,5 +1,5 @@
 +++
-title = "Waking Up The Neighbors x Bahari"
+title = "Waking Up The Neighbors - Bahari"
 # featured = 0
 weight = 111
 heroImage = "https://drisommer.blob.core.windows.net/datastorage/videos/028_Neighbors-preview.png"

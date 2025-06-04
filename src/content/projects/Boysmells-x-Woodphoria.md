@@ -1,5 +1,5 @@
 +++
-title = "Boysmells x Woodphoria"
+title = "Boysmells - Woodphoria"
 # featured = 0
 weight = 10
 heroImage = "https://drisommer.blob.core.windows.net/datastorage/videos/009_BoysmellsxWoodphoria-preview.jpg"

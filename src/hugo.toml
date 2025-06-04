@@ -37,9 +37,9 @@ publishDir = "../public"
   [params.fontSizes]
     # Title font sizes (vw values)
     headerTitle = "6"
-    heroTitle = "24.15"
+    heroTitle = "40"
     bigTitle = "12"
-    h1Size = "4.15"
+    h1Size = "3"
     h2Size = "3"
     h3Size = "2"
     h4Size = "1"

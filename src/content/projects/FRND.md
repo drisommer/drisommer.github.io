@@ -1,5 +1,5 @@
 +++
-title = "100 Faces x FRND"
+title = "100 Faces - FRND"
 # featured = 0
 weight = 110
 heroImage = "https://drisommer.blob.core.windows.net/datastorage/videos/027-FRND-preview.png"

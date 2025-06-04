@@ -12,7 +12,7 @@ gallery_backwards = [
 ]
 
 gallery_forwards = [
-  {image = "images/006.jpg"},
+  {image = "images/006.png"},
   {image = "images/010.jpg"},
   {image = "images/008.jpg"},
   {image = "images/002.JPG"},

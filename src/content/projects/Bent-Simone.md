@@ -1,5 +1,5 @@
 +++
-title = "Bent x Simone Torres"
+title = "Bent - Simone Torres"
 # featured = 0
 weight = 105
 heroImage = "https://drisommer.blob.core.windows.net/datastorage/videos/030_BentSimoneTorres-Thumbnail.png.png"

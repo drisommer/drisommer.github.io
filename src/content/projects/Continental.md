@@ -1,5 +1,5 @@
 +++
-title = "MLS x Continental"
+title = "MLS - Continental Tires"
 # featured = 0
 weight = 15
 heroImage = "https://drisommer.blob.core.windows.net/datastorage/videos/022_Continental-preview.jpg"

@@ -1,5 +1,5 @@
 +++
-title = "Diana Taurasi - Pfizer x Disney"
+title = "Diana Taurasi - Pfizer & Disney"
 # featured = 11
 weight = 4
 heroImage = "https://drisommer.blob.core.windows.net/datastorage/videos/010_PfizerDisneyxDianaTaurasi-preview.jpg"

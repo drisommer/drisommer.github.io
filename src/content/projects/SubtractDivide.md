@@ -1,5 +1,5 @@
 +++
-title = "Subtract & Divide x Glory Daze"
+title = "Subtract & Divide - Glory Daze"
 # featured = 0
 weight = 112
 heroImage = "https://drisommer.blob.core.windows.net/datastorage/videos/029_Subtract&Divide-preview.png"

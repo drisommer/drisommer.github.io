@@ -1,5 +1,5 @@
 +++
-title = "JP Saxe - The Few Things"
+title = "The Few Things - JP SAXE"
 # featured = 0
 weight = 113
 heroImage = "https://drisommer.blob.core.windows.net/datastorage/videos/026_TheFewThings-preview.png"
