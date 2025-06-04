@@ -1,7 +1,7 @@
 +++
 title = "Converse - For Every You"
 # featured = 2
-weight = 13
+weight = 4
 heroImage = "https://drisommer.blob.core.windows.net/datastorage/videos/020_Converse-preview.png"
 heroVideo = "https://drisommer.blob.core.windows.net/datastorage/videos/020_Converse-preview.mp4"
 

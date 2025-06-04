@@ -8,7 +8,7 @@ heroVideo = "https://drisommer.blob.core.windows.net/datastorage/videos/034_Mind
 heroVideoPortrait = "https://www.youtube.com/watch?v=fCJj78gStHU"
 
 
-projectVideo = "https://www.youtube.com/watch?v=xB4folECeGg"
+projectVideo = "https://www.youtube.com/watch?v=fCJj78gStHU"
 projectType = ["Music Video"]
 projectRole = ["Director", "Editor"]
 +++

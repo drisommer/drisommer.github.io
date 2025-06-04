@@ -1,7 +1,7 @@
 +++
 title = "The Sims - Spark Something - Episode 1"
 featured = 10
-weight = 7
+weight = 6
 heroImage = "https://drisommer.blob.core.windows.net/datastorage/videos/013_TheSimsxEpisode1-preview.jpg"
 heroVideo = "https://drisommer.blob.core.windows.net/datastorage/videos/013_TheSimsxEpisode1-preview.mp4"
 

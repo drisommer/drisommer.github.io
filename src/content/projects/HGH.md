@@ -1,7 +1,7 @@
 +++
 title = "Heavy Guarded Heart - Aint Afraid"
 # featured = 0
-weight = 115
+weight = 106
 heroImage = "https://drisommer.blob.core.windows.net/datastorage/videos/033_HGH-preview.png"
 heroVideo = "https://drisommer.blob.core.windows.net/datastorage/videos/033_HGH-preview.mp4"
 

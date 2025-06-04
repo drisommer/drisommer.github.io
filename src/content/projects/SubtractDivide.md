@@ -9,5 +9,5 @@ heroVideoPortrait = "https://drisommer.blob.core.windows.net/datastorage/videos/
 
 projectVideo = "https://drisommer.blob.core.windows.net/datastorage/videos/029_Subtract&Divide.mp4"
 projectType = ["Music Video"]
-projectRole = ["Director", "Editor", "Production"]
+projectRole = ["Director", "Editor"]
 +++
