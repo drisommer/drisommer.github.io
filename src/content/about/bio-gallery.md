@@ -1,5 +1,5 @@
 +++
-weight = 20
+weight = 30
 partial = "moving-gallery"
 
 gallery_backwards = [
@@ -20,6 +20,6 @@ gallery_forwards = [
 
 ]
 
-paddingTop = true
+paddingTop = false
 paddingBottom = false
 +++

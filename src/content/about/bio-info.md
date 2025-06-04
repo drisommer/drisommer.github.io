@@ -1,5 +1,5 @@
 +++
-weight = 35
+weight = 20
 partial = "text-section"
 
 PaddingTop = true
