@@ -1,9 +1,9 @@
 +++
-weight = 20
+weight = 35
 partial = "text-section"
 
-PaddingTop = false
-PaddingBottom = false
+PaddingTop = true
+PaddingBottom = true
 
 # header = "Biography"
 
