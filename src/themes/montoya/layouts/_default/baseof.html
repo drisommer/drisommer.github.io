@@ -11,6 +11,20 @@
   <meta name="description" content="{{ .Site.Params.Meta.description }}" />
   <meta name="author" content="{{ .Site.Params.Meta.author }}">
   <meta charset="UTF-8" />
+  
+  <!-- OpenGraph Meta Tags for Social Media -->
+  <meta property="og:title" content="{{ .Site.Params.Meta.Title }}" />
+  <meta property="og:description" content="{{ .Site.Params.Meta.description }}" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="{{ .Site.BaseURL }}" />
+  <meta property="og:image" content="{{ "favicon.ico" | absURL }}" />
+  
+  <!-- Twitter Card Tags -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="{{ .Site.Params.Meta.Title }}" />
+  <meta name="twitter:description" content="{{ .Site.Params.Meta.description }}" />
+  <meta name="twitter:image" content="{{ "favicon.ico" | absURL }}" />
+
   <link rel="icon" type="image/ico" href="{{ "favicon.ico" | relURL }}" />
   <link href="{{ "style.css" | relURL }}" rel="stylesheet" />
   <link href="{{ "css/all.min.css" | relURL }}" rel="stylesheet" />
