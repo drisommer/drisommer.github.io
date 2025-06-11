@@ -1,11 +1,11 @@
 +++
 title = " "
 # featured = 10
-weight = 110
-heroImage = "https://drisommer.blob.core.windows.net/datastorage/misc/REDBULL%20THUMBNAIL.png"
+weight = 150
+heroImage = "https://drisommer.blob.core.windows.net/datastorage/misc/fromsea-thumbnail.png"
 # heroVideo = "https://drisommer.blob.core.windows.net/datastorage/videos/032_AcademyOfPop-Google-Preview.mp4"
 
-projectVideo = "https://www.youtube.com/watch?v=3UPheKSvyls"
+projectVideo = "https://www.youtube.com/watch?v=Ytc6MIbrl1c"
 projectType = ["Immersive"]
 projectRole = ["Director of Photography"]
 +++

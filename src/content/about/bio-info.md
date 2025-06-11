@@ -8,9 +8,9 @@ PaddingBottom = true
 # header = "Biography"
 
 paragraphs = [
-    "Dri Sommer is a Brazilian director based in Los Angeles. She kicked off her career at Within, an Immersive Experience Studio, back in 2015. Driven by her dance & VR backgrounds, everything she creates builds on the fundamentals of play, rhythm and community. Bursting with color, her work is people-centric and stylized, exploring the bold, bright and down right dazzling.",
+    "Dri Sommer is a Brazilian director based in Los Angeles. Inspired by her dance & VR backgrounds, everything she creates builds on the fundamentals of play, rhythm and community. Bursting with color, her work is people-centric and stylized, exploring the bold, bright and down right dazzling.",
     
-    "Drawing from her experiences as an immigrant, she has a unique eye for stories of transformation and belonging,  using  music and movement as a bridge to transport viewers to vibrant worlds and fresh perspectives.",
+    "Drawing from her experiences as an immigrant, Dri has an unique eye for stories of transformation and belonging, using  music and movement as a bridge to transport viewers to vibrant worlds and fresh perspectives.",
     
     "A filmmaker by day, salsa dancer by night, her friends have crowned her as an obsessive hobbyist for spending most of her free time on the dance floor."
 ]
