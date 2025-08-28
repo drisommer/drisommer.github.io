@@ -6,7 +6,7 @@ publishDir = "../public"
 [params.meta]
   title = "Dri Sommer"
   author = "Dri Sommer"
-  description = "Dri Sommer - Directing and Editing"
+  description = "Directing and Editing"
   socialImage = "images/social-preview.png"
 
 [params]
