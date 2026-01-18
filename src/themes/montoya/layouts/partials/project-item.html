@@ -27,21 +27,50 @@
         {{ end }}
         
         {{ if $heroVideo }}
-        <div class="hero-video-wrapper">
+        {{/* Determine if this is the first project (featured = 1) */}}
+        {{ $isFirstProject := eq $project.Params.featured 1 }}
+
+        <div class="hero-video-wrapper"
+             data-lock-mobile-orientation="{{ $.Site.Params.performance.lockMobileOrientation | default false }}"
+             data-mobile-max-width="{{ $.Site.Params.performance.mobilePhoneMaxWidth | default 768 }}">
           {{ if ne $heroVideoPortrait $heroVideo }}
-          <!-- Landscape hero video (when portrait version exists) -->
-          <video loop muted playsinline class="bgvid bgvid--landscape">
-            <source src="{{ $heroVideo }}" type="video/mp4">
+          {{/* Has both landscape and portrait versions */}}
+
+          <!-- Landscape video -->
+          <video loop muted playsinline class="bgvid bgvid--landscape {{ if not $isFirstProject }}lazy-video{{ end }}"
+                 {{ if $isFirstProject }}
+                 data-autoload="true"
+                 {{ else }}
+                 data-lazy="true"
+                 {{ end }}
+                 poster="{{ $heroImage }}">
+            <source {{ if $isFirstProject }}src{{ else }}data-src{{ end }}="{{ $heroVideo }}" type="video/mp4">
           </video>
-          <!-- Portrait hero video (mobile/tablet portrait) -->
-          <video loop muted playsinline class="bgvid bgvid--portrait">
-            <source src="{{ $heroVideoPortrait }}" type="video/mp4">
+
+          <!-- Portrait video -->
+          <video loop muted playsinline class="bgvid bgvid--portrait {{ if not $isFirstProject }}lazy-video{{ end }}"
+                 {{ if $isFirstProject }}
+                 data-autoload="true"
+                 {{ else }}
+                 data-lazy="true"
+                 {{ end }}
+                 poster="{{ $heroImagePortrait }}">
+            <source {{ if $isFirstProject }}src{{ else }}data-src{{ end }}="{{ $heroVideoPortrait }}" type="video/mp4">
           </video>
+
           {{ else }}
-          <!-- Single hero video (no portrait variant) -->
-          <video loop muted playsinline class="bgvid">
-            <source src="{{ $heroVideo }}" type="video/mp4">
+          {{/* Single video (no portrait variant) */}}
+
+          <video loop muted playsinline class="bgvid {{ if not $isFirstProject }}lazy-video{{ end }}"
+                 {{ if $isFirstProject }}
+                 data-autoload="true"
+                 {{ else }}
+                 data-lazy="true"
+                 {{ end }}
+                 poster="{{ $heroImage }}">
+            <source {{ if $isFirstProject }}src{{ else }}data-src{{ end }}="{{ $heroVideo }}" type="video/mp4">
           </video>
+
           {{ end }}
         </div>
         {{ end }}

@@ -206,8 +206,12 @@ Function Page Load
 		
 		
 		function initOnFirstLoad() {
-		
-			imagesLoaded('body', function() {
+
+			// Only wait for first project images to load (not lazy-loaded ones)
+			var firstProject = $('.overlapping-image').first();
+			var criticalContent = firstProject.length > 0 ? firstProject : 'body';
+
+			imagesLoaded(criticalContent, function() {
 				gsap.to('#ball', {duration: 0.2, borderWidth: '4px', scale:0.5, borderColor:'#999999', backgroundColor:'transparent'});
 				gsap.to('#ball-loader', {duration: 0.2, borderWidth: '4px', top: 0, left: 0});
 				$('#ball p').remove();
@@ -382,9 +386,9 @@ Function Page Load
 			
 			
 			var width = 100,
-				perfData = window.performance.timing, 
+				perfData = window.performance.timing,
 				EstimatedTime = -(perfData.loadEventEnd - perfData.navigationStart),
-				time = 1000
+				time = 600  // Reduced from 1000ms for faster perceived load with lazy loading
 				
 			// Loadbar Animation
 			$(".loadbar").animate({

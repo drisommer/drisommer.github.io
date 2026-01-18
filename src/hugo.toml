@@ -94,6 +94,15 @@ publishDir = "../public"
     galleryItemMedium = "33"
     galleryItemLarge = "44"
 
+  [params.performance]
+    # Lock orientation to portrait on mobile phone devices
+    # This prevents landscape videos from loading on phones even if rotated
+    lockMobileOrientation = true
+
+    # Mobile phone detection threshold (width in pixels)
+    # Devices with max-width <= this value are considered phones
+    mobilePhoneMaxWidth = 768
+
 # Main navigation menu
 [menu]
   [[menu.main]]

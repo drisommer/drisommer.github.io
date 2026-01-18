@@ -1,18 +1,37 @@
-/* Portrait Video Support for Hero */
-.hero-video-background-wrapper .bgvid--landscape {
-    display: block;
+/* Show/hide videos based on viewport orientation */
+
+/* Desktop and tablets - respect actual orientation */
+@media (min-width: 769px) {
+  @media (orientation: landscape) {
+    .bgvid--portrait {
+      display: none !important;
+    }
+    .bgvid--landscape {
+      display: block;
+    }
+  }
+
+  @media (orientation: portrait) {
+    .bgvid--landscape {
+      display: none !important;
+    }
+    .bgvid--portrait {
+      display: block;
+    }
+  }
 }
 
-.hero-video-background-wrapper .bgvid--portrait {
-    display: none;
+/* Mobile phones - always show portrait (when lockMobileOrientation is enabled) */
+@media (max-width: 768px) {
+  .bgvid--landscape {
+    display: none !important;
+  }
+  .bgvid--portrait {
+    display: block !important;
+  }
 }
 
-@media (orientation: portrait), (max-width: 767px) {
-    .hero-video-background-wrapper .bgvid--landscape {
-        display: none;
-    }
-    
-    .hero-video-background-wrapper .bgvid--portrait {
-        display: block;
-    }
+/* Single videos (no orientation variant) always show */
+.bgvid:not(.bgvid--landscape):not(.bgvid--portrait) {
+  display: block;
 }
