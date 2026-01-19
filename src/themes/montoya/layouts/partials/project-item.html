@@ -32,7 +32,8 @@
 
         <div class="hero-video-wrapper"
              data-lock-mobile-orientation="{{ $.Site.Params.performance.lockMobileOrientation | default false }}"
-             data-mobile-max-width="{{ $.Site.Params.performance.mobilePhoneMaxWidth | default 768 }}">
+             data-mobile-max-width="{{ $.Site.Params.performance.mobilePhoneMaxWidth | default 768 }}"
+             data-debug-video="{{ $.Site.Params.performance.debugVideoLoading | default false }}">
           {{ if ne $heroVideoPortrait $heroVideo }}
           {{/* Has both landscape and portrait versions */}}
 

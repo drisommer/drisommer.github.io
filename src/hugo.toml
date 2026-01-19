@@ -103,6 +103,11 @@ publishDir = "../public"
     # Devices with max-width <= this value are considered phones
     mobilePhoneMaxWidth = 768
 
+    # Enable detailed video loading debug logs in console
+    # Set to false in production for cleaner console
+    # Can be toggled in browser console: window.VideoDebug = true/false
+    debugVideoLoading = true
+
 # Main navigation menu
 [menu]
   [[menu.main]]

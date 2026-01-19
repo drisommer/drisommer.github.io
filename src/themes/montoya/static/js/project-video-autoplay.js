@@ -1,16 +1,51 @@
 // Smart Video Loading with First Video Priority and Viewport Detection
 window.ProjectVideoAutoplay = function() {
+  // Debug logging configuration
+  // Can be toggled in browser console: window.VideoDebug = true/false
+  // Or set in hugo.toml: params.performance.debugVideoLoading
+  if (typeof window.VideoDebug === 'undefined') {
+    const firstContainer = document.querySelector('.hero-video-wrapper');
+    window.VideoDebug = firstContainer?.getAttribute('data-debug-video') === 'true' || false;
+  }
+
+  // Helper: Debug log (only if debugging enabled)
+  function debugLog(...args) {
+    if (window.VideoDebug) {
+      console.log(...args);
+    }
+  }
+
+  // Helper: Debug warn (only if debugging enabled)
+  function debugWarn(...args) {
+    if (window.VideoDebug) {
+      console.warn(...args);
+    }
+  }
+
+  // Loading queue to prevent connection pool exhaustion
+  let loadingQueue = [];
+  let currentlyLoading = 0;
+  const MAX_CONCURRENT_LOADS = 2;
+
+  // GSAP polling with maximum attempts
+  let gsapCheckAttempts = 0;
+  const MAX_GSAP_ATTEMPTS = 10;
+
   if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
     initSmartVideoLoading();
   } else {
-    setTimeout(checkGSAP, 1000);
+    checkGSAP();
   }
 
   function checkGSAP() {
+    gsapCheckAttempts++;
+
     if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
       initSmartVideoLoading();
-    } else {
+    } else if (gsapCheckAttempts < MAX_GSAP_ATTEMPTS) {
       setTimeout(checkGSAP, 1000);
+    } else {
+      console.error('GSAP/ScrollTrigger failed to load after ' + MAX_GSAP_ATTEMPTS + ' attempts. Videos may not function correctly.');
     }
   }
 
@@ -25,128 +60,323 @@ window.ProjectVideoAutoplay = function() {
     const lockMobileOrientation = firstContainer?.getAttribute('data-lock-mobile-orientation') === 'true';
     const mobileMaxWidth = parseInt(firstContainer?.getAttribute('data-mobile-max-width') || '768', 10);
 
-    // Step 2: Detect device type and orientation
-    const isMobilePhone = window.innerWidth <= mobileMaxWidth;
-    const currentOrientation = window.innerHeight > window.innerWidth ? 'portrait' : 'landscape';
+    // Step 2: Handle first video (immediate load with correct orientation)
+    handleFirstVideo();
 
-    // Step 3: Determine which orientation to use
-    let isPortrait;
-    if (lockMobileOrientation && isMobilePhone) {
-      // Lock to portrait on mobile phones
-      isPortrait = true;
-      console.log('Mobile phone detected - locked to portrait orientation');
-    } else {
-      // Use current viewport orientation
-      isPortrait = currentOrientation === 'portrait';
-    }
+    // Step 3: Set up lazy loading for all other videos
+    setupLazyVideoLoading(lockMobileOrientation, mobileMaxWidth);
 
-    // Step 4: Handle first video (immediate load with correct orientation)
-    handleFirstVideo(isPortrait);
-
-    // Step 5: Set up lazy loading for all other videos
-    setupLazyVideoLoading(isPortrait, lockMobileOrientation, mobileMaxWidth);
-
-    // Step 6: Listen for orientation changes (mobile rotation)
+    // Step 4: Listen for orientation changes (mobile rotation)
     window.addEventListener('resize', debounce(() => {
       handleOrientationChange(lockMobileOrientation, mobileMaxWidth);
     }, 300));
   }
 
-  // Handle first video - load immediately with correct orientation
-  function handleFirstVideo(isPortrait) {
+  // Helper: Get project name from container
+  function getProjectName(container) {
+    const projectItem = container.closest('.overlapping-image-inner');
+    const titleElement = projectItem?.querySelector('.slide-title');
+    return titleElement?.textContent.trim() || 'Unknown Project';
+  }
+
+  // Helper: Get which video is actually visible according to CSS
+  function getVisibleVideo(container) {
+    const landscapeVideo = container.querySelector('.bgvid--landscape');
+    const portraitVideo = container.querySelector('.bgvid--portrait');
+    const singleVideo = container.querySelector('.bgvid:not(.bgvid--landscape):not(.bgvid--portrait)');
+
+    const projectName = getProjectName(container);
+
+    // DEBUG: Log what we found
+    debugLog(`[${projectName}] DOM check - Landscape: ${!!landscapeVideo}, Portrait: ${!!portraitVideo}, Single: ${!!singleVideo}`);
+    if (landscapeVideo) debugLog(`[${projectName}]   - Landscape classes:`, landscapeVideo.className);
+    if (portraitVideo) debugLog(`[${projectName}]   - Portrait classes:`, portraitVideo.className);
+    if (singleVideo) debugLog(`[${projectName}]   - Single classes:`, singleVideo.className);
+
+    // If single video (no orientation variants), return it
+    if (singleVideo) {
+      debugLog(`[${projectName}] ✅ Returning single video (no orientation variant)`);
+      return singleVideo;
+    }
+
+    // Check which video is visible according to CSS
+    if (landscapeVideo && portraitVideo) {
+      const landscapeDisplay = window.getComputedStyle(landscapeVideo).display;
+      const portraitDisplay = window.getComputedStyle(portraitVideo).display;
+
+      debugLog(`[${projectName}] CSS visibility - Landscape: ${landscapeDisplay}, Portrait: ${portraitDisplay}`);
+
+      // Return whichever is not hidden
+      if (landscapeDisplay !== 'none') {
+        debugLog(`[${projectName}] ✅ Loading LANDSCAPE video`);
+        return landscapeVideo;
+      } else if (portraitDisplay !== 'none') {
+        debugLog(`[${projectName}] ✅ Loading PORTRAIT video`);
+        return portraitVideo;
+      }
+    } else if (landscapeVideo) {
+      // Only landscape exists, check if it's visible
+      const landscapeDisplay = window.getComputedStyle(landscapeVideo).display;
+      debugLog(`[${projectName}] Only landscape video exists, CSS display: ${landscapeDisplay}`);
+      if (landscapeDisplay !== 'none') {
+        debugLog(`[${projectName}] ✅ Loading LANDSCAPE video`);
+        return landscapeVideo;
+      }
+      // If hidden by CSS, return null (can't show this video)
+      debugWarn(`[${projectName}] ⚠️ Landscape video hidden by CSS (landscape-only on portrait viewport)`);
+      return null;
+    } else if (portraitVideo) {
+      // Only portrait exists, check if it's visible
+      const portraitDisplay = window.getComputedStyle(portraitVideo).display;
+      debugLog(`[${projectName}] Only portrait video exists, CSS display: ${portraitDisplay}`);
+      if (portraitDisplay !== 'none') {
+        debugLog(`[${projectName}] ✅ Loading PORTRAIT video`);
+        return portraitVideo;
+      }
+      // If hidden by CSS, return null
+      debugWarn(`[${projectName}] ⚠️ Portrait video hidden by CSS`);
+      return null;
+    }
+
+    debugWarn(`[${projectName}] ⚠️ No video found in container`);
+    return null;
+  }
+
+  // Handle first video - load immediately
+  function handleFirstVideo() {
     const firstVideoContainer = document.querySelector('[data-autoload="true"]')?.closest('.hero-video-wrapper');
 
-    if (!firstVideoContainer) return;
+    if (!firstVideoContainer) {
+      debugWarn('⚠️ No first video container found (data-autoload="true")');
+      return;
+    }
+
+    const projectName = getProjectName(firstVideoContainer);
+    debugLog(`\n🎬 [${projectName}] FIRST VIDEO - Loading immediately on page load`);
 
     const landscapeVideo = firstVideoContainer.querySelector('.bgvid--landscape');
     const portraitVideo = firstVideoContainer.querySelector('.bgvid--portrait');
 
     if (landscapeVideo && portraitVideo) {
-      // Has both orientations - choose the correct one
-      const activeVideo = isPortrait ? portraitVideo : landscapeVideo;
-      const inactiveVideo = isPortrait ? landscapeVideo : portraitVideo;
+      // Has both orientations - determine which is visible and preserve the other
+      const visibleVideo = getVisibleVideo(firstVideoContainer);
+      const hiddenVideo = visibleVideo === landscapeVideo ? portraitVideo : landscapeVideo;
 
-      // Remove the inactive video's source to prevent download
-      const inactiveSources = inactiveVideo.querySelectorAll('source');
-      inactiveSources.forEach(source => {
-        source.removeAttribute('src');
-        source.setAttribute('data-src', source.getAttribute('src') || source.getAttribute('data-src'));
-      });
+      if (hiddenVideo) {
+        // FIX: Preserve source URL BEFORE removing attribute
+        const hiddenSources = hiddenVideo.querySelectorAll('source');
+        hiddenSources.forEach(source => {
+          // Read src and data-src before any modifications
+          const srcValue = source.getAttribute('src');
+          const dataSrcValue = source.getAttribute('data-src');
 
-      // Ensure active video starts loading
-      activeVideo.load();
-      activeVideo.play().catch(err => {
-        console.log("First video autoplay prevented:", err);
-      });
-    } else {
-      // Single orientation - just play it
-      const video = firstVideoContainer.querySelector('video');
-      if (video) {
-        video.load();
-        video.play().catch(err => {
-          console.log("First video autoplay prevented:", err);
+          // Preserve whichever exists
+          const urlToPreserve = srcValue || dataSrcValue;
+
+          if (urlToPreserve) {
+            source.removeAttribute('src');
+            source.setAttribute('data-src', urlToPreserve);
+          }
         });
+      }
+
+      // Load and play the visible video
+      if (visibleVideo) {
+        debugLog(`📥 [${projectName}] Loading first video immediately`);
+        visibleVideo.load();
+        visibleVideo.play().then(() => {
+          debugLog(`✅ [${projectName}] First video PLAYING`);
+        }).catch(err => {
+          debugWarn(`⚠️ [${projectName}] First video autoplay prevented:`, err.message);
+        });
+
+        // Add error handling
+        visibleVideo.addEventListener('error', function(e) {
+          console.error(`❌ [${projectName}] First video failed to load:`, visibleVideo.currentSrc, e);
+        });
+      }
+    } else {
+      // Single orientation - get the visible video
+      const visibleVideo = getVisibleVideo(firstVideoContainer);
+
+      if (visibleVideo) {
+        debugLog(`📥 [${projectName}] Loading first video immediately`);
+        visibleVideo.load();
+        visibleVideo.play().then(() => {
+          debugLog(`✅ [${projectName}] First video PLAYING`);
+        }).catch(err => {
+          debugWarn(`⚠️ [${projectName}] First video autoplay prevented:`, err.message);
+        });
+
+        // Add error handling
+        visibleVideo.addEventListener('error', function(e) {
+          console.error(`❌ [${projectName}] First video failed to load:`, visibleVideo.currentSrc, e);
+        });
+      } else {
+        debugWarn(`⚠️ [${projectName}] First video container found but no visible video (might be hidden by CSS on this viewport)`);
       }
     }
   }
 
   // Set up Intersection Observer for lazy loading
-  function setupLazyVideoLoading(isPortrait, lockMobileOrientation, mobileMaxWidth) {
-    const lazyVideos = document.querySelectorAll('.lazy-video[data-lazy="true"]');
+  function setupLazyVideoLoading(lockMobileOrientation, mobileMaxWidth) {
+    // FIX: Only observe one video per container to prevent dual triggering
+    const lazyContainers = [];
+    const allLazyVideos = document.querySelectorAll('.lazy-video[data-lazy="true"]');
 
-    if (lazyVideos.length === 0) return;
+    // Group videos by container and only observe one per container
+    const observedContainers = new Set();
 
-    // Create Intersection Observer
-    const videoObserver = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const video = entry.target;
+    allLazyVideos.forEach(video => {
+      const container = video.closest('.hero-video-wrapper');
+      if (container && !observedContainers.has(container)) {
+        observedContainers.add(container);
 
-          // Re-check orientation for this video (might have scrolled after rotation)
-          const isMobilePhone = window.innerWidth <= mobileMaxWidth;
-          let currentIsPortrait;
+        // FIX: Observe whichever video is VISIBLE according to CSS
+        // Don't observe hidden videos - IntersectionObserver won't fire for display:none elements!
+        const landscapeVideo = container.querySelector('.bgvid--landscape.lazy-video');
+        const portraitVideo = container.querySelector('.bgvid--portrait.lazy-video');
+        const singleVideo = container.querySelector('.lazy-video:not(.bgvid--landscape):not(.bgvid--portrait)');
 
-          if (lockMobileOrientation && isMobilePhone) {
-            currentIsPortrait = true; // Always portrait on mobile phones
-          } else {
-            currentIsPortrait = window.innerHeight > window.innerWidth;
+        let videoToObserve = null;
+
+        if (singleVideo) {
+          // Single video, always visible
+          videoToObserve = singleVideo;
+        } else if (landscapeVideo && portraitVideo) {
+          // Both exist - check which one CSS is showing
+          const landscapeDisplay = window.getComputedStyle(landscapeVideo).display;
+          const portraitDisplay = window.getComputedStyle(portraitVideo).display;
+
+          if (landscapeDisplay !== 'none') {
+            videoToObserve = landscapeVideo;
+          } else if (portraitDisplay !== 'none') {
+            videoToObserve = portraitVideo;
           }
-
-          loadVideoSource(video, currentIsPortrait);
-          observer.unobserve(video); // Stop observing once loaded
+        } else if (landscapeVideo) {
+          const landscapeDisplay = window.getComputedStyle(landscapeVideo).display;
+          if (landscapeDisplay !== 'none') {
+            videoToObserve = landscapeVideo;
+          }
+        } else if (portraitVideo) {
+          const portraitDisplay = window.getComputedStyle(portraitVideo).display;
+          if (portraitDisplay !== 'none') {
+            videoToObserve = portraitVideo;
+          }
         }
-      });
-    }, {
-      rootMargin: '50px' // Start loading 50px before video enters viewport
+
+        if (videoToObserve) {
+          const projectName = getProjectName(container);
+          debugLog(`📌 [${projectName}] Set up observer on ${videoToObserve.className.includes('landscape') ? 'LANDSCAPE' : videoToObserve.className.includes('portrait') ? 'PORTRAIT' : 'SINGLE'} video`);
+          lazyContainers.push({ container: container, video: videoToObserve });
+        } else {
+          const projectName = getProjectName(container);
+          debugWarn(`⚠️ [${projectName}] No visible video found for observation (all videos hidden by CSS?)`);
+        }
+      }
     });
 
-    // Observe all lazy videos
-    lazyVideos.forEach(video => {
-      videoObserver.observe(video);
-    });
-  }
-
-  // Load video source when it enters viewport
-  function loadVideoSource(video, isPortrait) {
-    const videoContainer = video.closest('.hero-video-wrapper');
-
-    if (!videoContainer) {
-      // Single video, just load it
-      loadSingleVideo(video);
+    if (lazyContainers.length === 0) {
+      debugWarn('⚠️ No lazy video containers found to observe');
       return;
     }
 
-    const landscapeVideo = videoContainer.querySelector('.bgvid--landscape');
-    const portraitVideo = videoContainer.querySelector('.bgvid--portrait');
+    debugLog(`📊 Total containers to observe: ${lazyContainers.length}`);
 
-    if (landscapeVideo && portraitVideo) {
-      // Has both orientations - load only the correct one
-      const targetVideo = isPortrait ? portraitVideo : landscapeVideo;
-      loadSingleVideo(targetVideo);
+    // Create Intersection Observer with larger margin to reduce simultaneous loads
+    const videoObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const triggerVideo = entry.target;
+          const container = triggerVideo.closest('.hero-video-wrapper');
+          const projectName = getProjectName(container);
+
+          debugLog(`\n🔍 [${projectName}] ENTERED VIEWPORT - Triggering lazy load`);
+
+          // Use loading queue to prevent connection pool exhaustion
+          loadVideoWithQueue(container);
+          observer.unobserve(triggerVideo); // Stop observing once queued
+        }
+      });
+    }, {
+      rootMargin: '200px' // Increased from 50px to reduce simultaneous loads
+    });
+
+    // Observe the selected videos
+    lazyContainers.forEach(item => {
+      videoObserver.observe(item.video);
+    });
+  }
+
+  // Queue video loading to prevent connection pool exhaustion
+  function loadVideoWithQueue(container) {
+    const projectName = getProjectName(container);
+
+    if (currentlyLoading < MAX_CONCURRENT_LOADS) {
+      debugLog(`📥 [${projectName}] Loading immediately (${currentlyLoading}/${MAX_CONCURRENT_LOADS} slots used)`);
+      loadVideoImmediately(container);
     } else {
-      // Single orientation
-      loadSingleVideo(video);
+      debugLog(`⏳ [${projectName}] QUEUED (${currentlyLoading}/${MAX_CONCURRENT_LOADS} slots full, queue length: ${loadingQueue.length})`);
+      loadingQueue.push({ container: container });
     }
+  }
+
+  // Load video immediately and track loading state
+  function loadVideoImmediately(container) {
+    const projectName = getProjectName(container);
+    currentlyLoading++;
+
+    debugLog(`🎬 [${projectName}] Starting video load (currentlyLoading: ${currentlyLoading})`);
+
+    // FIX: Get the actual video that is visible according to CSS
+    const actualVideo = loadVideoForContainer(container);
+
+    // Add event listeners to the CORRECT video
+    if (actualVideo) {
+      actualVideo.addEventListener('loadeddata', function() {
+        debugLog(`✅ [${projectName}] Video loaded successfully`);
+        onVideoLoadComplete();
+      }, { once: true });
+
+      actualVideo.addEventListener('error', function(e) {
+        console.error(`❌ [${projectName}] Video load ERROR:`, e);
+        onVideoLoadComplete();
+      }, { once: true });
+    } else {
+      // No visible video, decrement immediately
+      debugWarn(`⚠️ [${projectName}] Container has no visible video, skipping load`);
+      currentlyLoading--;
+      processQueue();
+    }
+  }
+
+  // Handle video load completion (success or error)
+  function onVideoLoadComplete() {
+    currentlyLoading--;
+    processQueue();
+  }
+
+  // Process next video in queue
+  function processQueue() {
+    if (loadingQueue.length > 0) {
+      const next = loadingQueue.shift();
+      const nextProjectName = getProjectName(next.container);
+      debugLog(`\n⏭️  Processing queue - Next: [${nextProjectName}] (${loadingQueue.length} remaining in queue)`);
+      loadVideoImmediately(next.container);
+    } else {
+      debugLog(`✨ Queue empty, all videos processed`);
+    }
+  }
+
+  // Load video for a container based on what CSS is actually showing
+  function loadVideoForContainer(container) {
+    const visibleVideo = getVisibleVideo(container);
+
+    if (visibleVideo) {
+      loadSingleVideo(visibleVideo);
+    }
+
+    return visibleVideo; // Return the video that was actually loaded (or null)
   }
 
   // Load a single video's source
@@ -163,6 +393,11 @@ window.ProjectVideoAutoplay = function() {
 
     video.load();
 
+    // Add error logging (event listeners for queue are added in loadVideoImmediately)
+    video.addEventListener('error', function(e) {
+      console.error('Video failed to load:', video.currentSrc, e);
+    }, { once: true });
+
     // Set up ScrollTrigger for play/pause
     setupVideoScrollTrigger(video);
   }
@@ -173,32 +408,51 @@ window.ProjectVideoAutoplay = function() {
 
     if (!projectItem) return;
 
+    const container = video.closest('.hero-video-wrapper');
+    const projectName = getProjectName(container);
+
+    debugLog(`🎯 [${projectName}] ScrollTrigger set up for play/pause control`);
+
     ScrollTrigger.create({
       trigger: projectItem,
       start: "top 80%",
       end: "bottom 20%",
       onEnter: () => {
+        debugLog(`▶️  [${projectName}] ScrollTrigger: onEnter - Attempting to play`);
         if (video.paused) {
-          video.play().catch(err => {
-            console.log("Autoplay prevented:", err);
+          video.play().then(() => {
+            debugLog(`✅ [${projectName}] Video PLAYING`);
+          }).catch(err => {
+            debugWarn(`⚠️ [${projectName}] Autoplay prevented:`, err.message);
           });
+        } else {
+          debugLog(`ℹ️  [${projectName}] Already playing`);
         }
       },
       onLeave: () => {
+        debugLog(`⏸️  [${projectName}] ScrollTrigger: onLeave - Pausing`);
         if (!video.paused) {
           video.pause();
+          debugLog(`✅ [${projectName}] Video PAUSED`);
         }
       },
       onEnterBack: () => {
+        debugLog(`▶️  [${projectName}] ScrollTrigger: onEnterBack - Attempting to play`);
         if (video.paused) {
-          video.play().catch(err => {
-            console.log("Autoplay prevented:", err);
+          video.play().then(() => {
+            debugLog(`✅ [${projectName}] Video PLAYING`);
+          }).catch(err => {
+            debugWarn(`⚠️ [${projectName}] Autoplay prevented:`, err.message);
           });
+        } else {
+          debugLog(`ℹ️  [${projectName}] Already playing`);
         }
       },
       onLeaveBack: () => {
+        debugLog(`⏸️  [${projectName}] ScrollTrigger: onLeaveBack - Pausing`);
         if (!video.paused) {
           video.pause();
+          debugLog(`✅ [${projectName}] Video PAUSED`);
         }
       }
     });
@@ -206,28 +460,48 @@ window.ProjectVideoAutoplay = function() {
 
   // Handle orientation changes (mobile rotation)
   function handleOrientationChange(lockMobileOrientation, mobileMaxWidth) {
-    const isMobilePhone = window.innerWidth <= mobileMaxWidth;
+    debugLog('Orientation change detected, reloading appropriate videos');
 
-    // Determine new orientation
-    let newIsPortrait;
-    if (lockMobileOrientation && isMobilePhone) {
-      // Keep locked to portrait on mobile phones
-      newIsPortrait = true;
-      console.log('Orientation locked to portrait on mobile phone');
-    } else {
-      // Use current viewport orientation
-      newIsPortrait = window.innerHeight > window.innerWidth;
-    }
-
-    // Update all loaded videos to show correct orientation
+    // Update all video containers to show correct orientation
     document.querySelectorAll('.hero-video-wrapper').forEach(container => {
       const landscapeVideo = container.querySelector('.bgvid--landscape');
       const portraitVideo = container.querySelector('.bgvid--portrait');
 
       if (landscapeVideo && portraitVideo) {
-        // Both exist - manage visibility via CSS classes handled by existing styles
-        // The CSS already handles this with media queries
-        // When locked to portrait on mobile, portrait video always shows
+        // Determine which video is now visible according to CSS
+        const visibleVideo = getVisibleVideo(container);
+        const hiddenVideo = visibleVideo === landscapeVideo ? portraitVideo : landscapeVideo;
+
+        if (hiddenVideo) {
+          // Preserve hidden video's source
+          const hiddenSources = hiddenVideo.querySelectorAll('source[src]');
+          hiddenSources.forEach(source => {
+            const srcValue = source.getAttribute('src');
+            if (srcValue) {
+              source.removeAttribute('src');
+              source.setAttribute('data-src', srcValue);
+            }
+          });
+
+          // Pause hidden video if playing
+          if (!hiddenVideo.paused) {
+            hiddenVideo.pause();
+          }
+        }
+
+        if (visibleVideo) {
+          // Check if visible video needs its source loaded
+          const visibleSources = visibleVideo.querySelectorAll('source[data-src]');
+          if (visibleSources.length > 0) {
+            // FIX: Use the queue system for orientation changes too
+            loadVideoWithQueue(container);
+          } else {
+            // Already loaded, just play
+            visibleVideo.play().catch(err => {
+              debugLog("Autoplay prevented on orientation change:", err);
+            });
+          }
+        }
       }
     });
   }
