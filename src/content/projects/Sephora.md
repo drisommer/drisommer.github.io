@@ -1,6 +1,6 @@
 +++
 title = "Sephora - Chris McMillan"
-featured = 
+featured = false
 weight = 5
 heroImage = "https://drisommer.blob.core.windows.net/datastorage/videos/037_Sephora-preview.png"
 heroVideo = "https://drisommer.blob.core.windows.net/datastorage/videos/037_Sephora-preview.mp4"

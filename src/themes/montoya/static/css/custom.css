@@ -154,6 +154,12 @@ a:hover, a:active {
   color: var(--accent-color);
 }
 
+/* Hero subtitle: larger and tighter to the name */
+.hero-subtitle {
+  font-size: 28px !important;
+  margin-top: 10px !important;
+}
+
 /* Hero section fixes */
 #hero {
   position: relative;
