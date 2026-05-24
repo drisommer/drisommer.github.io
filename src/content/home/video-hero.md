@@ -4,7 +4,7 @@ partial = "video-hero"
 
 # Hero configuration
 hero_title = "Dri Sommer"
-hero_subtitle = "director & editor"
+hero_subtitle = ""
 hero_video = "https://drisommer.blob.core.windows.net/datastorage/misc/websiteopening.mp4"
 
 heroVideoPortrait = "https://drisommer.blob.core.windows.net/datastorage/misc/websiteopeningvertical.mp4"
