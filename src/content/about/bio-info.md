@@ -63,7 +63,7 @@ paragraphs = [
 # middleColumnSize = "one_third"
 # rightColumnSize = "one_third"
 # leftHeader = "Background"
-# leftParagraphs = ["Born in São Paulo, Brasil..."]
+# leftParagraphs = ["Born in New York, Brasil..."]
 # rightHeader = "Passion"
 # rightParagraphs = ["Salsa dancing enthusiast..."]
 #

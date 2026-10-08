@@ -14,7 +14,7 @@ paddingTop = false
 # type = "email"
 # 
 # [[contacts]]
-# info = "Los Angeles 🛫 São Paulo"
+# info = "Los Angeles 🛫 New York"
 # name = "usually hanging out in one of these places"
 # icon = "fa-location-dot"
 # type = "text"
