@@ -1,6 +1,6 @@
 +++
 layout = "page"
-url = "/immersive/"
-title = "Immersive"
+url = "/documentary/"
+title = "Documentary"
 iconHeight = 70
 +++

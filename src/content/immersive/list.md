@@ -2,7 +2,7 @@
 weight = 10
 partial = "overlapping-gallery"
 # filterByFeatured = true
-filterByProjectType = ["Immersive"]
+filterByprojectType = ["Documentary"]
 # filterByRole = ["Editor", "Director"]
 
 sortBy = "weight"

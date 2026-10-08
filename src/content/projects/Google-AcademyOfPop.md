@@ -8,6 +8,6 @@ heroVideo = "https://drisommer.blob.core.windows.net/datastorage/videos/032_Acad
 heroVideoPortrait = "https://drisommer.blob.core.windows.net/datastorage/videos/032_AcademyOfPop-Google-Portrait.mp4"
 
 projectVideo = "https://drisommer.blob.core.windows.net/datastorage/videos/032_AcademyOfPop-Google.mp4"
-projectType = ["Immersive"]
+projectType = ["Documentary"]
 projectRole = ["Director", "Editor"]
 +++
