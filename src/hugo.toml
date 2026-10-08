@@ -121,8 +121,8 @@ publishDir = "../public"
     weight = 20
 
   [[menu.main]]
-    name = "Immersive"
-    url = "/immersive/"
+    name = "Documentary"
+    url = "/documentary/"
     weight = 30
   
     [[menu.main]]

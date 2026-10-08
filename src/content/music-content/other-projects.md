@@ -9,6 +9,6 @@ text = "Commercials"
 url = "/commercials/"
 
 [[buttons]]
-text = "Immersive"
-url = "/immersive/"
+text = "Documentary"
+url = "/documentary/"
 +++

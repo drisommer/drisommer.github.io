@@ -1,6 +1,6 @@
 MAIN CONTENT
 
-- split portfolio page into 3 sections in the menu -- commercial, music content, immersive
+- split portfolio page into 3 sections in the menu -- commercial, music content, documentary
 - change the template of how content is shown (same as the home page)
 - change the top-right icon to new "DS" logo
 - make new "project folders" for the new projects Dri added to AZURE

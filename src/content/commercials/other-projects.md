@@ -9,6 +9,6 @@ text = "Music Videos"
 url = "/music-videos/"
 
 [[buttons]]
-text = "Immersive"
-url = "/immersive/"
+text = "Documentary"
+url = "/documentary/"
 +++
