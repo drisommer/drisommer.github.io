@@ -1,6 +1,6 @@
 +++
 title = "Geechi - Aint Afraid"
-featured = 10
+featured = 0
 weight = 104
 heroImage = "https://drisommer.blob.core.windows.net/datastorage/misc/speedmachine-thepossible.jpg"
 heroVideo = "https://drisommer.blob.core.windows.net/datastorage/videos/025_Geechi.preview.mp4"
